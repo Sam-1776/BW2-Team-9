@@ -1,7 +1,7 @@
-const main = document.querySelector("main");
+const main = document.querySelector("#mainAside");
 const aside = document.querySelector("aside");
 const listen = document.getElementById("listen");
-const section = document.querySelector("section");
+const section = document.querySelector("#sectionAside");
 const close = document.getElementById("close");
 console.log(aside);
 

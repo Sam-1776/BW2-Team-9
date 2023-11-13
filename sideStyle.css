@@ -1,9 +1,9 @@
 
-body {
+#bodyASide {
   position: relative;
   box-sizing: border-box;
 }
-main{
+#mainAside{
   position: relative;
   height: 100vh;
   transition: all 1s;
@@ -15,7 +15,7 @@ main{
   background-color: transparent;
   border: none;
 }
-img {
+#imageUser {
   width: 100%;
   object-fit: cover;
 }
