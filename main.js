@@ -40,9 +40,9 @@ const cardsSongsLoaded = () => {
             console.error(err.message)
             )
             
-            function cardsSongs (song) {
+            function cardsSongs (songs) {
                 cards2.innerHTML = "";
-                           song.forEach((song) => {
+                           songs.data.forEach((song) => {
        cards2.innerHTML += `
        <div id="col-20">
        <div class="card bg-secondary text-white">
@@ -55,17 +55,6 @@ const cardsSongsLoaded = () => {
        `;
          });
                 }
-        //         song.forEach(song => {
-        //     cards2.innerHTML = `
-        //     <div id="col-20">
-        //     <div class="card bg-secondary text-white">
-        //     <img src="${song.picture_medium}" class="card-img-top" alt="...">
-        //     <div class="card-body">
-        //     <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quae.</p>
-        //     </div>
-        //     </div>
-        //     </div>
-        //     `
-        // })
+        
     }
     
