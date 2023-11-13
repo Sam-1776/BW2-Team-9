@@ -91,6 +91,138 @@ padding: 1em;
       transform: translateX(400px);
     z-index: 999;
   }
+
+
+
+
+  /* SIDE LEFT */
+  #section-left {
+    background-color: #000000;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .first-icons p {
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+  }
+  .first-icons {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-inline: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  
+  .first-icons a {
+    color: white;
+    font-size: 28px;
+  }
+  
+  .bi-three-dots {
+    font-size: 25px;
+    padding-inline: 25px;
+    color: white;
+    margin-left: 2px;
+  }
+  
+  .second-icons {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    padding-inline: 20px;
+    margin-top: 20px;
+  }
+  hr {
+    width: 95%;
+    color: white;
+    margin-inline: auto;
+  }
+  
+  .second-icons p {
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .second-icons a {
+    font-size: 20px;
+  }
+  
+  .bi-plus-square-fill {
+    font-size: 35px;
+  }
+  
+  /*.input {
+    font-size: 20px;
+    background-color: rgb(151, 149, 149);
+    width: 200px;
+    border-radius: 13px;
+    border: 1px solid black;
+    margin: 10px;
+    display: block;
+  }*/
+  .input-block {
+    display: block !important;
+    background: rgb(49, 46, 46);
+    color: #000000;
+    border: none;
+    margin-bottom: 20px;
+    width: 70%;
+  
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .input-button-none {
+    display: none;
+  }
+  
+  .input-button {
+    width: 40px;
+    border-radius: 20%;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: rgb(49, 46, 46);
+    color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .div-input {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #ul {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .but-li {
+    display: inline;
+  }
+  
+  #playlist {
+    overflow-y: auto;
+  }
+  
+  #ul {
+    font-size: 25px;
+    padding-left: 12px;
+  }
+  
   
 
 
