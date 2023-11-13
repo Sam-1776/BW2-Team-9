@@ -46,9 +46,10 @@ const cardsSongsLoaded = () => {
        cards2.innerHTML += `
        <div id="col-20">
        <div class="card bg-secondary text-white">
-       <img src="${song.picture_medium}" class="card-img-top" alt="...">
+       <img src="${song.artist.picture_medium}" class="card-img-top" alt="...">
        <div class="card-body">
-       <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quae.</p>
+       <p class="card-text">Canzone :${song.title}</p>
+       <p class="card-text">Cantante :${song.artist.name}</p>
        </div>
        </div>
        </div>
