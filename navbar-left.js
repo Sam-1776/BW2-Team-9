@@ -67,7 +67,7 @@ function createListItem(ul, value) {
         alert("Playlist cancellata con successo");
         storedData.splice(indexToRemove, 1);
         localStorage.setItem("data", JSON.stringify(storedData));
-        // Assicurati che ulDiv esista prima di tentare di rimuoverlo
+
         if (ulDiv) {
           ul.removeChild(ulDiv);
         }
