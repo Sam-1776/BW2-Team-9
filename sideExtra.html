@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Side bar right</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="row text-bg-dark g-0">
+    <main>
+        <button
+        class="btn btn-dark rounded-circle"
+        type="button"
+        id="friends"
+      >
+        <i class="bi bi-people"></i>
+      </button>
+    </main>
+    <aside class="display translate overflow-hidden d-none">
+<div id="listen">
+            <div class="d-flex justify-content-between p-3">
+                <h5 class=" text-light">
+                    Attività amici
+                  </h5>
+                  <div>
+                    <button
+                      class="btn btn-dark rounded-circle"
+                      type="button"
+                      id="add-Friends"
+                    >
+                      <i class="bi bi-person-add"></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-dark rounded-circle"
+                      id="close">
+                       <i class="bi bi-x-lg"></i>
+                    </button>
+                  </div>
+            </div>
+           <div class="p-3">
+                <div class="container">
+                    <div class="row align-items-basline">
+                      <div class="col-3">
+                        <img
+                          class="rounded-circle"
+                          src="./assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="text-secondary">
+                          <p class="fs-5">Nome amico</p>
+                          <p style="font-size: 0.8rem">
+                            canzone <span><i class="bi bi-dot"></i></span> nome artista
+                          </p>
+                          <p style="font-size: 0.8rem"><i class="bi bi-disc"></i> info</p>
+                        </div>
+                      </div>
+                      <div class="col-3 text-end text-secondary">
+                        <p style="font-size: 0.8rem">ore</p>
+                      </div>
+                    </div>
+                  </div>
+           </div>
+</div>
+        <section class="translate d-none">
+            <div id="newFriends p-3">
+                <div style="padding: 16px">
+                  <button type="button" class="btn btn-dark rounded-circle" id="back">
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                </div>
+                <div style="padding: 16px">
+                    <h5 class="text-light">
+                        Attività amici
+                      </h5>
+              <div class="d-flex justify-content-between">
+                      <input type="text" class="rounded-pill text-bg-dark border border-ligth" placeholder="inserisci nome amico" style="width: 260px;">
+                      <button class="btn btn-dark rounded-circle"><i class="bi bi-plus-circle"></i></button>
+              </div>
+                </div>
+              </div>
+        </section>
+    </aside>
+    <script src="./sideExtra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

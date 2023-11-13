@@ -1,0 +1,44 @@
+
+body {
+  position: relative;
+  box-sizing: border-box;
+}
+main{
+  position: relative;
+  height: 100vh;
+  transition: all 1s;
+}
+.row > .col-6 > .text-secondary > p {
+  margin-bottom: 2px;
+}
+.btn-dark {
+  background-color: transparent;
+  border: none;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+#friends {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#newFriends {
+  width: 399px;
+}
+aside{
+  background-color: black;
+}
+
+.trsizioni{
+    animation: fade-in  1s 300ms;
+/*     animation: fade-out  1s 300ms; */
+    transition: all 1s;
+}
+.translate{
+    transform: translateX(400px);
+  z-index: 999;
+}
+
+
