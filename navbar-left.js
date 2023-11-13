@@ -15,44 +15,68 @@ anchor.addEventListener("click", function (e) {
 });
 
 const ul = document.getElementById("ul");
-let arr = [];
 
-dataStorage = localStorage.getItem("data");
-if (dataStorage) {
-  arr = JSON.parse(dataStorage);
-}
+// Carica gli elementi dal localStorage al caricamento della pagina
+document.addEventListener("DOMContentLoaded", function () {
+  const storedData = JSON.parse(localStorage.getItem("data")) || [];
+  storedData.forEach(function (value) {
+    createListItem(ul, value);
+  });
+});
 
-butIn.addEventListener("click", function (e) {
+butIn.addEventListener("click", function () {
   if (!containsLetter(input.value)) {
     alert("Inserisci un valore nell'input");
     return;
   }
-  arr.push(input.value);
-  pushEl();
-  localStorage.setItem("data", JSON.stringify(arr));
+  const value = input.value;
+
+  const storedData = getStoredData();
+  storedData.push(value);
+  localStorage.setItem("data", JSON.stringify(storedData));
+
   input.value = "";
+  createListItem(ul, value);
 });
 
 function containsLetter(str) {
   return /[a-zA-Z]/.test(str);
 }
 
-const pushEl = function () {
-  for (i = 0; i < arr.length; i++) {
-    const li = document.createElement("li");
-    const butLi = document.createElement("a");
-    const icon = document.createElement("i");
-    icon.className = "bi bi-trash3-fill";
-    butLi.appendChild(icon);
-    const ulDiv = document.createElement("div");
-    ul.appendChild(ulDiv);
-    ulDiv.appendChild(li);
-    ulDiv.appendChild(butLi);
+function createListItem(ul, value) {
+  const li = document.createElement("li");
+  const butLi = document.createElement("a");
+  const icon = document.createElement("i");
 
-    ulDiv.className = "d-flex justify-content-between";
-    li.innerText = arr[i];
+  icon.className = "bi bi-trash3-fill text-danger";
+  butLi.appendChild(icon);
+  const ulDiv = document.createElement("div");
+  ul.appendChild(ulDiv);
+  ulDiv.appendChild(li);
+  ulDiv.appendChild(butLi);
+
+  ulDiv.className = "d-flex justify-content-between mx-2 ";
+
+  li.innerText = value;
+}
+
+function getStoredData() {
+  return JSON.parse(localStorage.getItem("data")) || [];
+}
+
+function deleteElement(value) {
+  const storedData = getStoredData();
+  const indexToRemove = storedData.indexOf(value);
+
+  if (indexToRemove !== -1) {
+    storedData.splice(indexToRemove, 1);
+    localStorage.setItem("data", JSON.stringify(storedData));
+
+    const elementsToRemove = document.querySelectorAll(
+      `li:contains('${value}')`
+    );
+    elementsToRemove.forEach(function (element) {
+      element.parentNode.remove();
+    });
   }
-};
-pushEl();
-
-const deleteLI = function () {};
+}
