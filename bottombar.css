@@ -1,0 +1,106 @@
+body {
+  background-color: black;
+}
+
+.box {
+  background-color: rgb(31, 29, 29);
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  padding: 10px;
+}
+
+.left-part {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.left-part-img {
+  border-radius: 10px;
+  width: 50px;
+}
+
+.leftPart {
+  margin-left: 10px;
+  line-height: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.leftPart-h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 10px;
+}
+.leftPart-h5 {
+  margin-bottom: 0;
+  color: grey;
+  font-size: 10px;
+}
+
+.far.fa-heart {
+  margin-left: 15px;
+}
+
+.fontIcon {
+  font-size: 15px;
+  color: white;
+}
+
+.fontIconPlay {
+  font-size: 25px;
+  color: white;
+}
+
+.fontSizeNumber {
+  font-size: 15px;
+  margin: 0;
+}
+
+.heart-icon {
+  color: black;
+}
+
+.heart-icon.green {
+  color: green;
+}
+
+.heart-icon:hover {
+  color: green;
+}
+
+.fas.fa-random:hover {
+  color: green;
+}
+.fas.fa-step-backward:hover {
+  color: green;
+}
+.fas.fa-step-forward:hover {
+  color: green;
+}
+.fas.fa-retweet:hover {
+  color: green;
+}
+.fas.fa-microphone:hover {
+  color: green;
+}
+.fas.fa-bars:hover {
+  color: green;
+}
+.bi.bi-speaker:hover {
+  color: green;
+}
+.fas.fa-expand-alt:hover {
+  color: green;
+}
+.fas.fa-volume-up:hover {
+  color: green;
+}
+.fas.fa-volume-mute:hover {
+  color: green;
+}
