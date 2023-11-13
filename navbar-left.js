@@ -16,7 +16,6 @@ anchor.addEventListener("click", function (e) {
 
 const ul = document.getElementById("ul");
 
-// Carica gli elementi dal localStorage al caricamento della pagina
 document.addEventListener("DOMContentLoaded", function () {
   const storedData = JSON.parse(localStorage.getItem("data")) || [];
   storedData.forEach(function (value) {
@@ -58,6 +57,12 @@ function createListItem(ul, value) {
   ulDiv.className = "d-flex justify-content-between mx-2 ";
 
   li.innerText = value;
+  butLi.addEventListener("click", function () {
+    localStorage.removeItem("data");
+    input.value = "";
+    li.innerText = "";
+    icon.className = "display-none";
+  });
 }
 
 function getStoredData() {
@@ -65,18 +70,5 @@ function getStoredData() {
 }
 
 function deleteElement(value) {
-  const storedData = getStoredData();
-  const indexToRemove = storedData.indexOf(value);
-
-  if (indexToRemove !== -1) {
-    storedData.splice(indexToRemove, 1);
-    localStorage.setItem("data", JSON.stringify(storedData));
-
-    const elementsToRemove = document.querySelectorAll(
-      `li:contains('${value}')`
-    );
-    elementsToRemove.forEach(function (element) {
-      element.parentNode.remove();
-    });
-  }
+  li.remove();
 }
