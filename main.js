@@ -16,6 +16,9 @@ const buttonSection2 = document.getElementById("buttonSection2")
 const cards2 = document.getElementById("cards2")
 cards2.setAttribute("id","cards")
 
+window.onload = () => {
+section1CardsLoaded()
+}
 
 buttonSection2.onclick = function () {
     
@@ -45,10 +48,13 @@ const cardsSongsLoaded = () => {
                            songs.data.forEach((song) => {
        cards2.innerHTML += `
        <div id="col-20">
-       <div class="card bg-secondary text-white">
-       <img src="${song.picture_medium}" class="card-img-top" alt="...">
+       <div class="card h-100 rounded text-bg-secondary">
+    <div class="card-img-top w-100 object-fit-cover rounded shadow-sm w-25">
+       <img src="${song.album.cover_medium}" class="card-img-top" alt="...">
+       </div>
        <div class="card-body">
-       <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quae.</p>
+       <p class="card-text">Cantante: ${song.artist.name}</p>
+       <p class="card-text">Canzone: ${song.album.title}</p>
        </div>
        </div>
        </div>
@@ -57,4 +63,5 @@ const cardsSongsLoaded = () => {
                 }
         
     }
+
     
