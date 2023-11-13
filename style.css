@@ -31,11 +31,6 @@ aside{
   background-color: black;
 }
 
-.trsizioni{
-    animation: fade-in  1s 300ms;
-/*     animation: fade-out  1s 300ms; */
-    transition: all 1s;
-}
 .translate{
     transform: translateX(400px);
   z-index: 999;
