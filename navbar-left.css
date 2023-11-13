@@ -1,7 +1,8 @@
-section {
-  width: 20%;
+#section-left {
+  width: 30%;
   background-color: #000000;
-  height: 120vh;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
 }
@@ -114,4 +115,12 @@ hr {
 
 .but-li {
   display: inline;
+}
+
+#playlist {
+  overflow: scroll;
+}
+
+#ul {
+  font-size: 25px;
 }

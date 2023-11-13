@@ -58,10 +58,14 @@ function createListItem(ul, value) {
 
   li.innerText = value;
   butLi.addEventListener("click", function () {
-    localStorage.removeItem("data");
-    input.value = "";
-    li.innerText = "";
-    icon.className = "display-none";
+    const valueToRemove = li.innerText;
+    const storedData = getStoredData();
+    const indexToRemove = storedData.indexOf(valueToRemove);
+    if (indexToRemove !== -1) {
+      storedData.splice(indexToRemove, 1);
+      localStorage.setItem("data", JSON.stringify(storedData));
+    }
+    ul.removeChild(ulDiv);
   });
 }
 
