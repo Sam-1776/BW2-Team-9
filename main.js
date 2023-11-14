@@ -108,66 +108,132 @@ section2CardsLoaded = function () {
     }
          }
     const card3Loaded = function () {
-     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
-         headers: {
-             'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
-             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-         }
-     })
-     .then(resp => {
-         console.log(resp)
-         return  resp.json() }) 
-         .then(song => {
-             // myfunc(song)
-             console.log(song);
-             
-         })
-         .catch(err =>
-             console.error(err.message)
-             )
+        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
+            headers: {
+                'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
+                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+        })
+        .then(resp => {
+            console.log(resp)
+            return  resp.json() }) 
+            .then(song => {
+                currentSong(song)
+                console.log(song);
+                
+            })
+            .catch(err =>
+                console.error(err.message)
+                )
+                
+                function currentSong (tyga) {
+                    const randomNum = Math.floor(Math.random() * (tyga.data.length - 1));
+                   const randomSong = tyga.data[randomNum];
+                   const currentCoverAlbum = randomSong.album.cover_medium;
+                   const currentTitle = randomSong.title;
+                   const currentArtist = randomSong.artist.name;
+                   cards1.innerHTML +=`
+                   <div id="col-20">
+                   <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
+                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     </div>
+                       <div class="card-body">
+                         <p class="card-text">Canatante: ${currentArtist}</p>
+                         <p class="card-text">Canzone: ${currentTitle}</p>
+                       </div>
+                     </div>
+                   </div> 
+                   `
+    }
          }
     const card4Loaded = function () {
-     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=chris_brown", {
-         headers: {
-             'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
-             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+      fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=future", {
+            headers: {
+                'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
+                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+        })
+        .then(resp => {
+            console.log(resp)
+            return  resp.json() }) 
+            .then(song => {
+                currentSong(song)
+                console.log(song);
+                
+            })
+            .catch(err =>
+                console.error(err.message)
+                )
+                
+                function currentSong (future) {
+                    const randomNum = Math.floor(Math.random() * (future.data.length - 1));
+                   const randomSong = future.data[randomNum];
+                   const currentCoverAlbum = randomSong.album.cover_medium;
+                   const currentTitle = randomSong.title;
+                   const currentArtist = randomSong.artist.name;
+                   cards1.innerHTML +=`
+                   <div id="col-20">
+                   <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
+                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     </div>
+                       <div class="card-body">
+                         <p class="card-text">Canatante: ${currentArtist}</p>
+                         <p class="card-text">Canzone: ${currentTitle}</p>
+                       </div>
+                     </div>
+                   </div> 
+                   `
          }
-     })
-     .then(resp => {
-         console.log(resp)
-         return  resp.json() }) 
-         .then(song => {
-             // myfunc(song)
-             console.log(song);
-             
-         })
-         .catch(err =>
-             console.error(err.message)
-             )
-         }
+        }
     const card5Loaded = function () {
-     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=", {
-         headers: {
-             'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
-             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=akon", {
+            headers: {
+                'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
+                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+        })
+        .then(resp => {
+            console.log(resp)
+            return  resp.json() }) 
+            .then(song => {
+                currentSong(song)
+                console.log(song);
+                
+            })
+            .catch(err =>
+                console.error(err.message)
+                )
+                
+                function currentSong (akon) {
+                    const randomNum = Math.floor(Math.random() * (akon.data.length - 1));
+                   const randomSong = akon.data[randomNum];
+                   const currentCoverAlbum = randomSong.album.cover_medium;
+                   const currentTitle = randomSong.title;
+                   const currentArtist = randomSong.artist.name;
+                   cards1.innerHTML +=`
+                   <div id="col-20">
+                   <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
+                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     </div>
+                       <div class="card-body">
+                         <p class="card-text">Canatante: ${currentArtist}</p>
+                         <p class="card-text">Canzone: ${currentTitle}</p>
+                       </div>
+                     </div>
+                   </div> 
+                   `
          }
-     })
-     .then(resp => {
-         console.log(resp)
-         return  resp.json() }) 
-         .then(song => {
-             // myfunc(song)
-             console.log(song);
-             
-         })
-         .catch(err =>
-             console.error(err.message)
-             )
-         }
+        }
+        card5Loaded()
+         card4Loaded()
+         card3Loaded()
          card2Loaded()
          card1Loaded()   
         }
-
+    
         cardsSection2.onclick = () => {
 
         }
