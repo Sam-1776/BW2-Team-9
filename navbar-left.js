@@ -62,17 +62,22 @@ function createListItem(ul, value) {
     const storedData = getStoredData();
     const indexToRemove = storedData.indexOf(valueToRemove);
     if (indexToRemove !== -1) {
-      storedData.splice(indexToRemove, 1);
-      localStorage.setItem("data", JSON.stringify(storedData));
+      let conferma = confirm("Sei sicuro di eliminare la playlist?");
+      if (conferma) {
+        alert("Playlist cancellata con successo");
+        storedData.splice(indexToRemove, 1);
+        localStorage.setItem("data", JSON.stringify(storedData));
+
+        if (ulDiv) {
+          ul.removeChild(ulDiv);
+        }
+      } else {
+        alert("Playlist trattenuta");
+      }
     }
-    ul.removeChild(ulDiv);
   });
 }
 
 function getStoredData() {
   return JSON.parse(localStorage.getItem("data")) || [];
-}
-
-function deleteElement(value) {
-  li.remove();
 }
