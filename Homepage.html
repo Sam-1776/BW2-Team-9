@@ -25,305 +25,351 @@
   </head>
   <body class="row text-bg-dark g-0">
     <section id="section-left" class="col-3">
-        <div>
-          <i class="bi bi-three-dots"></i>
+      <div>
+        <i class="bi bi-three-dots"></i>
+      </div>
+      <div class="first-icons">
+        <div class="div-a-i d-flex">
+          <a href=""><i class="bi bi-house-door-fill"></i></a>
+          <p style="margin-top: 8px">Home</p>
         </div>
-        <div class="first-icons">
-          <div class="div-a-i d-flex">
-            <a href=""><i class="bi bi-house-door-fill"></i></a>
-            <p style="margin-top: 8px">Home</p>
-          </div>
-          <div class="div-a-i d-flex">
-            <a href=""><i class="bi bi-search"></i></a>
-            <p style="margin-top: 8px">Cerca</p>
-          </div>
-          <div class="div-a-i d-flex">
-            <a href=""><i class="bi bi-music-note-list"></i></a>
-            <p style="margin-top: 8px">La tua libreria</p>
-          </div>
+        <div class="div-a-i d-flex">
+          <a href=""><i class="bi bi-search"></i></a>
+          <p style="margin-top: 8px">Cerca</p>
         </div>
-        <div class="second-icons">
-          <div class="div-a-i d-flex my-1">
-            <a href="" id="anchor"
-              ><i class="bi bi-plus-square-fill text-white"></i
-            ></a>
-            <p style="margin-top: 8px">Crea playlist</p>
-          </div>
-          <div class="div-input">
-            <input type="text" class="input" placeholder="Create playlist" />
-            <button id="input-button" class="input-button-none">
-              <i class="bi bi-plus"></i>
-            </button>
-          </div>
-          <div class="div-a-i d-flex my-2">
-            <a href=""
-              ><i
-                class="bi bi-suit-heart-fill p-1 text-white px-2"
-                style="
-                  background: rgb(61, 15, 228);
-                  background: linear-gradient(
-                    143deg,
-                    rgba(61, 15, 228, 1) 0%,
-                    rgba(202, 177, 215, 1) 53%
-                  );
-                "
-              ></i
-            ></a>
-            <p>Brani che ti piacciono</p>
-          </div>
-          <div class="div-a-i d-flex">
-            <a href=""
-              ><i
-                class="bi bi-bookmark-fill p-1 px-2 rounded"
-                style="color: #149643; background-color: #004537"
-              ></i
-            ></a>
-            <p>I tuoi episodi</p>
-          </div>
+        <div class="div-a-i d-flex">
+          <a href=""><i class="bi bi-music-note-list"></i></a>
+          <p style="margin-top: 8px">La tua libreria</p>
         </div>
-        <hr />
-        <div id="playlist">
-          <ul id="ul"></ul>
+      </div>
+      <div class="second-icons">
+        <div class="div-a-i d-flex my-1">
+          <a href="" id="anchor"
+            ><i class="bi bi-plus-square-fill text-white"></i
+          ></a>
+          <p style="margin-top: 8px">Crea playlist</p>
         </div>
-      </section>
+        <div class="div-input">
+          <input type="text" class="input" placeholder="Create playlist" />
+          <button id="input-button" class="input-button-none">
+            <i class="bi bi-plus"></i>
+          </button>
+        </div>
+        <div class="div-a-i d-flex my-2">
+          <a href=""
+            ><i
+              class="bi bi-suit-heart-fill p-1 text-white px-2"
+              style="
+                background: rgb(61, 15, 228);
+                background: linear-gradient(
+                  143deg,
+                  rgba(61, 15, 228, 1) 0%,
+                  rgba(202, 177, 215, 1) 53%
+                );
+              "
+            ></i
+          ></a>
+          <p>Brani che ti piacciono</p>
+        </div>
+        <div class="div-a-i d-flex">
+          <a href=""
+            ><i
+              class="bi bi-bookmark-fill p-1 px-2 rounded"
+              style="color: #149643; background-color: #004537"
+            ></i
+          ></a>
+          <p>I tuoi episodi</p>
+        </div>
+      </div>
+      <hr />
+      <div id="playlist">
+        <ul id="ul"></ul>
+      </div>
+    </section>
     <main id="mainAside" class="col-9">
-        <div class="d-flex justify-content-between mt-3 align-items-center">
-            <div id="navInfo">
-                <button class="btn btn-dark rounded-circle active me-2"><i class="bi bi-chevron-left"></i></button>
-                <button class="btn btn-dark rounded-circle"><i class="bi bi-chevron-right"></i></button>
-            </div>
-            <div>
-                <button class="btn btn-dark rounded-circle"><i class="bi bi-bell"></i></button>
-                <button class="btn btn-dark rounded-circle"><i class="bi bi-people" id="friends"></i></button>
-                <button class="btn btn-dark rounded-circle"><i class="bi bi-person"></i></button>
-            </div>
+      <div
+        class="d-flex justify-content-between pt-3 align-items-center text-bg-dark"
+        id="header"
+      >
+        <div id="navInfo">
+          <button class="btn btn-dark rounded-circle active me-2">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="btn btn-dark rounded-circle">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
-      <section1 class="mb-3">
-        <h2 class="text-white">Contenuti di Oggi</h2>
-        <div id="cards">
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-1.jpg" alt="" />
-              <img src="./assets/imgs/main/image-2.jpg" alt="" />
-              <img src="./assets/imgs/main/image-3.jpg" alt="" />
-              <img src="./assets/imgs/main/image-4.jpg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-5.jpg" alt="" />
-              <img src="./assets/imgs/main/image-6.jpg" alt="" />
-              <img src="./assets/imgs/main/image-7.jpg" alt="" />
-              <img src="./assets/imgs/main/image-8.jpg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-9.jpg" alt="" />
-              <img src="./assets/imgs/main/image-10.jpg" alt="" />
-              <img src="./assets/imgs/main/image-11.jpg" alt="" />
-              <img src="./assets/imgs/main/image-12.jpg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-13.jpg" alt="" />
-              <img src="./assets/imgs/main/image-14.jpg" alt="" />
-              <img src="./assets/imgs/main/image-15.jpg" alt="" />
-              <img src="./assets/imgs/main/image-16.jpg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-17.jpg" alt="" />
-              <img src="./assets/imgs/main/image-18.jpg" alt="" />
-              <img src="./assets/imgs/main/image-19.jpg" alt="" />
-              <img src="./assets/imgs/search/image-1.jpeg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/search/image-2.jpg" alt="" />
-              <img src="./assets/imgs/search/image-3.jpg" alt="" />
-              <img src="./assets/imgs/search/image-4.jpg" alt="" />
-              <img src="./assets/imgs/search/image-5.jpg" alt="" />
-            </div>
-            <div id="textContainer" class="bg-secondary text-white">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
+        <div>
+          <button class="btn btn-dark rounded-circle">
+            <i class="bi bi-bell"></i>
+          </button>
+          <button class="btn btn-dark rounded-circle">
+            <i class="bi bi-people" id="friends"></i>
+          </button>
+          <button class="btn btn-dark rounded-circle">
+            <i class="bi bi-person"></i>
+          </button>
         </div>
-      </section1>
-      <section2 id="section2" class="mb-3">
-        <div id="h2-Button-Container">
-          <h2 class="text-white col-auto">Altri Contenuti</h2>
-          <div id="buttonContainer">
-            <button id="buttonSection2">
-              <p class="m-0">Visualizza tutto</p>
+      </div>
+      <div id="section1">
+        <section1 class="container mb-3">
+          <h2 class="text-white">Contenuti di Oggi</h2>
+          <div id="cards">
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/main/image-1.jpg" alt="" />
+                <img src="./assets/imgs/main/image-2.jpg" alt="" />
+                <img src="./assets/imgs/main/image-3.jpg" alt="" />
+                <img src="./assets/imgs/main/image-4.jpg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/main/image-5.jpg" alt="" />
+                <img src="./assets/imgs/main/image-6.jpg" alt="" />
+                <img src="./assets/imgs/main/image-7.jpg" alt="" />
+                <img src="./assets/imgs/main/image-8.jpg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/main/image-9.jpg" alt="" />
+                <img src="./assets/imgs/main/image-10.jpg" alt="" />
+                <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                <img src="./assets/imgs/main/image-12.jpg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/main/image-13.jpg" alt="" />
+                <img src="./assets/imgs/main/image-14.jpg" alt="" />
+                <img src="./assets/imgs/main/image-15.jpg" alt="" />
+                <img src="./assets/imgs/main/image-16.jpg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/main/image-17.jpg" alt="" />
+                <img src="./assets/imgs/main/image-18.jpg" alt="" />
+                <img src="./assets/imgs/main/image-19.jpg" alt="" />
+                <img src="./assets/imgs/search/image-1.jpeg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+            <div id="cardContainer" class="col-4 p-3">
+              <div id="imgCard">
+                <img src="./assets/imgs/search/image-2.jpg" alt="" />
+                <img src="./assets/imgs/search/image-3.jpg" alt="" />
+                <img src="./assets/imgs/search/image-4.jpg" alt="" />
+                <img src="./assets/imgs/search/image-5.jpg" alt="" />
+              </div>
+              <div id="textContainer" class="bg-secondary text-white">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+          </div>
+        </section1>
+      </div>
+      <div id="section2">
+        <section2 class="container mb-3">
+          <div id="h2-Button-Container">
+            <h2 class="text-white col-auto">Altri Contenuti</h2>
+            <div id="buttonContainer">
+              <button id="buttonSection2">
+                <p class="m-0">Visualizza tutto</p>
+              </button>
+            </div>
+          </div>
+          <div id="cards">
+            <div id="col-20">
+              <div class="card bg-secondary text-white">
+                <img
+                  src="./assets/imgs/search/image-6.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Blanditiis, quae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="col-20">
+              <div class="card bg-secondary text-white">
+                <img
+                  src="./assets/imgs/search/image-7.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Blanditiis, quae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="col-20">
+              <div class="card bg-secondary text-white">
+                <img
+                  src="./assets/imgs/search/image-8.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Blanditiis, quae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="col-20">
+              <div class="card bg-secondary text-white">
+                <img
+                  src="./assets/imgs/search/image-39.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Blanditiis, quae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="col-20">
+              <div class="card bg-secondary text-white">
+                <img
+                  src="./assets/imgs/search/image-10.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Blanditiis, quae.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section2>
+      </div>
+    </main>
+    <aside class="d-none">
+      <div id="listen">
+        <div class="d-flex justify-content-between p-2 align-items-center">
+          <h5 class="text-light m-0" style="font-size: 0.8rem">
+            Attività amici
+          </h5>
+          <div class="d-flex">
+            <button
+              class="btn btn-dark rounded-circle p-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              id="add-Friends"
+            >
+              <i class="bi bi-person-add"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark rounded-circle"
+              id="close"
+            >
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
         </div>
-        <div id="cards">
-          <div id="col-20">
-            <div class="card bg-secondary text-white">
-              <img
-                src="./assets/imgs/search/image-6.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+        <div class="p-1">
+          <div class="container p-2">
+            <div class="row justify-content-center g-1">
+              <div class="col-3">
+                <img
+                  id="imageUser"
+                  class="rounded-circle"
+                  src="./assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
+                  alt=""
+                />
               </div>
-            </div>
-          </div>
-          <div id="col-20">
-            <div class="card bg-secondary text-white">
-              <img
-                src="./assets/imgs/search/image-7.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+              <div class="col-7">
+                <div class="text-secondary">
+                  <h5 class="m-0" style="font-size: 0.8rem">Nome amico</h5>
+                  <p style="font-size: 0.7rem" class="m-0">
+                    canzone <span><i class="bi bi-dot"></i></span> nome artista
+                  </p>
+                  <p style="font-size: 0.7rem">
+                    <i class="bi bi-disc"></i> info
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="col-20">
-            <div class="card bg-secondary text-white">
-              <img
-                src="./assets/imgs/search/image-8.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="col-20">
-            <div class="card bg-secondary text-white">
-              <img
-                src="./assets/imgs/search/image-39.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="col-20">
-            <div class="card bg-secondary text-white">
-              <img
-                src="./assets/imgs/search/image-10.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+              <div class="col-2 text-end text-secondary">
+                <p style="font-size: 0.8rem">ore</p>
               </div>
             </div>
           </div>
         </div>
-      </section2>
-    </main>
-    <aside class="translate overflow-hidden d-none ">
-        <div id="listen">
-                    <div class="d-flex justify-content-between p-3">
-                        <h5 class=" text-light">
-                            Attività amici
-                          </h5>
-                          <div>
-                            <button
-                              class="btn btn-dark rounded-circle"
-                              type="button"
-                              id="add-Friends"
-                            >
-                              <i class="bi bi-person-add"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-dark rounded-circle"
-                              id="close">
-                               <i class="bi bi-x-lg"></i>
-                            </button>
-                          </div>
-                    </div>
-                   <div class="p-3">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                              <div class="col-3">
-                                <img id="imageUser"
-                                  class="rounded-circle"
-                                  src="./assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div class="col-6">
-                                <div class="text-secondary">
-                                  <p class="fs-5">Nome amico</p>
-                                  <p style="font-size: 0.8rem">
-                                    canzone <span><i class="bi bi-dot"></i></span> nome artista
-                                  </p>
-                                  <p style="font-size: 0.8rem"><i class="bi bi-disc"></i> info</p>
-                                </div>
-                              </div>
-                              <div class="col-3 text-end text-secondary">
-                                <p style="font-size: 0.8rem">ore</p>
-                              </div>
-                            </div>
-                          </div>
-                   </div>
+      </div>
+
+      <div
+        class="offcanvas offcanvas-end text-light"
+        data-bs-backdrop="static"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header pb-1">
+          <button
+            type="button"
+            class="btn btn-dark rounded-circle"
+            id="back"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
         </div>
-                <section id="sectionAside" class="translate d-none">
-                    <div id="newFriends p-3">
-                        <div style="padding: 16px">
-                          <button type="button" class="btn btn-dark rounded-circle" id="back">
-                            <i class="bi bi-chevron-left"></i>
-                          </button>
-                        </div>
-                        <div style="padding: 16px">
-                            <h5 class="text-light">
-                                Attività amici
-                              </h5>
-                      <div class="d-flex justify-content-between">
-                              <input type="text" class="rounded-pill text-bg-dark border border-ligth" placeholder="inserisci nome amico" style="width: 260px;">
-                              <button class="btn btn-dark rounded-circle"><i class="bi bi-plus-circle"></i></button>
-                      </div>
-                        </div>
-                      </div>
-                </section>
-            </aside>
+        <div class="offcanvas-body pt-1">
+          <div id="newFriends">
+            <div>
+              <h5 class="text-light m-2" style="font-size: 0.8rem">
+                Aggiungi amici
+              </h5>
+              <div class="d-flex justify-content-between">
+                <input
+                  type="text"
+                  class="rounded-pill text-bg-dark border border-ligth"
+                  placeholder="inserisci nome amico"
+                  style="width: 140px"
+                />
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <footer>
       <div class="box">

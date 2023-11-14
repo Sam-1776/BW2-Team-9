@@ -5,6 +5,10 @@ img {
 }
 
 /* SECTION1 */
+#section1{
+  padding-top: 40px;
+  padding-inline: 15px;
+}
 #cards {
     display: flex;
     flex-wrap: wrap;
@@ -41,8 +45,11 @@ border-radius:0 10px 10px 0;
 }
 
 /* SECTION2 */
+#section2{
+  padding-inline: 15px;
+}
 
-section2 #h2-Button-Container {
+#section2 #h2-Button-Container {
 display: flex;
 }
 #h2-Button-Container #buttonContainer {
@@ -67,7 +74,18 @@ padding: 1em;
 #mainAside{
     position: relative;
     height: 100vh;
-   /*  transition: all 1s; */
+    overflow: scroll;
+  }
+  #header{
+    width: 75%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+  }
+  #offcanvasRight{
+    width: 200px;
+    height: calc(100vh - 75px);
+    background-color: #000000;
   }
   .row > .col-6 > .text-secondary > p {
     margin-bottom: 2px;
@@ -80,16 +98,12 @@ padding: 1em;
     width: 100%;
     object-fit: cover;
   }
-  #newFriends {
-    width: 399px;
+  #add-Friends:hover{
+    background-color: transparent;
+    border-color: transparent;
   }
   aside{
     background-color: black;
-  }
-  
-  .translate{
-      transform: translateX(400px);
-    z-index: 999;
   }
 
 
@@ -99,7 +113,6 @@ padding: 1em;
   #section-left {
     background-color: #000000;
     height: 100vh;
-  
     display: flex;
     flex-direction: column;
   }
@@ -215,7 +228,8 @@ padding: 1em;
   }
   
   #playlist {
-    overflow-y: auto;
+    height: calc(100vh - 496.5px);
+    overflow: scroll;
   }
   
   #ul {
@@ -231,10 +245,6 @@ padding: 1em;
 
 
 /* FOOTER */
-
-footer{
-    background-color: black;
-}
 
 .box {
     background-color: rgb(31, 29, 29);
