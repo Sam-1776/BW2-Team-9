@@ -1,7 +1,7 @@
 // BOTTONE "Visualizza tutto"
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
   headers: {
-    "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+    "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 })
@@ -30,7 +30,7 @@ window.onload = () => {
 const carouselDynamic = function () {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
     headers: {
-      "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -46,8 +46,6 @@ const carouselDynamic = function () {
 
   const carouselLoaded = function (carousel) {
     const randomNum = Math.floor(Math.random() * (carousel.data.length - 1));
-
-    const div1 = sfadas;
 
     const randomSong1 = carousel.data[randomNum];
     const randomSong2 = carousel.data[randomNum];
@@ -91,7 +89,7 @@ const carouselDynamic = function () {
 const cardsSongsLoaded = () => {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
     headers: {
-      "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -134,7 +132,7 @@ section2CardsLoaded = function () {
   const card1Loaded = () => {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
       headers: {
-        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -176,7 +174,7 @@ section2CardsLoaded = function () {
   const card2Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=rihanna", {
       headers: {
-        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -217,7 +215,7 @@ section2CardsLoaded = function () {
   const card3Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
       headers: {
-        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -258,7 +256,7 @@ section2CardsLoaded = function () {
   const card4Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=future", {
       headers: {
-        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -299,7 +297,7 @@ section2CardsLoaded = function () {
   const card5Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=akon", {
       headers: {
-        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })

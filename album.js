@@ -7,7 +7,7 @@ if (productId) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + productId, {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -17,13 +17,21 @@ if (productId) {
     })
     .then((data) => {
       console.log("API Response:", data);
+      const div = document.createElement("div");
+      const header = document.getElementById("header-snd");
+      img = document.createElement("img");
+      header.appendChild(div);
+      h1 = document.createElement("h1");
+      header.appendChild(h1);
+      h1.innerText = "ciao";
+      img.src = data.cover_medium;
+      div.appendChild(img);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
 }
 
-//altri js
 const input = document.querySelector(".input");
 const anchor = document.getElementById("anchor");
 const divinput = document.getElementById("div-input");
