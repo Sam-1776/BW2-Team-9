@@ -29,17 +29,14 @@
         <i class="bi bi-three-dots"></i>
       </div>
       <div class="first-icons">
-        <div class="div-a-i d-flex">
-          <a href=""><i class="bi bi-house-door-fill"></i></a>
-          <p style="margin-top: 8px">Home</p>
+        <div class="div-a-i d-flex align-items-center">
+          <a href="./Homepage.html" class="text-decoration-none fs-6 mb-2" ><i class="bi bi-house-door-fill"></i> Home</a>
         </div>
         <div class="div-a-i d-flex">
-          <a href=""><i class="bi bi-search"></i></a>
-          <p style="margin-top: 8px">Cerca</p>
+          <a href="#" class="text-decoration-none fs-6 mb-2" id="search"><i class="bi bi-search"></i> Cerca</a>
         </div>
         <div class="div-a-i d-flex">
-          <a href=""><i class="bi bi-music-note-list"></i></a>
-          <p style="margin-top: 8px">La tua libreria</p>
+          <a href="" class="text-decoration-none fs-6 mb-2"><i class="bi bi-music-note-list"></i> La tua libreria</a>
         </div>
       </div>
       <div class="second-icons">
@@ -91,13 +88,14 @@
         class="d-flex justify-content-between pt-3 align-items-center text-bg-dark"
         id="header"
       >
-        <div id="navInfo">
-          <button class="btn btn-dark rounded-circle active me-2">
+        <div id="navInfo" class="d-flex">
+          <button class="btn btn-dark rounded-circle me-2" id="backHome">
             <i class="bi bi-chevron-left"></i>
           </button>
           <button class="btn btn-dark rounded-circle">
             <i class="bi bi-chevron-right"></i>
           </button>
+          <input type="text" class=" text-bg-dark border border-ligth rounded-pill d-none" placeholder="cosa vuoi ascoltare?" id="barSearch">
         </div>
         <div>
           <button class="btn btn-dark rounded-circle">
@@ -314,6 +312,24 @@
     </div> -->
         </div>
       </section2>
+
+
+      <div id="reSearch" class="d-none">
+        <div class="container">
+          <h4>Sfoglia tutto</h4>
+          <div class="row g-2">
+            <div class="col-6 col-sm-4 col-lg-3">
+              <div class="cardSearch rounded overflow-hidden ">
+                <img src="./assets/imgs/search/image-1.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+
+
+
     </main>
     <aside class="d-none">
       <div id="listen">
@@ -411,6 +427,7 @@
         </div>
       </div>
     </aside>
+
 
     <footer>
       <div class="box">
@@ -537,5 +554,6 @@
     <script src="./bottombar.js"></script>
     <script src="./sideExtra.js"></script>
     <script src="./navbar-left.js"></script>
+    <script src="./Homepage.js"></script>
   </body>
 </html>
