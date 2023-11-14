@@ -56,11 +56,13 @@ const cardsSongsLoaded = () => {
        cards2.innerHTML += `
        <div id="col-20">
        <div class="card h-100 text-bg-dark">
+<a href="./album.html?id=${currentId}">
     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
        <img src="${imgAlbumMedium}" class="card-img-top" alt="...">
        </div>
+       </a>
        <div class="card-body">
-       <p class="card-text"><a href:"./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
+       <p class="card-text"><a href="./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
        </div>
        </div>
        </div>
