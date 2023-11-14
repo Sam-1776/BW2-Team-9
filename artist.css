@@ -1,0 +1,114 @@
+header {
+  background-image: url(./assets/imgs/main/image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 480px;
+}
+
+.div-top {
+  padding: 20px;
+  font-size: 10px;
+}
+
+.heightArtist {
+  height: 57vh;
+}
+.iconWidth {
+  font-size: 35px;
+}
+
+.iconColor {
+  color: #3d91f4;
+}
+
+.titleFontSize {
+  font-size: 100px;
+}
+
+.bi-play-circle-fill {
+  font-size: 70px;
+  color: green;
+}
+main {
+  background-color: #1b1b1b;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 20, 14, 1) 57%,
+    rgb(39, 39, 38) 94%
+  );
+}
+
+.buttonWidth {
+  width: 10%;
+}
+
+.fontSizeFollowing {
+  font-size: 15px;
+}
+
+.dropbtn {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  border: none;
+  bottom: -16px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.spaceLetterDropdown {
+  letter-spacing: 10px;
+}
+
+.imageWidth {
+  width: 20%;
+}
+
+.containerWidth {
+  width: 40%;
+}
+
+.boxWidth {
+  width: 100%;
+}
+.rightBoxWidth {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.spaceWidth {
+  width: 60%;
+}
+
+.favouriteSongs {
+  border-radius: 50%;
+}
+
+.linkColor {
+  color: grey;
+}
