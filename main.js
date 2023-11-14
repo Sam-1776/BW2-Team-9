@@ -49,6 +49,7 @@ const cardsSongsLoaded = () => {
             function cardsSongs (songs) {
                 cards2.innerHTML = "";
                           for( let i = 0; i < 20; i++) {
+                            
                             const imgAlbumMedium = songs.data[i].album.cover_medium;
                             const currentSinger = songs.data[i].artist.name;
                             const currentAlbum = songs.data[i].album.title;
