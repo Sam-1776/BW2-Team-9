@@ -28,7 +28,7 @@ buttonSection2.onclick = function () {
 
 }
 const cardsSongsLoaded = () => {
-    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
+    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
         headers: {
             'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
             'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
@@ -48,20 +48,24 @@ const cardsSongsLoaded = () => {
             
             function cardsSongs (songs) {
                 cards2.innerHTML = "";
-                           songs.data.forEach((song) => {
+                          for( let i = 0; i < 20; i++) {
+                            const imgAlbumMedium = songs.data[i].album.cover_medium;
+                            const currentSinger = songs.data[i].artist.name;
+                            const currentAlbum = songs.data[i].album.title;
+                            const currentId = songs.data[i].id;
        cards2.innerHTML += `
        <div id="col-20">
        <div class="card h-100 text-bg-dark">
     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-       <img src="${song.album.cover_medium}" class="card-img-top" alt="...">
+       <img src="${imgAlbumMedium}" class="card-img-top" alt="...">
        </div>
        <div class="card-body">
-       <p class="card-text">Cantante:${song.artist.name}</br>Canzone:${song.album.title}</p>
+       <p class="card-text"><a href:"./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
        </div>
        </div>
        </div>
        `;
-         })}
+         }}
 }
 
 section2CardsLoaded = function () {
