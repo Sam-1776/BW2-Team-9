@@ -63,10 +63,22 @@ body {
 }
 
 .heart-icon {
-  color: black;
+  color: white;
 }
 
 .heart-icon.green {
+  color: green;
+}
+
+#heartPath {
+  animation: fillHeart 2s ease-in-out;
+}
+
+.random-icon {
+  color: white;
+}
+
+.green {
   color: green;
 }
 
@@ -103,4 +115,43 @@ body {
 }
 .fas.fa-volume-mute:hover {
   color: green;
+}
+
+.rounded-circle {
+  border: radius 75%;
+  height: 25px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  display: none;
+}
+
+.second-dot {
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 6px;
+  display: none;
+}
+
+#counter {
+  text-decoration: none;
+  width: 7px;
+  height: 1px;
+  font-size: 11px;
+  color: green;
+  position: absolute;
+  top: 15px;
+  right: 6px;
+  display: none;
 }

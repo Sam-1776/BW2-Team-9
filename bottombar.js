@@ -31,3 +31,72 @@ function toggleOnOff() {
   }
   isTheVolumeUp = !isTheVolumeUp;
 }
+
+let link = document.getElementById("myLink");
+let icon = document.getElementById("myIcon");
+let isIconGreen = false;
+
+link.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  icon.classList.toggle("green", !isIconGreen);
+  isIconGreen = !isIconGreen;
+});
+
+let loopLink = document.getElementById("loopLink");
+let loopIcon = document.getElementById("loopIcon");
+let isLoopIconGreen = false;
+
+loopLink.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  loopIcon.classList.toggle("green", !isLoopIconGreen);
+  isLoopIconGreen = !isLoopIconGreen;
+});
+
+let dotLink = document.getElementById("myLink");
+let dotIcon = document.getElementById("myIcon");
+let dot = document.getElementById("dot");
+let isTheDotThere = false;
+
+dotLink.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  dotIcon.classList.toggle("green", !isTheDotThere);
+
+  if (!dot) {
+    dot = document.createElement("div");
+    dot.className = "dot";
+    document.body.appendChild(dot);
+  }
+
+  dot.style.display = isTheDotThere ? "none" : "block";
+
+  isTheDotThere = !isTheDotThere;
+});
+
+let dotLoopLink = document.getElementById("loopLink");
+let dotLoopIcon = document.getElementById("loopIcon");
+let dotLoop = document.getElementById("secondDot");
+let counter = document.getElementById("counter");
+let clickCount = 0;
+
+dotLoopLink.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  if (clickCount % 4 === 0) {
+    dotLoopIcon.classList.remove("green");
+  } else {
+    dotLoopIcon.classList.add("green");
+  }
+  dotLoop.style.display = clickCount % 4 === 1 ? "block" : "none";
+  counter.style.display = clickCount % 4 === 2 ? "block" : "none";
+
+  if (clickCount % 4 === 2) {
+    counter.textContent = "1";
+  } else {
+    counter.textContent = "";
+  }
+
+  clickCount = (clickCount + 1) % 4;
+});

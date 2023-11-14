@@ -36,25 +36,35 @@
             class="heart-icon"
             id="heartIcon"
             onclick="toggleHeartIcon()"
-            ><i class="fas fa-heart ms-3"></i
-          ></a>
+            ><i class="far fa-heart"></i>
+          </a>
         </div>
         <div class="col-4 text-white">
-          <div class="d-flex justify-content-center">
-            <div>
-              <a href=""> <i class="fas fa-random fontIcon"></i></a>
-              <a href=""><i class="fas fa-step-backward fontIcon ms-3"></i></a>
+          <div class="d-flex justify-content-center align-items-center">
+            <a href="#" class="random-icon position-relative" id="myLink">
+              <i class="fas fa-random fontIcon" id="myIcon"></i>
+              <div class="dot" id="dot"></div>
+            </a>
+            <a href=""
+              ><i class="fas fa-step-backward fontIcon ms-2 me-2"></i
+            ></a>
 
-              <button class="btn" onclick="togglePlayPause()">
-                <i
-                  class="fas fa-play-circle play-icon fontIconPlay ms-3"
-                  id="playIcon"
-                ></i>
-              </button>
+            <button
+              class="btn p-0 rounded-circle border-none"
+              onclick="togglePlayPause()"
+            >
+              <i
+                class="fas fa-play-circle play-icon fontIconPlay"
+                id="playIcon"
+              ></i>
+            </button>
 
-              <a href=""><i class="fas fa-step-forward fontIcon ms-3"></i></a>
-              <a href=""><i class="fas fa-retweet fontIcon ms-3"></i></a>
-            </div>
+            <a href=""><i class="fas fa-step-forward fontIcon ms-2"></i></a>
+            <a href="#" id="loopLink" class="position-relative"
+              ><i class="fas fa-retweet fontIcon ms-2" id="loopIcon"></i>
+              <div class="second-dot" id="secondDot"></div>
+              <div id="counter">1</div>
+            </a>
           </div>
           <div class="d-flex align-items-center">
             <h5 class="fontSizeNumber me-2">0:58</h5>
