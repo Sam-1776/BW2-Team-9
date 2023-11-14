@@ -147,13 +147,12 @@ const cardsSongsLoaded = () => {
                            songs.data.forEach((song) => {
        cards2.innerHTML += `
        <div id="col-20">
-       <div class="card h-100 text-bg-secondary" style="border:1px solid #181818;">
-    <div class="card-img-top w-100 object-fit-cover bg-dark p-3 shadow-sm w-25">
+       <div class="card h-100 text-bg-dark">
+    <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
        <img src="${song.album.cover_medium}" class="card-img-top" alt="...">
        </div>
-       <div class="card-body text-bg-dark">
-       <p class="card-text">Cantante: ${song.artist.name}</p>
-       <p class="card-text">Canzone: ${song.album.title}</p>
+       <div class="card-body">
+       <p class="card-text">Cantante:${song.artist.name}</br>Canzone:${song.album.title}</p>
        </div>
        </div>
        </div>
