@@ -60,7 +60,7 @@ const cardsSongsLoaded = () => {
        <img src="${imgAlbumMedium}" class="card-img-top" alt="...">
        </div>
        <div class="card-body">
-       <p class="card-text"><a href:"./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
+       <p class="card-text"><a href="./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
        </div>
        </div>
        </div>
