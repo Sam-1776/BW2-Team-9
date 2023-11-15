@@ -24,7 +24,6 @@ search.onclick = () => {
 };
 
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
-const ricerca = document.querySelector("#ricerca")
 
 barInput.onchange = () => {
   const query = barInput.value;
