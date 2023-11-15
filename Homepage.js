@@ -295,6 +295,7 @@ function convertiSecondiInMinuti(secondi) {
 window.onload = ()=>{
   laodPage()
   headerloaded();
+  
 }
 
 const laodPage = ()=>{
@@ -361,7 +362,7 @@ const randomText = containerText[randomPosition]
                <div class="d-flex col-md-auto flex-column justify-content-center" id="textAndButton-Container">
                  <div>
                  <h5>${currentTitle}</h5>
-                 <h1 class="display-1">${currentPlayed}</h1>
+                 <h1 class="display-4">${currentPlayed}</h1>
                  <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
                  <p class="h4">${randomText}</p>
                  <div>
@@ -383,9 +384,15 @@ const randomText = containerText[randomPosition]
   advertismentLoading();
 
 };
-
-
-
+const cardColor = document.getElementById("cardColor")
+const cardSearchTot = 52;
+for (let index = 0; index < cardSearchTot; index++) {
+  let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
+  randomColor = `#${randomColor.padStart(6, "0")}`
+ 
+ cardColor.style.backgroundColor = `${randomColor}`
+ 
+}
 
 
 
