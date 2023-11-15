@@ -20,6 +20,9 @@ console.log(card);
 card.forEach(element => {
   element.onclick = (element) =>{
     const txt = element.srcElement.children[0].innerText
+    console.log(element);
+    console.log(element.srcElement);
+    console.log(element.srcElement.children[0]);
     console.log(element.srcElement.children[0].innerText);
     console.log(txt);
     made(txt)
@@ -50,6 +53,7 @@ barInput.onchange = () => {
       console.log(Obj);
       Artist(Obj);
       Brani(Obj);
+      generateNewC(Obj, "Songs")
     })
     .catch((err) => console.log(err));
 };
@@ -165,7 +169,7 @@ const made = (x) =>{
     .then((resp) => resp.json())
     .then((Obj) => {
       console.log(Obj);
-      generateNewC(Obj, x)
+      generateNewC(Obj, x,)
     })
     .catch((err) => console.log(err));
 }
@@ -185,7 +189,6 @@ const generateNewC = (x, str) =>{
     col.className = "col-3 mb-3"
     const card = document.createElement("div")
     card.className = "card "
-   /*  card.style = "height: 200px" */
     card.style ="background-color: #212529 "
     const divF =document.createElement("div")
     divF.className = "d-flex justify-content-center align-items-center card-img-top mt-3"
@@ -225,5 +228,15 @@ const generateNewC = (x, str) =>{
 
   container.appendChild(h2)
   container.appendChild(row)
+}
+
+
+const saluto = document.getElementById("saluto")
+const ore = new Date().getHours()
+console.log(ore);
+if (ore >= 12) {
+  saluto.innerHTML = "Buonasera"
+} else {
+  saluto.innerHTML = "Buongiorno"
 }
 
