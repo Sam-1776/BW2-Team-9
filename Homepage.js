@@ -3,6 +3,7 @@ console.log(search);
 const buttonB = document.getElementById("backHome");
 const barInput = document.getElementById("barSearch");
 const newSection = document.getElementById("reSearch");
+const ricerca = document.getElementById("ricerca")
 
 search.onclick = () => {
   const section1 = document.querySelector("section1");
@@ -18,6 +19,7 @@ search.onclick = () => {
     window.location.assign("./Homepage.html");
     barInput.classList.add("d-none");
     newSection.classList.add("d-none");
+    ricerca.classList.add("d-none");
   };
 };
 
@@ -25,7 +27,7 @@ const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
 
 barInput.onchange = () => {
   const query = barInput.value;
-
+  ricerca.classList.remove("d-none")
   fetch(URL + query, {
     headers: {
       "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
