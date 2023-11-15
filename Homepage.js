@@ -20,6 +20,9 @@ console.log(card);
 card.forEach(element => {
   element.onclick = (element) =>{
     const txt = element.srcElement.children[0].innerText
+    console.log(element);
+    console.log(element.srcElement);
+    console.log(element.srcElement.children[0]);
     console.log(element.srcElement.children[0].innerText);
     console.log(txt);
     made(txt)
@@ -50,11 +53,15 @@ barInput.onchange = () => {
       console.log(Obj);
       Artist(Obj);
       Brani(Obj);
+      generateNewC(Obj, "Songs")
     })
     .catch((err) => console.log(err));
 };
 
 const container = document.querySelector("#searchQ")
+
+/* Creazione Card info artista */
+
 const Artist = (x) => {
   newSection.classList.add("d-none");
   const row = document.createElement("div");
@@ -95,9 +102,11 @@ const Artist = (x) => {
 };
 
 
+/* Creazione card right brani */
+
 const Brani = (x) =>{
   const row = document.createElement("div");
-  row.className = "col-6"
+  row.className = "col-7"
   const divT = document.createElement("div");
   divT.className = "mb-3"
   const h4 = document.createElement("h4")
@@ -117,6 +126,7 @@ const Brani = (x) =>{
     img.src = x.data[j].album.cover_small
     img.className = "rounded me-2"
     img.style = "width: 46px; height:46px"
+    img.onclick = () => startPlayer(x.data[j])
     const a = document.createElement("a");
     const an = document.createElement("a");
     const h5 = document.createElement("h5")
@@ -124,7 +134,7 @@ const Brani = (x) =>{
     h5.className = "m-0"
     const p = document.createElement("p")
     p.className = "m-0"
-    p.innerHTML =  x.data[j].duration
+    p.innerHTML = convertiSecondiInMinuti(x.data[j].duration)
     const span = document.createElement("span")
     span.innerHTML = x.data[j].artist.name
 
@@ -165,11 +175,13 @@ const made = (x) =>{
     .then((resp) => resp.json())
     .then((Obj) => {
       console.log(Obj);
-      generateNewC(Obj, x)
+      generateNewC(Obj, x,)
     })
     .catch((err) => console.log(err));
 }
 
+
+/* Creazioni card song */
 
 const generateNewC = (x, str) =>{
   console.log(str);
@@ -185,7 +197,6 @@ const generateNewC = (x, str) =>{
     col.className = "col-3 mb-3"
     const card = document.createElement("div")
     card.className = "card "
-   /*  card.style = "height: 200px" */
     card.style ="background-color: #212529 "
     const divF =document.createElement("div")
     divF.className = "d-flex justify-content-center align-items-center card-img-top mt-3"
@@ -194,6 +205,7 @@ const generateNewC = (x, str) =>{
     img.className = "card-img-top rounded shadow img-fluid"
     img.src = x.data[i].album.cover_medium
     img.style = "width: 100%"
+    img.onclick = () => startPlayer(x.data[i])
     const body = document.createElement("div")
     body.className = "card-body"
     const aA = document.createElement("a")
@@ -227,3 +239,70 @@ const generateNewC = (x, str) =>{
   container.appendChild(row)
 }
 
+
+const saluto = document.getElementById("saluto")
+const ore = new Date().getHours()
+console.log(ore);
+if (ore >= 12) {
+  saluto.innerHTML = "Buonasera"
+} else {
+  saluto.innerHTML = "Buongiorno"
+}
+
+
+/* Dati sul footer */
+
+const footer = document.querySelector("footer")
+console.log(footer);
+const startPlayer = (y) =>{
+  console.log(y);
+  footer.classList.remove("d-none")
+  const img = document.querySelector(".left-part-img")
+  console.log(img);
+  img.src = y.album.cover_small
+  const h3 = document.querySelector(".leftPart-h3")
+  h3.innerHTML = y.title
+  h3.onclick = () =>{
+    window.location.assign("./album.html?id=" + y.album.id)
+  }
+  const h5 = document.querySelector(".leftPart-h5")
+  h5.innerHTML = y.artist.name
+  h5.onclick = () =>{
+    window.location.assign("./album.html?id=" + y.artist.id)
+  }
+  const time = document.querySelector("#time")
+  time.innerHTML = convertiSecondiInMinuti(y.duration)
+
+  const main = document.getElementById("mainAside")
+  main.style = "height: calc(100vh - 60px)"
+  const barLeft = document.getElementById("playlist")
+  barLeft.style = " height: calc(100vh - 416.5px)"
+  localStorage.setItem("info", JSON.stringify(y));
+}
+
+
+
+function convertiSecondiInMinuti(secondi) {
+  const minuti = Math.floor(secondi / 60);
+  const secondiResidui = secondi % 60;
+
+  const secondoFormattato =
+    secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
+
+  return minuti + ":" + secondoFormattato;
+}
+
+window.onload = ()=>{
+  laodPage()
+}
+
+const laodPage = ()=>{
+  const item = JSON.parse(localStorage.getItem("info"));
+  console.log(item);
+  if (item) {
+    startPlayer(item)
+  }
+}
+
+
+/* localStorage.removeItem("info") */

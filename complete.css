@@ -34,8 +34,9 @@ section2 #h2-Button-Container {
 /* ASIDE RIGHT */
 #mainAside {
   position: relative;
-  height: calc(100vh - 60px);
-  overflow: auto;
+  /* height: calc(100vh - 60px); */
+  height: 100vh;
+  overflow: scroll;
   background-color: #121212;
 }
 
@@ -87,9 +88,9 @@ aside {
   cursor: pointer;
 }
 
-.cardSearch:hover{
+/* .cardSearch:hover{
   
-}
+} */
 .cardSearch > img {
   position: absolute;
   width: 60%;
@@ -218,7 +219,7 @@ hr {
 }
 
 #playlist {
-  height: calc(100vh - 416.5px);
+  /* height: calc(100vh - 416.5px); */
   overflow: auto;
 }
 
@@ -256,7 +257,8 @@ hr {
 
 .left-part-img {
   border-radius: 10px;
-  width: 50px;
+  width: 56px;
+  aspect-ratio: 1/1;
 }
 
 .leftPart {
@@ -269,13 +271,13 @@ hr {
 
 .leftPart-h3 {
   margin: 0;
-  font-weight: bold;
-  font-size: 10px;
+  font-weight: normal;
+  font-size:  1.2rem;
 }
 .leftPart-h5 {
   margin-bottom: 0;
   color: grey;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .far.fa-heart {
