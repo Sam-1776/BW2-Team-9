@@ -28,67 +28,7 @@ buttonSection2.onclick = function () {
 }
 }
 
-const carouselDynamic = function () {
-  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
-    headers: {
-        'X-RapidAPI-Key': '971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c',
-        'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
-    }
-})
-.then(resp => {
-    console.log(resp)
-    return  resp.json() }) 
-    .then(song => {
-      carouselLoaded(song)
-        console.log(song);
-        })
-    .catch(err =>
-        console.error(err.message)
-        )
 
-     const carouselLoaded = function (carousel) {
-      const randomNum = Math.floor(Math.random() * (carousel.data.length - 1));
-
-      const div1 = sfadas;
-
-                   const randomSong1 = carousel.data[randomNum];
-                   const randomSong2 = carousel.data[randomNum];
-                   const randomSong3 = carousel.data[randomNum];
-                  const currentCoverAlbum1 = randomSong1.album.cover_medium;
-                   const currentCoverAlbum2 = randomSong2.album.cover_medium;
-                   const currentCoverAlbum3 = randomSong3.album.cover_medium;
-                   const currentTitle1 = randomSong1.title;
-                   const currentTitle2 = randomSong2.title;
-                   const currentTitle3 = randomSong3.title;
-                   const currentArtist1 = randomSong1.artist.name;
-                   const currentArtist2 = randomSong2.artist.name;
-                   const currentArtist3 = randomSong3.artist.name;
-                
-// header.innerHTML =`
-//                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-//         <div class="carousel-inner">
-//           <div class="carousel-item active">
-//             <img class="d-block w-100" src="${currentCoverAlbum1}" alt="First slide">
-//           </div>
-//           <div class="carousel-item">
-//             <img class="d-block w-100" src="${currentCoverAlbum2}" alt="Second slide">
-//           </div>
-//           <div class="carousel-item">
-//             <img class="d-block w-100" src="${currentCoverAlbum3}" alt="Third slide">
-//           </div>
-//         </div>
-//         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-//           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-//           <span class="sr-only">Previous</span>
-//         </a>
-//         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-//           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-//           <span class="sr-only">Next</span>
-//         </a>
-//       </div>
-//                   `
-     }
-}
 
 const cardsSongsLoaded = () => {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
@@ -280,11 +220,7 @@ section2CardsLoaded = function () {
                    `
          }
         }
-        card5Loaded()
-         card4Loaded()
-         card3Loaded()
-         card2Loaded()
-         card1Loaded()   
+         cardsLoaded()   
         }
     
    
