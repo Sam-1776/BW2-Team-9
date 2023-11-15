@@ -7,7 +7,7 @@ if (productId) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + productId, {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+      "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -44,6 +44,15 @@ if (productId) {
       divTotal.appendChild(div);
       divTotal.appendChild(divText);
       divTotal.className = "album-header";
+      const ol = document.getElementById("ol");
+
+      data.tracks.data.forEach((song) => {
+        console.log(song);
+        const li = document.createElement("li");
+        li.innerText = song.title;
+        ol.appendChild(li);
+        li.className = "li-track";
+      });
     })
     .catch((error) => {
       console.error("Error fetching data:", error);

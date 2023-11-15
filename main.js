@@ -1,7 +1,7 @@
 // BOTTONE "Visualizza tutto"
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
   headers: {
-    "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+    "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 })
@@ -30,7 +30,7 @@ window.onload = () => {
 const carouselDynamic = function () {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
     headers: {
-      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+      "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -89,7 +89,7 @@ const carouselDynamic = function () {
 const cardsSongsLoaded = () => {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
     headers: {
-      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+      "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -132,7 +132,7 @@ section2CardsLoaded = function () {
   const card1Loaded = () => {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
       headers: {
-        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+        "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -174,7 +174,7 @@ section2CardsLoaded = function () {
   const card2Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=rihanna", {
       headers: {
-        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+        "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -215,7 +215,7 @@ section2CardsLoaded = function () {
   const card3Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=tyga", {
       headers: {
-        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+        "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -256,7 +256,7 @@ section2CardsLoaded = function () {
   const card4Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=future", {
       headers: {
-        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+        "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })
@@ -297,7 +297,7 @@ section2CardsLoaded = function () {
   const card5Loaded = function () {
     fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=akon", {
       headers: {
-        "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+        "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
         "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
       },
     })

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 header {
   background-color: #bebe34;
   height: 330px;
@@ -9,7 +11,6 @@ header {
 }
 
 .main-page-album {
-  height: 62vh;
   background: rgb(20, 20, 14);
   background: linear-gradient(
     0deg,
@@ -55,11 +56,34 @@ header {
 }
 
 .div-text > h1 {
-  font-weight: bold;
-  font-size: 100px;
-  font-family: italic;
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: "Archivo Black", sans-serif;
 }
 
 .div-text p {
   font-size: 20px;
+}
+
+.tracklist {
+  width: 500px;
+}
+
+.li-track {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  margin-right: 0.5em;
 }
