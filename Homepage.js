@@ -294,6 +294,7 @@ function convertiSecondiInMinuti(secondi) {
 
 window.onload = ()=>{
   laodPage()
+  headerloaded();
 }
 
 const laodPage = ()=>{
@@ -306,3 +307,89 @@ const laodPage = ()=>{
 
 
 /* localStorage.removeItem("info") */
+
+
+
+
+
+
+
+
+
+
+// DIV HEADER 
+const advertisementContainer = document.querySelector("#advertisementContainer");
+const headerloaded = function () {
+  const advertismentLoading = () => {
+    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
+      headers: {
+        "X-RapidAPI-Key": "971f3683c1mshd0d96937de5880fp110e78jsn1242e8b2381c",
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    })
+    .then(resp => {
+        console.log(resp)
+        return  resp.json() }) 
+        .then(song => {
+            currentPlaylist(song)
+            console.log(song);
+            
+        })
+        .catch(err =>
+            console.error(err.message)
+            )
+            
+            function currentPlaylist(current) {
+            console.log(current);
+                const randomNum = Math.floor(Math.random() * (current.data.length - 1));
+          const randomSong = current.data[randomNum];
+               const currentCoverAlbum = randomSong.album.cover_medium;
+               const currentTitle = randomSong.title;
+               const currentPlayed = randomSong.album.title;
+               const currentArtist = randomSong.artist.name;
+               const currentAlbumId = randomSong.album.id;
+               const currentArtistId = randomSong.artist.id;
+               const containerText = ["Canzone del momento", "Ascolta di nuovo", "Ascoltato recentemente"];
+               const randomPosition = Math.floor(Math.random() * (containerText.length));
+const randomText = containerText[randomPosition]
+
+               advertisementContainer.innerHTML +=`
+               <div class="col-12 d-flex flex-column flex-md-row p-3 rounded" id="advertisementContainer">
+               <div class="col-md-2 col-12 me-3 py-5">
+                 <img src="${currentCoverAlbum}" alt="" class="img-fluid">
+               </div>
+               <div class="d-flex flex-column justify-content-between" id="textAndButton-Container">
+                 <div>
+                 <h5>${currentTitle}</h5>
+                 <h1 class="display-1">${currentPlayed}</h1>
+                 <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
+                 <p class="h4">${randomText}</p>
+               </div>
+               <div>
+               <button class="btn btn-success me-5 px-4" id="play" type="
+               button">PLAY</button>
+               <button class="btn btn-light px-4" id="save" type="
+               button">SALVA</button>
+</div>
+               </div>
+                     </div>
+               `;
+               const play = document.getElementById("play");
+
+               play.onclick =() => startPlayer(randomSong);
+    }
+
+  };
+  advertismentLoading();
+
+};
+
+
+
+
+
+
+
+
+
+
