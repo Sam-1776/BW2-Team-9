@@ -6,8 +6,8 @@ const newSection = document.getElementById("reSearch");
 const ricerca = document.getElementById("ricerca")
 
 search.onclick = () => {
-  const section1 = document.querySelector("section1");
-  const section2 = document.querySelector("section2");
+  const section1 = document.querySelector("#section1");
+  const section2 = document.querySelector("#section2");
   newSection.classList.remove("d-none");
   barInput.classList.remove("d-none");
   console.log(section1);
@@ -15,6 +15,16 @@ search.onclick = () => {
   section1.classList.add("d-none");
   section2.classList.add("d-none");
   buttonB.classList.add("active");
+  const card = document.querySelectorAll(".cardSearch")
+console.log(card);
+card.forEach(element => {
+  element.onclick = (element) =>{
+    const txt = element.srcElement.children[0].innerText
+    console.log(element.srcElement.children[0].innerText);
+    console.log(txt);
+    made(txt)
+  }
+});
   buttonB.onclick = () => {
     window.location.assign("./Homepage.html");
     barInput.classList.add("d-none");
@@ -24,13 +34,14 @@ search.onclick = () => {
 };
 
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
+const Key = "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61"
 
 barInput.onchange = () => {
   const query = barInput.value;
   ricerca.classList.remove("d-none")
   fetch(URL + query, {
     headers: {
-      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+      "X-RapidAPI-Key": Key,
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -142,3 +153,77 @@ const Brani = (x) =>{
   
   container.appendChild(row)
 }
+
+const made = (x) =>{
+  console.log(x);
+  fetch(URL + x, {
+    headers: {
+      "X-RapidAPI-Key": Key,
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  })
+    .then((resp) => resp.json())
+    .then((Obj) => {
+      console.log(Obj);
+      generateNewC(Obj, x)
+    })
+    .catch((err) => console.log(err));
+}
+
+
+const generateNewC = (x, str) =>{
+  console.log(str);
+  newSection.classList.add("d-none");
+  const container = document.getElementById("searchC")
+  const row = document.createElement("div")
+  row.className = "row"
+  const h2 = document.createElement("h2")
+  h2.innerText = str
+  h2.className = "fs-1 mb-4"
+  for (let i = 0; i < 16; i++) {
+    const col = document.createElement("div")
+    col.className = "col-3 mb-3"
+    const card = document.createElement("div")
+    card.className = "card "
+   /*  card.style = "height: 200px" */
+    card.style ="background-color: #212529 "
+    const divF =document.createElement("div")
+    divF.className = "d-flex justify-content-center align-items-center card-img-top mt-3"
+    divF.style = "width: 80%; margin: auto"
+    const img = document.createElement("img")
+    img.className = "card-img-top rounded shadow img-fluid"
+    img.src = x.data[i].album.cover_medium
+    img.style = "width: 100%"
+    const body = document.createElement("div")
+    body.className = "card-body"
+    const aA = document.createElement("a")
+    aA.onclick = () =>{
+      window.location.assign("./album.html?id=" + x.data[i].album.id)
+    }
+    const h5 = document.createElement("h5")
+    h5.className = "card-title text-light"
+    h5.innerText = x.data[i].title
+    const aArt = document.createElement("a")
+    aArt.onclick = () =>{
+      window.location.assign("./artist.html?id=" + x.data[i].artist.id)
+    }
+    const p = document.createElement("p")
+    p.className = "card-text text-light"
+    p.innerText = x.data[i].artist.name
+
+    aArt.appendChild(p)
+    aA.appendChild(h5)
+    body.appendChild(aA)
+    body.appendChild(aArt)
+    divF.appendChild(img)
+    card.appendChild(divF)
+    card.appendChild(body)
+    col.appendChild(card)
+    row.appendChild(col)
+
+  }
+
+  container.appendChild(h2)
+  container.appendChild(row)
+}
+
