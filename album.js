@@ -19,13 +19,31 @@ if (productId) {
       console.log("API Response:", data);
       const div = document.createElement("div");
       const header = document.getElementById("header-snd");
-      img = document.createElement("img");
-      header.appendChild(div);
+      const img = document.createElement("img");
+
+      const divText = document.createElement("div");
+      const h5 = document.createElement("h5");
+      divText.appendChild(h5);
+      h5.innerText = "ALBUM";
+      albumP = document.createElement("p");
+      albumP.innerText = data.artist.name + data.nb_traks;
+
       h1 = document.createElement("h1");
-      header.appendChild(h1);
-      h1.innerText = "ciao";
+      h1.innerText = data.title;
+
       img.src = data.cover_medium;
       div.appendChild(img);
+      img.className = "img-album";
+      div.className = "div-album";
+      divText.appendChild(h1);
+      divText.appendChild(albumP);
+      divText.className("div-text");
+
+      const divTotal = document.createElement("div");
+      header.appendChild(divTotal);
+      divTotal.appendChild(div);
+      divTotal.appendChild(divText);
+      divTotal.className = "album-header";
     })
     .catch((error) => {
       console.error("Error fetching data:", error);

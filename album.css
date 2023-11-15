@@ -1,6 +1,6 @@
 header {
   background-color: #bebe34;
-  height: 252px;
+  height: 330px;
 }
 
 .div-top {
@@ -9,7 +9,7 @@ header {
 }
 
 .main-page-album {
-  height: 71vh;
+  height: 65vh;
   background: rgb(20, 20, 14);
   background: linear-gradient(
     0deg,
@@ -26,4 +26,25 @@ header {
 .bi-play-circle-fill {
   font-size: 70px;
   color: green;
+}
+
+.img-album {
+  width: 200px;
+  object-fit: cover;
+}
+
+.div-album {
+  display: flex;
+  justify-content: center;
+}
+
+.album-header {
+  display: flex;
+  align-items: center;
+}
+
+.div-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
