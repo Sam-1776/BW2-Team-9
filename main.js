@@ -112,11 +112,11 @@ const cardsSongsLoaded = () => {
                             const currentAlbum = songs.data[i].album.title;
                             const currentId = songs.data[i].album.id;
        cards2.innerHTML += `
-       <div class="col-md-auto col-12">
+       <div class="p-2 col-md-3 col-12" >
        <div class="card h-100 text-bg-dark">
 <a href="./album.html?id=${currentId}">
-    <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-       <img src="${imgAlbumMedium}" class="card-img-top" alt="...">
+    <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+       <img src="${imgAlbumMedium}" class="card-img-top img-fluid" alt="...">
        </div>
        </a>
        <div class="card-body">
@@ -145,7 +145,6 @@ section2CardsLoaded = function () {
                 current2Song(song)
                 current3Song(song)
                 current4Song(song)
-                current5Song(song)
                 console.log(song);
                 
             })
@@ -162,11 +161,11 @@ section2CardsLoaded = function () {
                    const currentId = randomSong.album.id;
                    
                    cards1.innerHTML +=`
-                   <div class="col-md-auto col-12">
+                   <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
                    <a href="./currentAlbum.html?id=${currentId}">
-                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
@@ -186,11 +185,11 @@ section2CardsLoaded = function () {
                    const currentId = randomSong.album.id;
                    
                    cards1.innerHTML +=`
-                   <div class="col-md-auto col-12">
+                   <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
                    <a href="./currentAlbum.html?id=${currentId}">
-                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
@@ -210,11 +209,11 @@ section2CardsLoaded = function () {
                    const currentId = randomSong.album.id;
                    
                    cards1.innerHTML +=`
-                   <div class="col-md-auto col-12">
+                   <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
                    <a href="./currentAlbum.html?id=${currentId}">
-                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
@@ -234,11 +233,11 @@ section2CardsLoaded = function () {
                    const currentId = randomSong.album.id;
                    
                    cards1.innerHTML +=`
-                   <div class="col-md-auto col-12">
+                   <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
                    <a href="./currentAlbum.html?id=${currentId}">
-                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
+                     <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+                       <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
@@ -247,32 +246,13 @@ section2CardsLoaded = function () {
                        </div>
                      </div>
                    </div> 
-                   `;
+                   `
     }
-                function current5Song (songs) {
-                    const randomNum = Math.floor(Math.random() * (songs.data.length - 1));
-                   const randomSong = songs.data[randomNum];
-                   const currentCoverAlbum = randomSong.album.cover_medium;
-                   const currentTitle = randomSong.title;
-                   const currentArtist = randomSong.artist.name;
-                   const currentId = randomSong.album.id;
-                   
-                   cards1.innerHTML +=`
-                   <div class="col-md-auto col-12">
-                   <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
-                   <a href="./currentAlbum.html?id=${currentId}">
-                     <div class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25">
-                       <img src="${currentCoverAlbum}" class="card-img-top" alt="...">
-                     </div>
-                     </a>
-                       <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
-                         <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
-                       </div>
-                     </div>
-                   </div> 
-                   `;
-    }
-  };
-  cardsLoaded();
-};
+} 
+ cardsLoaded()   
+        }
+    
+   
+
+
+    
