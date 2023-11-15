@@ -1,4 +1,11 @@
 /* GENERAL SETTINGS */
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: aqua;
+}
 img {
     width: 100%;
   
