@@ -366,3 +366,22 @@ const headerloaded = function () {
   };
   advertismentLoading();
 };
+const cardSearchTot = 52;
+const cardColor = document.getElementById("cardColor")
+for (let index = 0; index < cardSearchTot; index++) {
+  let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
+  randomColor = `#${randomColor.padStart(6, "0")}`
+ 
+ cardColor.style.backgroundColor = `${randomColor}`
+ 
+}
+
+
+
+
+
+
+
+
+
+

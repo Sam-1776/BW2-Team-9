@@ -82,115 +82,50 @@
           </div>
         </div>
       </div>
-      <div class="p-0 boxWidth d-flex">
-        <div class="spaceWidth">
-          <h1 class="mt-2 text-white">Popolari</h1>
-          <div class="row mt-5 d-flex justify-content-between">
-            <div class="col-5 containerWidth d-flex">
-              <div class="d-flex align-items-center">
-                <p class="text-white fs-5">1</p>
-                <img
-                  src="./assets/imgs/search/image-11.jpg"
-                  alt=""
-                  class="ms-3 imageWidth"
-                />
-                <h3 class="fs-5 ms-3 text-white">Ocean Avenue</h3>
-              </div>
-            </div>
-            <div
-              class="col- containerWidth d-flex align-items-center justify-content-center"
-            >
-              <h3 class="fs-5 text-white">276.616.912</h3>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-center">
-              <h3 class="text-white fs-5">3.18</h3>
-            </div>
-          </div>
-          <div class="row mt-5 d-flex justify-content-between">
-            <div class="col-5 containerWidth d-flex">
-              <div class="d-flex align-items-center">
-                <p class="text-white fs-5">2</p>
-                <img
-                  src="./assets/imgs/search/image-11.jpg"
-                  alt=""
-                  class="ms-3 imageWidth"
-                />
-                <h3 class="fs-5 ms-3 text-white">Ocean Avenue</h3>
-              </div>
-            </div>
-            <div
-              class="col- containerWidth d-flex align-items-center justify-content-center"
-            >
-              <h3 class="fs-5 text-white">71.124.127</h3>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-center">
-              <h3 class="text-white fs-5">2.13</h3>
-            </div>
-          </div>
-          <div class="row mt-5 d-flex justify-content-between">
-            <div class="col-5 containerWidth d-flex">
-              <div class="d-flex align-items-center">
-                <p class="text-white fs-5">3</p>
-                <img
-                  src="./assets/imgs/search/image-11.jpg"
-                  alt=""
-                  class="ms-3 imageWidth"
-                />
-                <h3 class="fs-5 ms-3 text-white">Ocean Avenue</h3>
-              </div>
-            </div>
-            <div
-              class="col- containerWidth d-flex align-items-center justify-content-center"
-            >
-              <h3 class="fs-5 text-white">616.912</h3>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-center">
-              <h3 class="text-white fs-5">1.45</h3>
-            </div>
-          </div>
-          <div class="row mt-5 d-flex justify-content-between">
-            <div class="col-5 containerWidth d-flex">
-              <div class="d-flex align-items-center">
-                <p class="text-white fs-5">4</p>
-                <img
-                  src="./assets/imgs/search/image-11.jpg"
-                  alt=""
-                  class="ms-3 imageWidth"
-                />
-                <h3 class="fs-5 ms-3 text-white">Ocean Avenue</h3>
-              </div>
-            </div>
-            <div
-              class="col- containerWidth d-flex align-items-center justify-content-center"
-            >
-              <h3 class="fs-5 text-white">126.616.912</h3>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-center">
-              <h3 class="text-white fs-5">1.23</h3>
-            </div>
-          </div>
+      <div class="d-flex">
+        <div style="width: 70%">
+          <h2 class="mt-2 text-white">Popolari</h2>
         </div>
-        <div class="rightBoxWidth">
-          <h1 class="text-white">Brani che ti piacciono</h1>
-          <div class="d-flex align-items-center">
-            <img
-              class="favouriteSongs w-25"
-              src="./assets/imgs/search/image-12.jpg"
-              alt=""
-            />
-            <div class="ms-2">
-              <h4 class="text-white">Hai messo Mi piace a 11 brani</h4>
-              <h5 class="text-secondary">Di Yellowcard</h5>
+        <div style="width: 40%; display: inline; color: white">
+          <h2>Brani che ti piacciono</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4">
+            <ol id="ol-artist"></ol>
+          </div>
+          <div class="col-2">
+            <ul id="ol-visual"></ul>
+          </div>
+          <div class="col-1">
+            <ul id="ol-time"></ul>
+          </div>
+          <div class="col-md-4 mx-5">
+            <div class="like d-flex my-4" style="color: white">
+              <div
+                id="img"
+                class="rounded"
+                style="margin-right: 20px; border-radius: 50%"
+              >
+                <img id="mimg" alt="" style="border-radius: 50%" width="70px" />
+              </div>
+              <div id="text px-4">
+                <h5>Hai messo mi piace a 7 brani</h5>
+                <p id="p-text" style="color: greyz"></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-3">
-        <a href="#" class="mt-5 text-decoration-none linkColor fs-4 fw-bold"
-          >Visualizza Altro</a
+      <h4>
+        <a href="" id="anchor-art" style="text-decoration: none; color: white"
+          >Visualizza altro</a
         >
-      </div>
+      </h4>
+      <div id="cont"><ol id="ol-vis"></ol></div>
     </main>
+
     <script src="artist.js"></script>
     <script src="./bottombar.js"></script>
     <script src="./sideExtra.js"></script>
