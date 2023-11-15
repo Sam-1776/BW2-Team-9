@@ -355,22 +355,22 @@ const randomText = containerText[randomPosition]
 
                advertisementContainer.innerHTML +=`
                <div class="col-12 d-flex flex-column flex-md-row p-3 rounded" id="advertisementContainer">
-               <div class="col-md-2 col-12 me-3 py-5">
-                 <img src="${currentCoverAlbum}" alt="" class="img-fluid">
+               <div class="col-md-4 col-12 me-3 py-5">
+                 <img src="${currentCoverAlbum}" alt="" class="img-fluid" style="width:100%; aspect-ratio: 1/1;";>
                </div>
-               <div class="d-flex flex-column justify-content-between" id="textAndButton-Container">
+               <div class="d-flex col-md-auto flex-column justify-content-center" id="textAndButton-Container">
                  <div>
                  <h5>${currentTitle}</h5>
                  <h1 class="display-1">${currentPlayed}</h1>
                  <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
                  <p class="h4">${randomText}</p>
+                 <div>
+                 <button class="btn btn-success me-3 px-4 rounded-pill" id="play" type="
+                 button">PLAY</button>
+                 <button class="btn btn-outline-light px-4 rounded-pill" id="save" type="
+                 button">SALVA</button>
+  </div>
                </div>
-               <div>
-               <button class="btn btn-success me-5 px-4" id="play" type="
-               button">PLAY</button>
-               <button class="btn btn-light px-4" id="save" type="
-               button">SALVA</button>
-</div>
                </div>
                      </div>
                `;
