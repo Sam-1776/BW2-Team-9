@@ -114,3 +114,33 @@ main {
 .linkColor {
   color: grey;
 }
+
+.li-artist {
+  font-size: 15px;
+  color: white;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  margin-right: 0.5em;
+}
+
+.img-artist {
+  margin-right: 10px;
+}
+
+.livis {
+  font-size: 15px;
+  list-style-type: none;
+  padding: 26px;
+  color: white;
+}

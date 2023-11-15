@@ -14,6 +14,7 @@ search.onclick = () => {
   console.log(section2);
   section1.classList.add("d-none");
   section2.classList.add("d-none");
+  advertisementContainer.classList.add("d-none");
   buttonB.classList.add("active");
   const card = document.querySelectorAll(".cardSearch")
 console.log(card);
@@ -393,6 +394,9 @@ for (let index = 0; index < cardSearchTot; index++) {
  cardColor.style.backgroundColor = `${randomColor}`
  
 }
+
+
+
 
 
 
