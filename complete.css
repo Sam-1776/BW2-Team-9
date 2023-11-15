@@ -3,6 +3,7 @@ img {
   width: 100%;
 }
 
+
 /* SECTION1 */
 #cards {
   display: flex;
@@ -64,8 +65,9 @@ section2 #h2-Button-Container {
 /* ASIDE RIGHT */
 #mainAside {
   position: relative;
-  height: calc(100vh - 59px);
-  overflow: scroll;
+  height: calc(100vh - 60px);
+  overflow: auto;
+  background-color: #121212;
 }
 
 #mainAside::-webkit-scrollbar {
@@ -86,7 +88,6 @@ section2 #h2-Button-Container {
   z-index: 99;
 }
 #offcanvasRight {
-  width: 200px;
   height: calc(100vh - 75px);
   background-color: #000000;
 }
