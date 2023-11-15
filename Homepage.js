@@ -18,13 +18,16 @@ search.onclick = () => {
     window.location.assign("./Homepage.html");
     barInput.classList.add("d-none");
     newSection.classList.add("d-none");
+    ricerca.classList.add("d-none");
   };
 };
 
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
+const ricerca = document.querySelector("#ricerca")
 
 barInput.onchange = () => {
   const query = barInput.value;
+  ricerca.classList.remove("d-none")
 
   fetch(URL + query, {
     headers: {
