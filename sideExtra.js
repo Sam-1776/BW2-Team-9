@@ -1,4 +1,4 @@
-const main = document.querySelector("#mainAside");
+const main = document.getElementById("mainAside");
 const aside = document.querySelector("aside");
 const close = document.getElementById("close");
 const capo = document.getElementById("header")
