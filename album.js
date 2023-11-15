@@ -7,7 +7,7 @@ if (productId) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + productId, {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "bdad29ac60mshb962def87bb8ae2p13c7acjsn8389c8071a1f",
+      "X-RapidAPI-Key": "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -19,13 +19,60 @@ if (productId) {
       console.log("API Response:", data);
       const div = document.createElement("div");
       const header = document.getElementById("header-snd");
-      img = document.createElement("img");
-      header.appendChild(div);
+      const img = document.createElement("img");
+
+      const divText = document.createElement("div");
+      const h5 = document.createElement("h5");
+      divText.appendChild(h5);
+      h5.innerText = "ALBUM";
+      albumP = document.createElement("p");
+      albumP.innerText = data.artist.name + " released " + data.release_date;
+
       h1 = document.createElement("h1");
-      header.appendChild(h1);
-      h1.innerText = "ciao";
+      h1.innerText = data.title;
+
       img.src = data.cover_medium;
       div.appendChild(img);
+      img.className = "img-album";
+      div.className = "div-album";
+      divText.appendChild(h1);
+      divText.appendChild(albumP);
+      divText.className = "div-text";
+
+      const divTotal = document.createElement("div");
+      header.appendChild(divTotal);
+      divTotal.appendChild(div);
+      divTotal.appendChild(divText);
+      divTotal.className = "album-header";
+      const ol = document.getElementById("ol");
+
+      data.tracks.data.forEach((song) => {
+        console.log(song);
+        const li = document.createElement("li");
+        li.innerText = song.title;
+        ol.appendChild(li);
+        li.className = "li-track";
+
+        const olsnd = document.getElementById("ol-nd");
+        const liNd = document.createElement("li");
+        liNd.innerText = song.rank;
+        olsnd.appendChild(liNd);
+        liNd.className = "li-track";
+        function convertiSecondiInMinuti(secondi) {
+          const minuti = Math.floor(secondi / 60);
+          const secondiResidui = secondi % 60;
+
+          const secondoFormattato =
+            secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
+
+          return minuti + ":" + secondoFormattato;
+        }
+
+        const olsec = document.getElementById("secondi");
+        const liSec = document.createElement("li");
+        liSec.innerText = convertiSecondiInMinuti(song.duration);
+        olsec.appendChild(liSec);
+      });
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
