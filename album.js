@@ -25,6 +25,7 @@ if (productId) {
       const h5 = document.createElement("h5");
       divText.appendChild(h5);
       h5.innerText = "ALBUM";
+
       albumP = document.createElement("p");
       albumP.innerText = data.artist.name + " released " + data.release_date;
 
@@ -34,16 +35,16 @@ if (productId) {
       img.src = data.cover_medium;
       div.appendChild(img);
       img.className = "img-album";
-      div.className = "div-album";
+      div.className = "div-album col-sm-8 col-md-3 col-lg-3";
       divText.appendChild(h1);
       divText.appendChild(albumP);
-      divText.className = "div-text";
+      divText.className = "div-text col-sm-4 col-lg-8";
 
       const divTotal = document.createElement("div");
       header.appendChild(divTotal);
       divTotal.appendChild(div);
       divTotal.appendChild(divText);
-      divTotal.className = "album-header";
+      divTotal.className = "album-header ";
       const ol = document.getElementById("ol");
 
       data.tracks.data.forEach((song) => {

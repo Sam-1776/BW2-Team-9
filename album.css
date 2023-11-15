@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
 header {
-  background-color: #bebe34;
-  height: 330px;
+  background-color: #d1b44a;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 20, 14, 1) -36%,
+    rgb(209, 180, 74) 44%
+  );
 }
 
 .div-top {
@@ -14,9 +18,11 @@ header {
   background: rgb(20, 20, 14);
   background: linear-gradient(
     0deg,
-    rgba(20, 20, 14, 1) 57%,
-    rgba(131, 131, 50, 1) 94%
+    rgba(20, 20, 14, 1) 75%,
+    rgba(131, 131, 50, 1) 117%
   );
+  height: calc(100vh - 330px);
+  overflow: auto;
 }
 .a-icont {
   padding: 15px;
@@ -25,13 +31,14 @@ header {
 }
 
 .bi-play-circle-fill {
-  font-size: 70px;
-  color: green;
+  font-size: 55px;
+  color: #1ed760;
 }
 
 .img-album {
-  width: 240px;
+  width: 100%;
   object-fit: cover;
+  box-shadow: -2px 2px 20px 3px #231e1e;
 }
 
 .div-album {
@@ -48,21 +55,28 @@ header {
 .div-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
   font-size: 40px;
-  margin-top: auto;
+  margin-top: 80px;
   margin-left: 20px;
   color: white;
+  height: 100%;
+}
+
+.div-text h5 {
+  font-size: 14px;
+  width: 50px;
 }
 
 .div-text > h1 {
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 65px;
   font-family: "Archivo Black", sans-serif;
 }
 
 .div-text p {
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .tracklist {
@@ -80,6 +94,11 @@ ol {
   list-style-type: none;
   counter-reset: item;
   padding: 0;
+}
+
+.containerPadding {
+  padding-left: 40px;
+  padding-right: 11px;
 }
 
 ol li::before {
@@ -105,4 +124,121 @@ ol li::before {
   color: white;
   padding: 10px;
   margin-right: 60px;
+}
+
+@media screen and(min-width:1200px) {
+  .img-album {
+    width: 140px;
+  }
+  header {
+    height: 280px;
+  }
+  .div-text {
+    margin-top: 40px;
+  }
+  .main-page-album {
+    height: calc(100vh - 320px);
+    overflow: auto;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .a-icont {
+    font-size: 35px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .img-album ig {
+    width: 80px;
+  }
+  .header-snd {
+    height: 100%;
+  }
+  .div-text {
+    margin-top: 40px;
+  }
+  .main-page-album {
+    height: calc(100vh - 200px);
+    overflow: auto;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .a-icont {
+    font-size: 35px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .album-header {
+    display: flex;
+    align-items: start;
+  }
+  .div-text {
+    margin-top: 50px;
+  }
+  .div-text h1 {
+    font-size: 30px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    display: none;
+  }
+  .playing {
+    display: none;
+  }
+  .first-column,
+  .second-column {
+    display: none;
+  }
+  .main-page-album {
+    overflow: auto;
+    height: calc(100vh - 251px);
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .first-column,
+  .second-column {
+    display: none;
+  }
+  .main-page-album {
+    overflow: scroll;
+  }
+  .album-header {
+    flex: row;
+  }
+  .img-album {
+    width: 10px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
