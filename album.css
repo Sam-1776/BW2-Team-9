@@ -9,7 +9,7 @@ header {
 }
 
 .main-page-album {
-  height: 65vh;
+  height: 62vh;
   background: rgb(20, 20, 14);
   background: linear-gradient(
     0deg,
@@ -29,7 +29,7 @@ header {
 }
 
 .img-album {
-  width: 200px;
+  width: 240px;
   object-fit: cover;
 }
 
@@ -41,10 +41,25 @@ header {
 .album-header {
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .div-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 40px;
+  margin-top: auto;
+  margin-left: 20px;
+  color: white;
+}
+
+.div-text > h1 {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: italic;
+}
+
+.div-text p {
+  font-size: 20px;
 }

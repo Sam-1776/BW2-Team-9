@@ -26,7 +26,7 @@ if (productId) {
       divText.appendChild(h5);
       h5.innerText = "ALBUM";
       albumP = document.createElement("p");
-      albumP.innerText = data.artist.name + data.nb_traks;
+      albumP.innerText = data.artist.name + " released " + data.release_date;
 
       h1 = document.createElement("h1");
       h1.innerText = data.title;
@@ -37,7 +37,7 @@ if (productId) {
       div.className = "div-album";
       divText.appendChild(h1);
       divText.appendChild(albumP);
-      divText.className("div-text");
+      divText.className = "div-text";
 
       const divTotal = document.createElement("div");
       header.appendChild(divTotal);
