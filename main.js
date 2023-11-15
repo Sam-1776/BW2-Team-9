@@ -195,6 +195,7 @@ section2CardsLoaded = function () {
       const currentTitle = randomSong.title;
       const currentArtist = randomSong.artist.name;
       const currentId = randomSong.album.id;
+      const artistId = randomSong.artist.id;
 
       cards1.innerHTML += `
                    <div id="col-20">
@@ -205,7 +206,7 @@ section2CardsLoaded = function () {
                      </div>
                      </a>
                        <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
+                         <p class="card-text"><a href="./artist.html?id=${artistId}">Cantante: ${currentArtist}</a></p>
                          <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
                        </div>
                      </div>
