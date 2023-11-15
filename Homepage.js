@@ -14,6 +14,7 @@ search.onclick = () => {
   console.log(section2);
   section1.classList.add("d-none");
   section2.classList.add("d-none");
+  advertisementContainer.classList.add("d-none");
   buttonB.classList.add("active");
   const card = document.querySelectorAll(".cardSearch")
 console.log(card);
@@ -361,7 +362,7 @@ const randomText = containerText[randomPosition]
                <div class="d-flex col-md-auto flex-column justify-content-center" id="textAndButton-Container">
                  <div>
                  <h5>${currentTitle}</h5>
-                 <h1 class="display-1">${currentPlayed}</h1>
+                 <h1 class="display-4">${currentPlayed}</h1>
                  <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
                  <p class="h4">${randomText}</p>
                  <div>
@@ -383,6 +384,9 @@ const randomText = containerText[randomPosition]
   advertismentLoading();
 
 };
+
+
+
 
 
 
