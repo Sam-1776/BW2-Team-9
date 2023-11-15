@@ -87,3 +87,22 @@ ol li::before {
   counter-increment: item;
   margin-right: 0.5em;
 }
+
+#ol-nd {
+  list-style-type: none;
+  padding: 0;
+}
+
+#secondi {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+  color: white;
+}
+
+#secondi li {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin-right: 60px;
+}

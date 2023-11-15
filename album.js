@@ -52,6 +52,26 @@ if (productId) {
         li.innerText = song.title;
         ol.appendChild(li);
         li.className = "li-track";
+
+        const olsnd = document.getElementById("ol-nd");
+        const liNd = document.createElement("li");
+        liNd.innerText = song.rank;
+        olsnd.appendChild(liNd);
+        liNd.className = "li-track";
+        function convertiSecondiInMinuti(secondi) {
+          const minuti = Math.floor(secondi / 60);
+          const secondiResidui = secondi % 60;
+
+          const secondoFormattato =
+            secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
+
+          return minuti + ":" + secondoFormattato;
+        }
+
+        const olsec = document.getElementById("secondi");
+        const liSec = document.createElement("li");
+        liSec.innerText = convertiSecondiInMinuti(song.duration);
+        olsec.appendChild(liSec);
       });
     })
     .catch((error) => {
