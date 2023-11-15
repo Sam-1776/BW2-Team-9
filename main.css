@@ -7,8 +7,8 @@ img {
 #advertisementContainer {
     background-image:linear-gradient(25deg, black, #202529);
 }
-#textAndButton-Container {
-
+#buttonHeader {
+    border-radius: 20px;
 }
 /* SECTION1 */
 #cards {
