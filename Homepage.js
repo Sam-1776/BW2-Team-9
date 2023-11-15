@@ -384,8 +384,8 @@ const randomText = containerText[randomPosition]
   advertismentLoading();
 
 };
-const cardColor = document.getElementById("cardColor")
 const cardSearchTot = 52;
+const cardColor = document.getElementById("cardColor")
 for (let index = 0; index < cardSearchTot; index++) {
   let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
   randomColor = `#${randomColor.padStart(6, "0")}`
