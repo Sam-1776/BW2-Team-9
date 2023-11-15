@@ -74,8 +74,8 @@ const randomText = containerText[randomPosition]
                  <p class="h4">${randomText}</p>
                </div>
                <div>
-  <button>PLAY</button>
-  <button>SALVA</button>
+               <button class="btn btn-success me-5 px-4" id="buttonHeader" type="submit">PLAY</button>
+               <button class="btn btn-light px-4" id="buttonHeader" type="submit">SALVA</button>
 </div>
                </div>
                      </div>
