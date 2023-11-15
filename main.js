@@ -57,10 +57,12 @@ const headerloaded = function () {
                const currentTitle = randomSong.title;
                const currentPlayed = randomSong.album.title;
                const currentArtist = randomSong.artist.name;
-               const currentId = randomSong.album.id;
+               const currentAlbumId = randomSong.album.id;
+               const currentArtistId = randomSong.artist.id;
                const containerText = ["Canzone del momento", "Ascolta di nuovo", "Ascoltato recentemente"];
                const randomPosition = Math.floor(Math.random() * (containerText.length));
 const randomText = containerText[randomPosition]
+
                advertisementContainer.innerHTML +=`
                <div class="col-12 d-flex flex-column flex-md-row p-3 rounded" id="advertisementContainer">
                <div class="col-md-2 col-12 me-3 py-5">
@@ -70,7 +72,7 @@ const randomText = containerText[randomPosition]
                  <div>
                  <h5>${currentTitle}</h5>
                  <h1 class="display-1">${currentPlayed}</h1>
-                 <p class="h3"><a href="./artist.html?id=${currentId}">${currentArtist}</a></p>
+                 <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
                  <p class="h4">${randomText}</p>
                </div>
                <div>
@@ -111,17 +113,18 @@ const cardsSongsLoaded = () => {
                             const imgAlbumMedium = songs.data[i].album.cover_medium;
                             const currentSinger = songs.data[i].artist.name;
                             const currentAlbum = songs.data[i].album.title;
-                            const currentId = songs.data[i].album.id;
+                            const currentAlbumId = songs.data[i].album.id;
+                            const currentArtistId = songs.data[i].artist.id;
        cards2.innerHTML += `
        <div class="p-2 col-md-3 col-12" >
        <div class="card h-100 text-bg-dark">
-<a href="./album.html?id=${currentId}">
+<a href="./album.html?id=${currentAlbumId}">
     <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
        <img src="${imgAlbumMedium}" class="card-img-top img-fluid" alt="...">
        </div>
        </a>
        <div class="card-body">
-       <p class="card-text"><a href="./artist.html?id=${currentId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentId}">Album: ${currentAlbum}</a></p>
+       <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentAlbumId}">Album: ${currentAlbum}</a></p>
        </div>
        </div>
        </div>
@@ -158,19 +161,20 @@ section2CardsLoaded = function () {
                    const currentCoverAlbum = randomSong.album.cover_medium;
                    const currentTitle = randomSong.title;
                    const currentArtist = randomSong.artist.name;
-                   const currentId = randomSong.album.id;
+                   const currentAlbumId = randomSong.album.id;
+                   const currentArtistId = randomSong.artist.id;
                    
                    cards1.innerHTML +=`
                    <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
-                   <a href="./currentAlbum.html?id=${currentId}">
+                   <a href="./currentAlbum.html?id=${currentAlbumId}">
                      <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
                        <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
-                         <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
+                         <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Canatante: ${currentArtist}</a></p>
+                         <p class="card-text"><a href="./album.html?id=${currentAlbumId}">Canzone: ${currentTitle}</a></p>
                        </div>
                      </div>
                    </div> 
@@ -182,19 +186,20 @@ section2CardsLoaded = function () {
                    const currentCoverAlbum = randomSong.album.cover_medium;
                    const currentTitle = randomSong.title;
                    const currentArtist = randomSong.artist.name;
-                   const currentId = randomSong.album.id;
+                   const currentAlbumId = randomSong.album.id;
+                   const currentArtistId = randomSong.artist.id;
                    
                    cards1.innerHTML +=`
                    <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
-                   <a href="./currentAlbum.html?id=${currentId}">
+                   <a href="./currentAlbum.html?id=${currentAlbumId}">
                      <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
                        <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
-                         <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
+                         <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Canatante: ${currentArtist}</a></p>
+                         <p class="card-text"><a href="./album.html?id=${currentAlbumId}">Canzone: ${currentTitle}</a></p>
                        </div>
                      </div>
                    </div> 
@@ -206,19 +211,20 @@ section2CardsLoaded = function () {
                    const currentCoverAlbum = randomSong.album.cover_medium;
                    const currentTitle = randomSong.title;
                    const currentArtist = randomSong.artist.name;
-                   const currentId = randomSong.album.id;
+                   const currentAlbumId = randomSong.album.id;
+                   const currentArtistId = randomSong.artist.id;
                    
                    cards1.innerHTML +=`
                    <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
-                   <a href="./currentAlbum.html?id=${currentId}">
+                   <a href="./currentAlbum.html?id=${currentAlbumId}">
                      <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
                        <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
-                         <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
+                         <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Canatante: ${currentArtist}</a></p>
+                         <p class="card-text"><a href="./album.html?id=${currentAlbumId}">Canzone: ${currentTitle}</a></p>
                        </div>
                      </div>
                    </div> 
@@ -230,19 +236,20 @@ section2CardsLoaded = function () {
                    const currentCoverAlbum = randomSong.album.cover_medium;
                    const currentTitle = randomSong.title;
                    const currentArtist = randomSong.artist.name;
-                   const currentId = randomSong.album.id;
+                   const currentAlbumId = randomSong.album.id;
+                   const currentArtistId = randomSong.artist.id;
                    
                    cards1.innerHTML +=`
                    <div class="p-2 col-md-3 col-12">
                    <div class="card h-100 rounded text-bg-dark" style="border:1px solid #181818;">
-                   <a href="./currentAlbum.html?id=${currentId}">
+                   <a href="./currentAlbum.html?id=${currentAlbumId}">
                      <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
                        <img src="${currentCoverAlbum}" class="card-img-top img-fluid" alt="...">
                      </div>
                      </a>
                        <div class="card-body">
-                         <p class="card-text"><a href="./artist.html?id=${currentId}">Canatante: ${currentArtist}</a></p>
-                         <p class="card-text"><a href="./album.html?id=${currentId}">Canzone: ${currentTitle}</a></p>
+                         <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Canatante: ${currentArtist}</a></p>
+                         <p class="card-text"><a href="./album.html?id=${currentAlbumId}">Canzone: ${currentTitle}</a></p>
                        </div>
                      </div>
                    </div> 
