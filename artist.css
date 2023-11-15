@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 header {
-  background-image: url(./assets/imgs/main/image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -23,8 +24,9 @@ header {
   color: #3d91f4;
 }
 
-.titleFontSize {
+#h1-artist {
   font-size: 100px;
+  font-family: "Archivo Black", sans-serif;
 }
 
 .bi-play-circle-fill {
