@@ -64,6 +64,11 @@ section2 #h2-Button-Container {
   top: 0;
   z-index: 99;
 }
+@media screen and (max-width: 766px){
+  #header {
+    width: 100%;
+  }
+}
 #offcanvasRight {
   height: calc(100vh - 75px);
   background-color: #000000;
@@ -114,6 +119,16 @@ aside {
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 766px) {
+  #section-left {
+display: none;
+  }
+  body {
+    width: 100;
+  }
+}
+
 @media screen 
 .first-icons p {
   display: inline-block;
