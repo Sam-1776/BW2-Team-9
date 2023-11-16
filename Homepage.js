@@ -245,6 +245,8 @@ if (ore >= 12) {
 
 const buttonPlay = document.getElementById("playIcon");
 let isPlayings = false;
+let audio;
+
 buttonPlay.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -253,13 +255,27 @@ buttonPlay.addEventListener("click", function (e) {
   if (previewInLocal) {
     const object = JSON.parse(previewInLocal);
 
-    if (!isPlayings) {
-      const audio = new Audio(object.preview);
-      audio.play();
-      isPlayings = true;
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
     }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
   }
 });
+
+function onAudioEnded() {
+  isPlayings = false;
+}
 
 /* Dati sul footer */
 

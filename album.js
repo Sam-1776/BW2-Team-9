@@ -224,24 +224,6 @@ btnF.onclick = () => {
   /* header.style.width = "58%"; */
 };
 
-const buttonPlay = document.getElementById("playIcon");
-let isPlayings = false;
-buttonPlay.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const previewInLocal = localStorage.getItem("info");
-
-  if (previewInLocal) {
-    const object = JSON.parse(previewInLocal);
-
-    if (!isPlayings) {
-      const audio = new Audio(object.preview);
-      audio.play();
-      isPlayings = true;
-    }
-  }
-});
-
 const buttonB = document.getElementById("backHome");
 
 buttonB.onclick = () => {
