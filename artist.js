@@ -43,14 +43,12 @@ if (productId) {
       return response.json();
     })
     .then((data) => {
-  
       console.log(data);
       const ol = document.getElementById("ol-artist");
       for (let i = 0; i < 4; i++) {
         const liAr = document.createElement("li");
         liAr.className = "li-artist";
-
-        imgAr = document.createElement("img");
+                const imgAr = document.createElement("img");
         imgAr.src = data.data[i].album.cover_small;
         liAr.appendChild(imgAr);
         imgAr.className = "img-artist";
