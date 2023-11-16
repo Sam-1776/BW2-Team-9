@@ -155,3 +155,61 @@ body {
   right: 6px;
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  .audioIcon {
+    display: none;
+  }
+  .media-quary-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  .media-quary-container2 {
+    display: flex;
+    justify-content: end;
+  }
+  .heart-icon {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 12px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .heart-icon:hover {
+    color: green;
+  }
+  .leftPart {
+    width: 100%;
+  }
+  .leftPart-h3 {
+    font-size: 18px;
+  }
+  .leftPart-h5 {
+    display: none;
+  }
+
+  .listIcon {
+    display: none;
+  }
+  .micIcon {
+    display: none;
+  }
+
+  .retweetIcon {
+    display: none;
+  }
+  .stepForwardIcon {
+    display: none;
+  }
+  .stepBackwardIcon {
+    display: none;
+  }
+  .random-icon {
+    display: none;
+  }
+  .box {
+    background-color: rgb(54, 50, 50);
+  }
+}

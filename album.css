@@ -106,3 +106,248 @@ ol li::before {
   padding: 10px;
   margin-right: 60px;
 }
+
+@media screen and(min-width:1200px) {
+  .img-album {
+    width: 140px;
+  }
+  header {
+    height: 280px;
+  }
+  .div-text {
+    margin-top: 40px;
+  }
+  .main-page-album {
+    height: calc(100vh - 320px);
+    overflow: auto;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .a-icont {
+    font-size: 35px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .img-album ig {
+    width: 80px;
+  }
+  .header-snd {
+    height: 100%;
+  }
+  .div-text {
+    margin-top: 40px;
+  }
+  .main-page-album {
+    height: calc(100vh - 200px);
+    overflow: auto;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .a-icont {
+    font-size: 35px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .album-header {
+    display: flex;
+    align-items: start;
+  }
+  .div-text {
+    margin-top: 50px;
+  }
+  .div-text h1 {
+    font-size: 23px;
+  }
+  .div-text p {
+    font-size: 13px;
+  }
+  .containerPadding {
+    padding-right: 1px;
+  }
+  .watch {
+    display: none;
+  }
+  .playing {
+    display: none;
+  }
+  .first-column,
+  .second-column {
+    display: none;
+  }
+  .main-page-album {
+    overflow: auto;
+    height: calc(100vh - 251px);
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .first-column,
+  .second-column {
+    display: none;
+  }
+  .watch {
+    display: none;
+  }
+  .playing {
+    display: none;
+  }
+  .main-page-album {
+    overflow: scroll;
+  }
+  .album-header {
+    display: flex;
+    flex-direction: column;
+  }
+  #header-snd {
+    margin: 0;
+    max-width: 546px;
+  }
+  .img-album {
+    width: 500px;
+  }
+  .div-text h1 {
+    font-size: 20px;
+  }
+  .div-text {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+  .div-text p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .column-reverse-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .right-icon {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    font-size: 35px;
+  }
+  .bi-suit-heart {
+    font-size: 30px;
+  }
+  .bi-arrow-down-circle {
+    font-size: 30px;
+  }
+  .titleDisplayNone {
+    display: none;
+  }
+  .display-list {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+  }
+  .displayMedia {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .first-column,
+  .second-column {
+    display: none;
+  }
+  .watch {
+    display: none;
+  }
+  .playing {
+    display: none;
+  }
+  .main-page-album {
+    overflow: scroll;
+  }
+  .album-header {
+    display: flex;
+    flex-direction: column;
+  }
+  #header-snd {
+    margin: 0;
+    max-width: 546px;
+  }
+  .img-album {
+    width: 300px;
+  }
+  .div-text h1 {
+    font-size: 20px;
+  }
+  .div-text {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+  .div-text p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .bi-play-circle-fill {
+    font-size: 35px;
+  }
+  .column-reverse-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .right-icon {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    font-size: 35px;
+  }
+  .bi-suit-heart {
+    font-size: 30px;
+  }
+  .bi-arrow-down-circle {
+    font-size: 30px;
+  }
+  .titleDisplayNone {
+    display: none;
+  }
+  .display-list {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+  }
+  .displayMedia {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
