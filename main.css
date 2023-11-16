@@ -1,10 +1,22 @@
 /* GENERAL SETTINGS */
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: aqua;
+}
 img {
     width: 100%;
   
 }
-/* CAROUSEL */
-
+/* HEADER */
+#advertisementContainer {
+    background-image:linear-gradient(25deg, black, #202529);
+}
+#buttonHeader {
+    border-radius: 20px;
+}
 /* SECTION1 */
 #cards {
     display: flex;
@@ -64,6 +76,5 @@ padding: 0;
 }
 #col-20 {
 width: 20%;
-padding: 1em;
 }
 

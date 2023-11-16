@@ -23,7 +23,7 @@
     />
     <link rel="stylesheet" href="./complete.css" />
   </head>
-  <body class="row text-bg-dark g-0">
+  <body class="row text-bg-dark g-0 ">
     <section id="section-left" class="col-3">
       <div>
         <i class="bi bi-three-dots"></i>
@@ -89,9 +89,9 @@
         <ul id="ul"></ul>
       </div>
     </section>
-    <main id="mainAside" class="col-9">
+    <main id="mainAside" class="col-12 col-md-9">
       <div
-        class="d-flex justify-content-between pt-3 pb-3 align-items-center text-bg-dark"
+        class="d-flex  justify-content-between pt-3 pb-3 align-items-center text-bg-dark"
         id="header"
       >
         <div id="navInfo" class="d-flex">
@@ -120,79 +120,103 @@
           </button>
         </div>
       </div>
-      <section1 class="mb-3">
-        <h2>Contenuti di Oggi</h2>
-        <div id="cards">
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-1.jpg" alt="" />
-              <img src="./assets/imgs/main/image-2.jpg" alt="" />
-              <img src="./assets/imgs/main/image-3.jpg" alt="" />
-              <img src="./assets/imgs/main/image-4.jpg" alt="" />
+      <div class="col-12 d-md-flex mt-5 rounded flex-column flex-md-row p-3" id="advertisementContainer">
+
+      </div> 
+      <div id="section1">
+        <div class="container">
+          <div class="row">
+            <h2 id="saluto">Buonasera</h2>
+            <div class="col-6 col-md-4">
+              <div class="card  mb-md-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3 justify-content-center align-items-center">
+                    <img src="./assets/imgs/main/image-10.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >Mood-Mix</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="col-6 col-md-4">
+              <div class="card mb-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3">
+                    <img src="./assets/imgs/main/image-2.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >Hit-estive</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-5.jpg" alt="" />
-              <img src="./assets/imgs/main/image-6.jpg" alt="" />
-              <img src="./assets/imgs/main/image-7.jpg" alt="" />
-              <img src="./assets/imgs/main/image-8.jpg" alt="" />
+            <div class="col-6 col-md-4">
+              <div class="card mb-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3">
+                    <img src="./assets/imgs/main/image-15.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >Casa dolce casa</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="col-6 col-md-4">
+              <div class="card mb-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3">
+                    <img src="./assets/imgs/main/image-19.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >Street Culto</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-9.jpg" alt="" />
-              <img src="./assets/imgs/main/image-10.jpg" alt="" />
-              <img src="./assets/imgs/main/image-11.jpg" alt="" />
-              <img src="./assets/imgs/main/image-12.jpg" alt="" />
+            <div class="col-6 col-md-4">
+              <div class="card mb-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3">
+                    <img src="./assets/imgs/main/image-1.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >This Is Salmo</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-13.jpg" alt="" />
-              <img src="./assets/imgs/main/image-14.jpg" alt="" />
-              <img src="./assets/imgs/main/image-15.jpg" alt="" />
-              <img src="./assets/imgs/main/image-16.jpg" alt="" />
-            </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/main/image-17.jpg" alt="" />
-              <img src="./assets/imgs/main/image-18.jpg" alt="" />
-              <img src="./assets/imgs/main/image-19.jpg" alt="" />
-              <img src="./assets/imgs/search/image-1.jpeg" alt="" />
-            </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-          <div id="cardContainer" class="col-4 p-3">
-            <div id="imgCard">
-              <img src="./assets/imgs/search/image-2.jpg" alt="" />
-              <img src="./assets/imgs/search/image-3.jpg" alt="" />
-              <img src="./assets/imgs/search/image-4.jpg" alt="" />
-              <img src="./assets/imgs/search/image-5.jpg" alt="" />
-            </div>
-            <div id="textContainer">
-              <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="col-6 col-md-4">
+              <div class="card mb-3 text-bg-dark overflow-hidden">
+                <div class="row g-0 align-items-center">
+                  <div class="col-3 pe-1 pe-md-3">
+                    <img src="./assets/imgs/main/image-11.jpg" class="img-fluid rounded-start" alt="..." style="aspect-ratio: 1/1; width: 100%;">
+                  </div>
+                  <div class="col-9">
+                    <div class="p-0" style="width: max-content;">
+                      <h6 class="mb-0" >This Is Imagine Dragons</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section1>
-      <section2 id="section2" class="mb-3">
-        <div id="h2-Button-Container">
+      </div>
+
+      <section2 id="section2" class="mb-3 d-md-flex flex-md-column">
+        <div id="h2-Button-Container" class="d-flex">
           <h2 class="col-auto">Altri Contenuti</h2>
           <div id="buttonContainer">
             <button id="buttonSection2">
@@ -200,14 +224,14 @@
             </button>
           </div>
         </div>
-        <div id="cards">
-          <div id="col-20">
+        <div id="cards" class="d-md-flex justify-content-between">
+          <div  class="col-12 col-md-3 mb-2">
             <div
               class="card h-100 rounded text-bg-dark"
               style="border: 1px solid #181818"
             >
               <div
-                class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25"
+                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
               >
                 <img
                   src="./assets/imgs/search/image-6.jpg"
@@ -223,13 +247,13 @@
               </div>
             </div>
           </div>
-          <div id="col-20">
+          <div class="col-12 col-md-3 mb-2">
             <div
               class="card h-100 rounded text-bg-dark"
               style="border: 1px solid #181818"
             >
               <div
-                class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25"
+                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
               >
                 <img
                   src="./assets/imgs/search/image-7.jpg"
@@ -245,13 +269,13 @@
               </div>
             </div>
           </div>
-          <div id="col-20">
+          <div class="col-12 col-md-3 mb-2">
             <div
               class="card h-100 rounded text-bg-dark"
               style="border: 1px solid #181818"
             >
               <div
-                class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25"
+                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
               >
                 <img
                   src="./assets/imgs/search/image-8.jpg"
@@ -267,38 +291,16 @@
               </div>
             </div>
           </div>
-          <div id="col-20">
+          <div class="col-12 col-md-3 mb-2">
             <div
               class="card h-100 rounded text-bg-dark"
               style="border: 1px solid #181818"
             >
               <div
-                class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25"
+                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
               >
                 <img
                   src="./assets/imgs/search/image-39.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="col-20">
-            <div
-              class="card h-100 rounded text-bg-dark"
-              style="border: 1px solid #181818"
-            >
-              <div
-                class="card-img-top w-100 object-fit-cover p-3 shadow-sm w-25"
-              >
-                <img
-                  src="./assets/imgs/search/image-10.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -324,7 +326,7 @@
         </div>
       </section2>
 
-      <div class="container ms-4 d-none" style="margin-top: 80px" id="ricerca">
+      <div class="container d-none" style="margin-top: 80px" id="ricerca">
         <div class="row" id="searchQ"></div>
       </div>
       <div id="reSearch" class="d-none" style="margin-top: 80px">
@@ -332,319 +334,323 @@
           <h4>Sfoglia tutto</h4>
           <div class="row g-2">
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Scopri</h4>
                 <img src="./assets/imgs/search/image-1.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Podcast</h4>
                 <img src="./assets/imgs/search/image-2.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Pollen</h4>
                 <img src="./assets/imgs/search/image-3.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Dance/Elettr<br />onica</h4>
                 <img src="./assets/imgs/search/image-4.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Latina</h4>
                 <img src="./assets/imgs/search/image-5.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">R&B</h4>
                 <img src="./assets/imgs/search/image-6.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Rock</h4>
                 <img src="./assets/imgs/search/image-7.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Allenamento</h4>
                 <img src="./assets/imgs/search/image-8.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Autori</h4>
                 <img src="./assets/imgs/search/image-9.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Lo-Fi Beats</h4>
                 <img src="./assets/imgs/search/image-10.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">In Auto</h4>
                 <img src="./assets/imgs/search/image-11.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Anni</h4>
                 <img src="./assets/imgs/search/image-12.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Rewind</h4>
                 <img src="./assets/imgs/search/image-13.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Classifiche</h4>
                 <img src="./assets/imgs/search/image-14.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Latina</h4>
                 <img src="./assets/imgs/search/image-15.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Soul</h4>
                 <img src="./assets/imgs/search/image-16.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Relax</h4>
                 <img src="./assets/imgs/search/image-17.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Per Dormire</h4>
                 <img src="./assets/imgs/search/image-18.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Pop</h4>
                 <img src="./assets/imgs/search/image-19.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Jazz</h4>
                 <img src="./assets/imgs/search/image-20.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Karaoke</h4>
                 <img src="./assets/imgs/search/image-21.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Podcast</h4>
                 <img src="./assets/imgs/search/image-22.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Concentrazione</h4>
                 <img src="./assets/imgs/search/image-23.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Acustic</h4>
                 <img src="./assets/imgs/search/image-24.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Glow</h4>
                 <img src="./assets/imgs/search/image-25.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Nuove uscite</h4>
                 <img src="./assets/imgs/search/image-26.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Party</h4>
                 <img src="./assets/imgs/search/image-27.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Afro</h4>
                 <img src="./assets/imgs/search/image-28.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Classica</h4>
                 <img src="./assets/imgs/search/image-29.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">League</h4>
                 <img src="./assets/imgs/search/image-30.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Metal</h4>
                 <img src="./assets/imgs/search/image-31.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Funk</h4>
                 <img src="./assets/imgs/search/image-32.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Punk</h4>
                 <img src="./assets/imgs/search/image-33.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Ambiental</h4>
                 <img src="./assets/imgs/search/image-34.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">K-pop</h4>
                 <img src="./assets/imgs/search/image-35.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Blues</h4>
                 <img src="./assets/imgs/search/image-36.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Elettronica</h4>
                 <img src="./assets/imgs/search/image-37.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Dal vivo</h4>
                 <img src="./assets/imgs/search/image-38.jpg" al vivot="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Country</h4>
                 <img src="./assets/imgs/search/image-39.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Frequence</h4>
                 <img src="./assets/imgs/search/image-40.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Arab</h4>
                 <img src="./assets/imgs/search/image-41.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Mix</h4>
                 <img src="./assets/imgs/search/image-42.png" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Radar</h4>
                 <img src="./assets/imgs/search/image-43.png" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Kids</h4>
                 <img src="./assets/imgs/search/image-44.png" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Daily</h4>
                 <img src="./assets/imgs/search/image-45.png" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Tastemaker</h4>
                 <img src="./assets/imgs/search/image-46.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Hits</h4>
                 <img src="./assets/imgs/search/image-47.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Christmas</h4>
                 <img src="./assets/imgs/search/image-48.jpeg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Rap</h4>
                 <img src="./assets/imgs/search/image-49.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Pop-Rock</h4>
                 <img src="./assets/imgs/search/image-50.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Mood</h4>
                 <img src="./assets/imgs/search/image-51.jpg" alt="" />
               </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="cardSearch rounded overflow-hidden">
+              <div class="cardSearch rounded overflow-hidden" id="cardColor">
                 <h4 class="ps-3 pt-3">Gaming</h4>
                 <img src="./assets/imgs/search/image-52.jpg" alt="" />
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="container" id="searchC" style="margin-top: 80px;">
+
       </div>
     </main>
     <aside class="overflow-hidden d-none">
@@ -737,12 +743,11 @@
       </div>
     </aside>
 
-    <footer>
+    <footer class="d-none">
       <div class="box">
         <div class="row">
           <div class="col-4 left-part">
             <img
-              src="./assets/imgs/main/image-9.jpg"
               alt="song-cover"
               class="left-part-img"
             />
@@ -778,7 +783,7 @@
               </div>
             </div>
             <div class="d-flex align-items-center">
-              <h5 class="fontSizeNumber me-2">0:58</h5>
+              <h5 class="fontSizeNumber me-2">0:00</h5>
               <div class="progress-stacked" style="width: 500px; height: 5px">
                 <div
                   class="progress"
@@ -803,7 +808,7 @@
                   <div class="progress-bar bg-secondary"></div>
                 </div>
               </div>
-              <h5 class="fontSizeNumber ms-2">3:20</h5>
+              <h5 class="fontSizeNumber ms-2" id="time">3:20</h5>
             </div>
           </div>
           <div
@@ -858,7 +863,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script> -->
     <script src="./bottombar.js"></script>
     <script src="./sideExtra.js"></script>
     <script src="./navbar-left.js"></script>

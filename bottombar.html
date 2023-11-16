@@ -21,7 +21,7 @@
   <body>
     <div class="box">
       <div class="row">
-        <div class="col-4 left-part">
+        <div class="col-10 col-md-4 col-lg-4 col-xl-4 left-part">
           <img
             src="./assets/imgs/main/image-9.jpg"
             alt="song-cover"
@@ -39,13 +39,17 @@
             ><i class="far fa-heart"></i>
           </a>
         </div>
-        <div class="col-4 text-white">
-          <div class="d-flex justify-content-center align-items-center">
+        <div
+          class="col-1 col-md-4 col-lg-4 col-xl-4 text-white media-quary-container"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center media-quary-container2"
+          >
             <a href="#" class="random-icon position-relative" id="myLink">
               <i class="fas fa-random fontIcon" id="myIcon"></i>
               <div class="dot" id="dot"></div>
             </a>
-            <a href=""
+            <a href="" class="stepBackwardIcon"
               ><i class="fas fa-step-backward fontIcon ms-2 me-2"></i
             ></a>
 
@@ -59,16 +63,21 @@
               ></i>
             </button>
 
-            <a href=""><i class="fas fa-step-forward fontIcon ms-2"></i></a>
-            <a href="#" id="loopLink" class="position-relative"
+            <a href="" class="stepForwardIcon"
+              ><i class="fas fa-step-forward fontIcon ms-2"></i
+            ></a>
+            <a href="#" id="loopLink " class="position-relative retweetIcon"
               ><i class="fas fa-retweet fontIcon ms-2" id="loopIcon"></i>
               <div class="second-dot" id="secondDot"></div>
               <div id="counter">1</div>
             </a>
           </div>
           <div class="d-flex align-items-center">
-            <h5 class="fontSizeNumber me-2">0:58</h5>
-            <div class="progress-stacked" style="width: 500px; height: 5px">
+            <h5 class="fontSizeNumber me-2 d-none d-md-block">0:58</h5>
+            <div
+              class="progress-stacked d-none d-md-block"
+              style="width: 500px; height: 5px"
+            >
               <div
                 class="progress"
                 role="progressbar"
@@ -92,14 +101,18 @@
                 <div class="progress-bar bg-secondary"></div>
               </div>
             </div>
-            <h5 class="fontSizeNumber ms-2">3:20</h5>
+            <h5 class="fontSizeNumber ms-2 d-none d-md-block">3:20</h5>
           </div>
         </div>
         <div
-          class="col-4 d-flex justify-content-end align-items-center text-white"
+          class="col-1 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-end align-items-center text-white"
         >
-          <a class="me-2" href=""><i class="fas fa-microphone fontIcon"></i></a>
-          <a class="me-2" href=""><i class="fas fa-bars fontIcon"></i></a>
+          <a class="me-2 micIcon" href=""
+            ><i class="fas fa-microphone fontIcon"></i
+          ></a>
+          <a class="me-2 listIcon" href=""
+            ><i class="fas fa-bars fontIcon"></i
+          ></a>
           <a class="me-2" href=""
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,10 +130,16 @@
               />
             </svg>
           </a>
-          <button class="btn p-0 me-2" onclick="toggleOnOff()">
+          <button
+            class="btn p-0 me-2 d-none d-md-block"
+            onclick="toggleOnOff()"
+          >
             <i class="fas fa-volume-up fontIcon" id="volumeIcon"></i>
           </button>
-          <div class="progress-stacked" style="width: 100px; height: 5px">
+          <div
+            class="progress-stacked d-none d-md-block"
+            style="width: 100px; height: 5px"
+          >
             <div
               class="progress"
               role="progressbar"
@@ -132,7 +151,9 @@
               <div class="progress-bar bg-white" style="width: 50%"></div>
             </div>
           </div>
-          <a class="ms-2" href=""><i class="fas fa-expand-alt fontIcon"></i></a>
+          <a class="ms-2 audioIcon" href=""
+            ><i class="fas fa-expand-alt fontIcon"></i
+          ></a>
         </div>
       </div>
     </div>
