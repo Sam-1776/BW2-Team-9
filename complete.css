@@ -98,7 +98,14 @@ width: 20%;
   background-color: grey;
   border-radius: 10px;
 }
-
+@media screen and (max-width: 766px) {
+ #advertisementContainer {
+  display: none;
+ }
+ #section1 {
+  margin-top: 70px;
+ }
+}
 #barSearch {
   width: 400px;
 }
@@ -165,7 +172,7 @@ aside {
   display: flex;
   flex-direction: column;
 }
-
+@media screen 
 .first-icons p {
   display: inline-block;
   margin-left: 10px;
