@@ -84,7 +84,7 @@ const Brani = (x) => {
     startPlayer(x.data[index]);
   };
   const row = document.createElement("div");
-  row.className = "col-7";
+  row.className = "col-12 col-md-6 order-2 order-md-1";
   const divT = document.createElement("div");
   divT.className = "mb-3";
   const h4 = document.createElement("h4");
@@ -138,7 +138,7 @@ const Brani = (x) => {
 };
 const Artist = (x) => {
   const row = document.createElement("div");
-  row.className = "col-5";
+  row.className = "col-12 col-md-6 order-1 order-md-2";
   const col = document.createElement("div");
   col.className = " d-flex align-items-center";
   const div = document.createElement("div");
@@ -238,3 +238,37 @@ const laodPage = () => {
     startPlayer(item);
   }
 };
+
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+let audio;
+
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
+    }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
+  }
+});
+
+function onAudioEnded() {
+  isPlayings = false;
+}
