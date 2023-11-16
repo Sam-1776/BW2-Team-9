@@ -243,6 +243,40 @@ if (ore >= 12) {
   saluto.innerHTML = "Buongiorno";
 }
 
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+let audio;
+
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
+    }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
+  }
+});
+
+function onAudioEnded() {
+  isPlayings = false;
+}
+
 /* Dati sul footer */
 
 const footer = document.querySelector("footer");
@@ -320,7 +354,6 @@ const headerloaded = function () {
       })
       .catch((err) => console.error(err.message));
 
-<<<<<<< HEAD
     function currentPlaylist(current) {
       console.log(current);
       const randomNum = Math.floor(Math.random() * (current.data.length - 1));
@@ -341,10 +374,6 @@ const headerloaded = function () {
 
       advertisementContainer.innerHTML += `
                <div class="col-12 d-flex flex-column flex-md-row p-3 rounded" id="advertisementContainer">
-=======
-               advertisementContainer.innerHTML +=`
-               
->>>>>>> rafael_Branch
                <div class="col-md-4 col-12 me-3 py-5">
                  <img src="${currentCoverAlbum}" alt="" class="img-fluid" style="width:100%; aspect-ratio: 1/1;";>
                </div>
@@ -380,14 +409,11 @@ for (let index = 0; index < cardColor.length; index++) {
   cardColor.style.backgroundColor = `${randomColor}`;
 } */
 
-
 /* Playlist HomePage */
 
-const Mood = []
-const hit = []
-const casa = []
-const street = []
+const Mood = [];
+const hit = [];
+const casa = [];
+const street = [];
 
-const dragons = []
-
-
+const dragons = [];
