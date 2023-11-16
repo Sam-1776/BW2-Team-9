@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
   storedData.forEach(function (value) {
     createListItem(ul, value);
   });
+  btn.forEach((element) => {
+    const nameP = element.children[1].innerText;
+    console.log(nameP);
+    laodPagePlay(nameP);
+  });
 });
 
 butIn.addEventListener("click", function () {
@@ -82,49 +87,63 @@ function getStoredData() {
   return JSON.parse(localStorage.getItem("data")) || [];
 }
 
-
-const btn = document.querySelectorAll("#cardPlay")
+const btn = document.querySelectorAll("#cardPlay");
 console.log(btn);
-const  a = []
 
 btn.forEach((element) => {
   element.onclick = (element) => {
     console.log(element);
     const txt = element.srcElement.children[0].innerText;
-   /* const txt = element.children[1].innerText */ 
-   console.log(txt);
-   const arr = JSON.parse(localStorage.getItem(txt))
-   console.log("questo è l'array", arr);
-   /* window.location.assign("./album.html?name=" + txt); */
-   fetch(URL + txt, {
-    headers: {
-      "X-RapidAPI-Key": Key,
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    },
-   })
-   .then(resp => resp.json())
-   .then(obj => {
-    console.log(obj)
-    const play = JSON.parse(localStorage.getItem(txt))
-      console.log(play);
-    if (play !== null) {
-      localStorage.removeItem(txt)
-        localStorage.setItem(txt, JSON.stringify(a))
-        console.log("ciao");
-    }else{
-      for (let i = 0; i < 10; i++) {
-        const element = obj.data[i];
-        a.push(element)
-        /* localStorage.setItem(txt, JSON.stringify(a)) */
-          localStorage.setItem(txt, JSON.stringify(a))
-          console.log("ciao");
-    }
+    /* const txt = element.children[1].innerText */
+    console.log(txt);
+    const arr = JSON.parse(localStorage.getItem(txt));
+    console.log("questo è l'array", arr);
+    /* window.location.assign("./album.html?name=" + txt); */
+    fetch(URL + txt, {
+      headers: {
+        "X-RapidAPI-Key": Key,
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((obj) => {
+        console.log(obj);
+        const play = JSON.parse(localStorage.getItem(txt));
+        console.log(play);
+        if (play != null) {
+          localStorage.removeItem(txt);
+          const a = [];
+          for (let i = 0; i < 10; i++) {
+            const element = obj.data[i];
+            a.push(element);
+            /* localStorage.setItem(txt, JSON.stringify(a)) */
+            localStorage.setItem(txt, JSON.stringify(a));
+            console.log("ciao");
+          }
+        } else {
+          localStorage.removeItem(txt);
+          const a = [];
+          for (let i = 0; i < 10; i++) {
+            const element = obj.data[i];
+            a.push(element);
+            /* localStorage.setItem(txt, JSON.stringify(a)) */
+            localStorage.setItem(txt, JSON.stringify(a));
+            console.log("ciao");
+          }
 
-      /* createListItem(ul, element) */
-      
-    }
-  })
+          createListItem(ul, txt);
+        }
+      });
   };
 });
+
+
+const laodPagePlay = (x) => {
+  const item = JSON.parse(localStorage.getItem(x));
+  console.log(item);
+  if (item) {
+    createListItem(ul, x);
+  }
+};
 
 /* localStorage.clear() */
