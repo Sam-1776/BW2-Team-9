@@ -355,7 +355,7 @@ const headerloaded = function () {
 const randomText = containerText[randomPosition]
 
                advertisementContainer.innerHTML +=`
-               <div class="col-12 d-flex flex-column flex-md-row p-3 rounded" id="advertisementContainer">
+               
                <div class="col-md-4 col-12 me-3 py-5">
                  <img src="${currentCoverAlbum}" alt="" class="img-fluid" style="width:100%; aspect-ratio: 1/1;";>
                </div>
@@ -373,7 +373,7 @@ const randomText = containerText[randomPosition]
   </div>
                </div>
                </div>
-                     </div>
+                     
                `;
                const play = document.getElementById("play");
 
