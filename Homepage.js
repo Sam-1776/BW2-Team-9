@@ -126,7 +126,9 @@ const Brani = (x) => {
     img.src = x.data[j].album.cover_small;
     img.className = "rounded me-2";
     img.style = "width: 46px; height:46px";
-    img.onclick = () => startPlayer(x.data[j]);
+    img.onclick = () => {
+      startPlayer(x.data[j]);
+    };
     const a = document.createElement("a");
     const an = document.createElement("a");
     const h5 = document.createElement("h5");
