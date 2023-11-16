@@ -67,9 +67,9 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-section2 #h2-Button-Container {
+/* section2 #h2-Button-Container {
   display: flex;
-}
+} */
 #h2-Button-Container #buttonContainer {
   width: 100%;
   display: flex;
@@ -435,14 +435,14 @@ header {
   font-size: 10px;
 }
 
-.main-page-album {
+/* .main-page-album {
   background: rgb(20, 20, 14);
   background: linear-gradient(
     0deg,
     rgba(20, 20, 14, 1) 57%,
     rgba(131, 131, 50, 1) 94%
   );
-}
+} */
 .a-icont {
   padding: 15px;
   font-size: 40px;

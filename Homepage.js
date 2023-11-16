@@ -12,9 +12,11 @@ search.onclick = () => {
   barInput.classList.remove("d-none");
   console.log(section1);
   console.log(section2);
+  advertisementContainer.classList.add("d-none");
+  section2.classList.remove("d-md-flex");
+  advertisementContainer.classList.remove("d-md-flex");
   section1.classList.add("d-none");
   section2.classList.add("d-none");
-  advertisementContainer.classList.add("d-none");
   buttonB.classList.add("active");
   const card = document.querySelectorAll(".cardSearch");
   console.log(card);
@@ -415,6 +417,3 @@ for (let index = 0; index < cardColor.length; index++) {
 } */
 
 /* Playlist HomePage */
-
-
-const dragons = [];

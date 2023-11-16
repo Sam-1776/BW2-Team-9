@@ -77,6 +77,12 @@ const makeBody = () => {
 const container = document.getElementById("containerBody");
 
 const Brani = (x) => {
+  const buttonP = document.querySelector(".bi-play-circle-fill");
+  buttonP.onclick = () => {
+    const index = Math.floor(Math.random() * x.data.length);
+    console.log(x.data[index]);
+    startPlayer(x.data[index]);
+  };
   const row = document.createElement("div");
   row.className = "col-7";
   const divT = document.createElement("div");

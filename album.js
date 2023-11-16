@@ -154,15 +154,6 @@ const generate = (x) => {
   };
 };
 
-const secondoFormattato =
-  secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
-
-return minuti + ":" + secondoFormattato;
-
-const olsec = document.getElementById("secondi");
-const liSec = document.createElement("li");
-liSec.innerText = convertiSecondiInMinuti(song.duration);
-olsec.appendChild(liSec);
 const input = document.querySelector(".input");
 const anchor = document.getElementById("anchor");
 const divinput = document.getElementById("div-input");
@@ -247,10 +238,10 @@ function getStoredData() {
   return JSON.parse(localStorage.getItem("data")) || [];
 }
 
-const main = document.querySelector("#mainAside");
+const main = document.getElementById("main");
 const aside = document.querySelector("aside");
 const close = document.getElementById("close");
-const header = document.getElementById("header");
+const capo = document.getElementById("header")
 console.log(aside);
 const btnF = document.getElementById("friends");
 
@@ -259,9 +250,9 @@ close.onclick = () => {
   aside.classList.add("d-none");
   aside.classList.remove("d-block");
   aside.classList.remove("col-2");
-  main.classList.remove("col-7");
-  main.classList.add("col-9");
-  /*  header.style.width = "75%"; */
+  main.classList.remove( "col-md-7" );
+  main.classList.add("col-md-9","col-12");
+  capo.style.width = "75%"
 };
 
 btnF.onclick = () => {
@@ -269,10 +260,11 @@ btnF.onclick = () => {
   aside.classList.remove("d-none");
   aside.classList.add("d-block");
   aside.classList.add("col-2");
-  main.classList.remove("col-9");
-  main.classList.add("col-7");
-  /* header.style.width = "58%"; */
+  main.classList.remove("col-md-9","col-12");
+  main.classList.add("col-md-7",)
+  capo.style.width = "58%"
 };
+
 
 const buttonB = document.getElementById("backHome");
 
