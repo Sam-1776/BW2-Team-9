@@ -327,6 +327,9 @@ function convertiSecondiInMinuti(secondi) {
 window.onload = () => {
   laodPage();
   headerloaded();
+  buttonSection2.onclick = function () {
+    cardsSongsLoaded();
+  };
 };
 
 const laodPage = () => {
@@ -417,3 +420,50 @@ for (let index = 0; index < cardColor.length; index++) {
 } */
 
 /* Playlist HomePage */
+
+const cardsSongsLoaded = () => {
+  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
+      headers: {
+          'X-RapidAPI-Key': '68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61',
+          'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+      }
+  })
+  .then(resp => {
+      console.log(resp)
+      return  resp.json() }) 
+      .then(song => {
+          cardsSongs(song)
+          console.log(song);
+          
+      })
+      .catch(err =>
+          console.error(err.message)
+          )
+          
+          function cardsSongs (songs) {
+            const cards2 = document.getElementById("cards2")
+              cards2.innerHTML = "";
+                        for( let i = 0; i < 20; i++) {
+                          
+                          const imgAlbumMedium = songs.data[i].album.cover_medium;
+                          const currentSinger = songs.data[i].artist.name;
+                          const currentAlbum = songs.data[i].album.title;
+                          const currentAlbumId = songs.data[i].album.id;
+                          const currentArtistId = songs.data[i].artist.id;
+     cards2.innerHTML += `
+     <div class="p-2 col-md-3 col-12" >
+     <div class="card h-100 text-bg-dark">
+<a href="./album.html?id=${currentAlbumId}">
+  <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+     <img src="${imgAlbumMedium}" class="card-img-top img-fluid" alt="...">
+     </div>
+     </a>
+     <div class="card-body">
+     <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentAlbumId}">Album: ${currentAlbum}</a></p>
+     </div>
+     </div>
+     </div>
+     `;
+  }
+}
+};
