@@ -12,9 +12,11 @@ search.onclick = () => {
   barInput.classList.remove("d-none");
   console.log(section1);
   console.log(section2);
+  advertisementContainer.classList.add("d-none");
+  section2.classList.remove("d-md-flex");
+  advertisementContainer.classList.remove("d-md-flex");
   section1.classList.add("d-none");
   section2.classList.add("d-none");
-  advertisementContainer.classList.add("d-none");
   buttonB.classList.add("active");
   const card = document.querySelectorAll(".cardSearch");
   console.log(card);
@@ -78,6 +80,9 @@ const Artist = (x) => {
   img.style = "width: 80px; height:80px";
   const h3 = document.createElement("h3");
   h3.className = "fw-bold";
+  h3.onclick = () =>{
+    window.location.assign("./myArtist.html?id=" + x.data[1].artist.id)
+  }
   const divT = document.createElement("div");
   /* divT.style = "width: 36px; heigth: 36px" */
   const h4 = document.createElement("h4");
@@ -126,7 +131,9 @@ const Brani = (x) => {
     img.src = x.data[j].album.cover_small;
     img.className = "rounded me-2";
     img.style = "width: 46px; height:46px";
-    img.onclick = () => startPlayer(x.data[j]);
+    img.onclick = () => {
+      startPlayer(x.data[j]);
+    };
     const a = document.createElement("a");
     const an = document.createElement("a");
     const h5 = document.createElement("h5");
@@ -320,6 +327,9 @@ function convertiSecondiInMinuti(secondi) {
 window.onload = () => {
   laodPage();
   headerloaded();
+  buttonSection2.onclick = function () {
+    cardsSongsLoaded();
+  };
 };
 
 const laodPage = () => {
@@ -411,9 +421,49 @@ for (let index = 0; index < cardColor.length; index++) {
 
 /* Playlist HomePage */
 
-const Mood = [];
-const hit = [];
-const casa = [];
-const street = [];
-
-const dragons = [];
+const cardsSongsLoaded = () => {
+  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hip-pop", {
+      headers: {
+          'X-RapidAPI-Key': '68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61',
+          'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+      }
+  })
+  .then(resp => {
+      console.log(resp)
+      return  resp.json() }) 
+      .then(song => {
+          cardsSongs(song)
+          console.log(song);
+          
+      })
+      .catch(err =>
+          console.error(err.message)
+          )
+          
+          function cardsSongs (songs) {
+            const cards2 = document.getElementById("cards2")
+              cards2.innerHTML = "";
+                        for( let i = 0; i < 20; i++) {
+                          
+                          const imgAlbumMedium = songs.data[i].album.cover_medium;
+                          const currentSinger = songs.data[i].artist.name;
+                          const currentAlbum = songs.data[i].album.title;
+                          const currentAlbumId = songs.data[i].album.id;
+                          const currentArtistId = songs.data[i].artist.id;
+     cards2.innerHTML += `
+     <div class="p-2 col-md-3 col-12" >
+     <div class="card h-100 text-bg-dark">
+<a href="./album.html?id=${currentAlbumId}">
+  <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">
+     <img src="${imgAlbumMedium}" class="card-img-top img-fluid" alt="...">
+     </div>
+     </a>
+     <div class="card-body">
+     <p class="card-text"><a href="./myArtist.html?id=${currentArtistId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentAlbumId}">Album: ${currentAlbum}</a></p>
+     </div>
+     </div>
+     </div>
+     `;
+  }
+}
+};

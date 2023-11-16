@@ -10,8 +10,8 @@ close.onclick = () => {
   aside.classList.add("d-none");
   aside.classList.remove("d-block");
   aside.classList.remove("col-2");
-  main.classList.remove("col-7");
-  main.classList.add("col-9");
+  main.classList.remove("col-md-7", "col-10");
+  main.classList.add("col-md-9","col-12");
   capo.style.width = "75%"
 };
 
@@ -20,7 +20,7 @@ btnF.onclick = () => {
   aside.classList.remove("d-none");
   aside.classList.add("d-block");
   aside.classList.add("col-2");
-  main.classList.remove("col-9");
-  main.classList.add("col-7")
+  main.classList.remove("col-md-9","col-12");
+  main.classList.add("col-md-7", "col-10")
   capo.style.width = "58%"
 };

@@ -24,23 +24,23 @@ if (productId) {
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
-}else{
-  const arr = JSON.parse(localStorage.getItem(namePlay))
+} else {
+  const arr = JSON.parse(localStorage.getItem(namePlay));
   console.log(arr);
-  const buttonP = document.querySelector(".bi-play-circle-fill")
-buttonP.onclick = () => {
-  const index = Math.floor(Math.random() * arr.length)
-  console.log(arr[index]);
-  startPlayer(arr[index])
-}
+  const buttonP = document.querySelector(".bi-play-circle-fill");
+  buttonP.onclick = () => {
+    const index = Math.floor(Math.random() * arr.length);
+    console.log(arr[index]);
+    startPlayer(arr[index]);
+  };
 
   const header = document.getElementById("header-snd");
   const div = document.createElement("div");
   const h1 = document.createElement("h1");
   h1.innerText = namePlay;
-  h1.className = "text-light ms-4"
+  h1.className = "text-light ms-4";
   const img = document.createElement("img");
-  img.src = arr[0].artist.picture_medium
+  img.src = arr[0].artist.picture_medium;
   div.appendChild(img);
   img.className = "img-album";
   div.className = "div-album";
@@ -53,14 +53,13 @@ buttonP.onclick = () => {
   const ol = document.getElementById("ol");
   header.appendChild(divTotal);
 
-
   arr.forEach((song) => {
     console.log(song);
     const li = document.createElement("li");
     li.innerText = song.title;
-    li.onclick = () =>{
-      startPlayer(song)
-    }
+    li.onclick = () => {
+      startPlayer(song);
+    };
     ol.appendChild(li);
     li.className = "li-track";
 
@@ -91,15 +90,15 @@ const generate = (x) => {
   const header = document.getElementById("header-snd");
   const img = document.createElement("img");
 
-      const divText = document.createElement("div");
-      const h5 = document.createElement("h5");
-      divText.appendChild(h5);
-      h5.innerText = "ALBUM";
-      const albumP = document.createElement("p");
-      albumP.innerText = x.artist.name + " released " + x.release_date;
+  const divText = document.createElement("div");
+  const h5 = document.createElement("h5");
+  divText.appendChild(h5);
+  h5.innerText = "ALBUM";
+  const albumP = document.createElement("p");
+  albumP.innerText = x.artist.name + " released " + x.release_date;
 
-      const h1 = document.createElement("h1");
-      h1.innerText = x.title;
+  const h1 = document.createElement("h1");
+  h1.innerText = x.title;
 
   img.src = x.cover_medium;
   div.appendChild(img);
@@ -116,44 +115,24 @@ const generate = (x) => {
   divTotal.className = "album-header";
   const ol = document.getElementById("ol");
 
-      x.tracks.data.forEach((song) => {
-        console.log(song);
-        const li = document.createElement("li");
-        li.innerText = song.title;
-        li.onclick = () =>{
-          startPlayer(song)
-        }
-        ol.appendChild(li);
-        li.className = "li-track";
+  x.tracks.data.forEach((song) => {
+    console.log(song);
+    const li = document.createElement("li");
+    li.innerText = song.title;
+    li.onclick = () => {
+      startPlayer(song);
+    };
+    ol.appendChild(li);
+    li.className = "li-track";
 
-        const olsnd = document.getElementById("ol-nd");
-        const liNd = document.createElement("li");
-        liNd.innerText = song.rank;
-        olsnd.appendChild(liNd);
-        liNd.className = "li-track";
-        function convertiSecondiInMinuti(secondi) {
-          const minuti = Math.floor(secondi / 60);
-          const secondiResidui = secondi % 60;
-
-          const secondoFormattato =
-            secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
-
-          return minuti + ":" + secondoFormattato;
-        }
-
-        const olsec = document.getElementById("secondi");
-        const liSec = document.createElement("li");
-        liSec.innerText = convertiSecondiInMinuti(song.duration);
-        olsec.appendChild(liSec);
-      });
-      const buttonP = document.querySelector(".bi-play-circle-fill")
-      buttonP.onclick = () => {
-        const i = Math.floor(Math.random() * x.tracks.data.length)
-        console.log(x.tracks.data.length);
-        console.log(x.tracks.data[i]);
-        startPlayer(x.tracks.data[i])
-      }
-}
+    const olsnd = document.getElementById("ol-nd");
+    const liNd = document.createElement("li");
+    liNd.innerText = song.rank;
+    olsnd.appendChild(liNd);
+    liNd.className = "li-track";
+    function convertiSecondiInMinuti(secondi) {
+      const minuti = Math.floor(secondi / 60);
+      const secondiResidui = secondi % 60;
 
       const secondoFormattato =
         secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
@@ -166,6 +145,13 @@ const generate = (x) => {
     liSec.innerText = convertiSecondiInMinuti(song.duration);
     olsec.appendChild(liSec);
   });
+  const buttonP = document.querySelector(".bi-play-circle-fill");
+  buttonP.onclick = () => {
+    const i = Math.floor(Math.random() * x.tracks.data.length);
+    console.log(x.tracks.data.length);
+    console.log(x.tracks.data[i]);
+    startPlayer(x.tracks.data[i]);
+  };
 };
 
 const input = document.querySelector(".input");
@@ -252,10 +238,10 @@ function getStoredData() {
   return JSON.parse(localStorage.getItem("data")) || [];
 }
 
-const main = document.querySelector("#mainAside");
+const main = document.getElementById("main");
 const aside = document.querySelector("aside");
 const close = document.getElementById("close");
-const header = document.getElementById("header");
+const capo = document.getElementById("header");
 console.log(aside);
 const btnF = document.getElementById("friends");
 
@@ -264,9 +250,9 @@ close.onclick = () => {
   aside.classList.add("d-none");
   aside.classList.remove("d-block");
   aside.classList.remove("col-2");
-  main.classList.remove("col-7");
-  main.classList.add("col-9");
-  /*  header.style.width = "75%"; */
+  main.classList.remove("col-md-7");
+  main.classList.add("col-md-9", "col-12");
+  capo.style.width = "75%";
 };
 
 btnF.onclick = () => {
@@ -274,9 +260,9 @@ btnF.onclick = () => {
   aside.classList.remove("d-none");
   aside.classList.add("d-block");
   aside.classList.add("col-2");
-  main.classList.remove("col-9");
-  main.classList.add("col-7");
-  /* header.style.width = "58%"; */
+  main.classList.remove("col-md-9", "col-12");
+  main.classList.add("col-md-7");
+  capo.style.width = "58%";
 };
 
 const buttonB = document.getElementById("backHome");
@@ -337,3 +323,36 @@ const laodPage = () => {
 };
 
 /* localStorage.removeItem("info") */
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+let audio;
+
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
+    }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
+  }
+});
+
+function onAudioEnded() {
+  isPlayings = false;
+}

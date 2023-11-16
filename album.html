@@ -25,114 +25,128 @@
     <!-- <link rel="stylesheet" href="album.css" /> -->
     <link rel="stylesheet" href="complete.css" />
   </head>
-  <body class="row"; style="margin: 0;">
-    
-      <section id="section-left" class="col-3 p-0">
-        <div>
-          <i class="bi bi-three-dots"></i>
-        </div>
-        <div class="first-icons">
-          <div class="div-a-i d-flex align-items-center">
-            <a href="./Homepage.html" class="text-decoration-none fs-6 mb-2"
-              ><i class="bi bi-house-door-fill"></i> Home</a
+  <body style="margin: 0;">
+    <div class="container-fluid">
+      <div class="row">
+        <section id="section-left" class="col-3 p-0">
+          <div>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="first-icons">
+            <div class="div-a-i d-flex align-items-center">
+              <a href="./Homepage.html" class="text-decoration-none fs-6 mb-2"
+                ><i class="bi bi-house-door-fill"></i> Home</a
+              >
+            </div>
+            <div class="div-a-i d-flex">
+              <a href="#" class="text-decoration-none fs-6 mb-2" id="search"
+                ><i class="bi bi-search"></i> Cerca</a
+              >
+            </div>
+            <div class="div-a-i d-flex">
+              <a href="" class="text-decoration-none fs-6 mb-2"
+                ><i class="bi bi-music-note-list"></i> La tua libreria</a
+              >
+            </div>
+          </div>
+          <div class="second-icons">
+            <div class="div-a-i d-flex my-1">
+              <a href="" id="anchor"
+                ><i class="bi bi-plus-square-fill text-white"></i
+              ></a>
+              <p style="margin-top: 8px">Crea playlist</p>
+            </div>
+            <div class="div-input">
+              <input type="text" class="input" placeholder="Create playlist" />
+              <button id="input-button" class="input-button-none">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+            <div class="div-a-i d-flex my-2">
+              <a href=""
+                ><i
+                  class="bi bi-suit-heart-fill p-1 text-white px-2"
+                  style="
+                    background: rgb(61, 15, 228);
+                    background: linear-gradient(
+                      143deg,
+                      rgba(61, 15, 228, 1) 0%,
+                      rgba(202, 177, 215, 1) 53%
+                    );
+                  "
+                ></i
+              ></a>
+              <p>Brani che ti piacciono</p>
+            </div>
+            <div class="div-a-i d-flex">
+              <a href=""
+                ><i
+                  class="bi bi-bookmark-fill p-1 px-2 rounded"
+                  style="color: #149643; background-color: #004537"
+                ></i
+              ></a>
+              <p>I tuoi episodi</p>
+            </div>
+          </div>
+          <hr />
+          <div id="playlist">
+            <ul id="ul"></ul>
+          </div>
+        </section>
+      <div class="col-md-9 full-container p-0" id="main">
+        <main class="main-page-album p-0" id="mainAside">
+          <header id="header-snd" class="container-fluid">
+            <div
+              class="d-flex justify-content-between  align-items-center div-top"
             >
+              <div id="navInfo">
+                <button class="btn btn-dark rounded-circle active me-2" id="backHome">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="displayMedia">
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-bell"></i>
+                </button>
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-people" id="friends"></i>
+                </button>
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-person"></i>
+                </button>
+              </div>
+            </div>
+          </header>
+          <div class="div-play d-flex align-items-center bg bg-succes column-reverse-container">
+            
+          <a href=""><i class="bi bi-play-circle-fill a-icont"></i></a>
+          <div class="right-icon">
+          <a href=""><i class="bi bi-suit-heart a-icont"></i></a>
+            <a href=""><i class="bi bi-arrow-down-circle a-icont"></i></a>
+            <a href=""><i class="bi bi-three-dots a-icont"></i></a>
           </div>
-          <div class="div-a-i d-flex">
-            <a href="#" class="text-decoration-none fs-6 mb-2" id="search"
-              ><i class="bi bi-search"></i> Cerca</a
-            >
           </div>
-          <div class="div-a-i d-flex">
-            <a href="" class="text-decoration-none fs-6 mb-2"
-              ><i class="bi bi-music-note-list"></i> La tua libreria</a
-            >
+          <div class="container-fluid containerPadding">
+            <div class="row mt-5 d-flex">
+              <div class="col-8">
+                <h5 class="titleDisplayNone" style="font-size: 20px; color: white"># TITOLO</h5>
+              </div>
+              <div class="col-3">
+                <h5 style="font-size: 20px; color: white">RIPRODUZIONI</h5>
+              </div>
+              <div class="col 1 text-center">
+                <i class="bi bi-clock" style="font-size: 20px; color: white"></i>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="second-icons">
-          <div class="div-a-i d-flex my-1">
-            <a href="" id="anchor"
-              ><i class="bi bi-plus-square-fill text-white"></i
-            ></a>
-            <p style="margin-top: 8px">Crea playlist</p>
-          </div>
-          <div class="div-input">
-            <input type="text" class="input" placeholder="Create playlist" />
-            <button id="input-button" class="input-button-none">
-              <i class="bi bi-plus"></i>
-            </button>
-          </div>
-          <div class="div-a-i d-flex my-2">
-            <a href=""
-              ><i
-                class="bi bi-suit-heart-fill p-1 text-white px-2"
-                style="
-                  background: rgb(61, 15, 228);
-                  background: linear-gradient(
-                    143deg,
-                    rgba(61, 15, 228, 1) 0%,
-                    rgba(202, 177, 215, 1) 53%
-                  );
-                "
-              ></i
-            ></a>
-            <p>Brani che ti piacciono</p>
-          </div>
-          <div class="div-a-i d-flex">
-            <a href=""
-              ><i
-                class="bi bi-bookmark-fill p-1 px-2 rounded"
-                style="color: #149643; background-color: #004537"
-              ></i
-            ></a>
-            <p>I tuoi episodi</p>
-          </div>
-        </div>
-        <hr />
-        <div id="playlist">
-          <ul id="ul"></ul>
-        </div>
-      </section>
-    </div>
-    <div class="col-9 full-container" style="padding-left:0">
-      <header id="header-snd" class="container">
-        <div
-          class="d-flex justify-content-between  align-items-center div-top"
-        >
-          <div id="navInfo">
-            <button class="btn btn-dark rounded-circle active me-2" id="backHome">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="btn btn-dark rounded-circle">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-          <div class="displayMedia">
-            <button class="btn btn-dark rounded-circle">
-              <i class="bi bi-bell"></i>
-            </button>
-            <button class="btn btn-dark rounded-circle">
-              <i class="bi bi-people" id="friends"></i>
-            </button>
-            <button class="btn btn-dark rounded-circle">
-              <i class="bi bi-person"></i>
-            </button>
-          </div>
-        </div>
-      </header>
-      <main class="main-page-album p-4">
-        <div class="div-play d-flex align-items-center bg bg-succes column-reverse-container">
-          
-        <a href=""><i class="bi bi-play-circle-fill a-icont"></i></a>
-        <div class="right-icon">
-        <a href=""><i class="bi bi-suit-heart a-icont"></i></a>
-          <a href=""><i class="bi bi-arrow-down-circle a-icont"></i></a>
-          <a href=""><i class="bi bi-three-dots a-icont"></i></a>
-        </div>
-        </div>
-        <div class="container-fluid containerPadding">
-          <div class="row mt-5 d-flex">
+          <hr style="color: white" />
+          <div class="container-fluid display-list">
+            <div class="row">
             <div class="col-8">
-              <h5 class="titleDisplayNone" style="font-size: 20px; color: white"># TITOLO</h5>
+              <ol id="ol"></ol>
             </div>
             <div class="col-3 playing ">
               <h5 style="font-size: 20px; color: white">RIPRODUZIONI</h5>
@@ -140,233 +154,224 @@
             <div class="col 1 px-0 watch text-center">
               <i class="bi bi-clock" style="font-size: 20px; color: white"></i>
             </div>
+  
           </div>
-        </div>
-        <hr style="color: white" />
-        <div class="container-fluid display-list">
-          <div class="row">
-          <div class="col-8">
-            <ol id="ol"></ol>
-          </div>
-          
-          <div class="col-3 first-column">
-            
-            <ul id="ol-nd"></ul>
-          </div>
-
-          <div class="col-1 second-column">
-            <ul id="secondi"></ul>
-          </div>
-        </div>
-        </div>
-      </main>
-    </div>
-    <aside class="overflow-hidden d-none">
-      <div id="listen">
-        <div class="d-flex justify-content-between p-3 align-items-center">
-          <h5 class="text-light m-0" style="font-size: 0.8rem">
-            Attività amici
-          </h5>
-          <div class="d-flex">
-            <button
-              class="btn btn-dark rounded-circle p-0"
-              type="button"
-              id="add-Friends"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"
-            >
-              <i class="bi bi-person-add"></i>
-            </button>
-            <button
-              type="button"
-              class="btn btn-dark rounded-circle"
-              id="close"
-            >
-              <i class="bi bi-x-lg"></i>
-            </button>
-          </div>
-        </div>
-        <div class="p-1">
-          <div class="container p-2">
-            <div class="row justify-content-center g-1">
-              <div class="col-3">
-                <img
-                  id="imageUser"
-                  class="rounded-circle"
-                  src="./assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
-                  alt=""
-                />
-              </div>
-              <div class="col-7">
-                <div class="text-secondary">
-                  <h5 class="m-0" style="font-size: 0.8rem">Nome amico</h5>
-                  <p style="font-size: 0.7rem" class="m-0">
-                    canzone <span><i class="bi bi-dot"></i></span> nome artista
-                  </p>
-                  <p style="font-size: 0.7rem">
-                    <i class="bi bi-disc"></i> info
-                  </p>
-                </div>
-              </div>
-              <div class="col-2 text-end text-secondary">
-                <p style="font-size: 0.8rem">ore</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </main>
       </div>
-      <div
-        class="offcanvas offcanvas-end col-2"
-        tabindex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <div class="offcanvas-header">
-          <button
-            type="button"
-            class="btn btn-dark rounded-circle"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
-            <i class="bi bi-chevron-left"></i>
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div id="newFriends p-3">
-            <h5 class="text-light" style="font-size: 1rem">Aggiungi amici</h5>
-            <div class="d-flex justify-content-between">
-              <input
-                type="text"
-                class="rounded-pill text-bg-dark border border-ligth"
-                placeholder="inserisci nome amico"
-                style="width: 2600px"
-              />
-              <button class="btn btn-dark rounded-circle">
-                <i class="bi bi-plus-circle"></i>
+      <aside class="overflow-hidden d-none">
+        <div id="listen">
+          <div class="d-flex justify-content-between p-3 align-items-center">
+            <h5 class="text-light m-0" style="font-size: 0.8rem">
+              Attività amici
+            </h5>
+            <div class="d-flex">
+              <button
+                class="btn btn-dark rounded-circle p-0"
+                type="button"
+                id="add-Friends"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                <i class="bi bi-person-add"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark rounded-circle"
+                id="close"
+              >
+                <i class="bi bi-x-lg"></i>
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </aside>
-
-    <footer class="d-none">
-      <div class="box">
-        <div class="row">
-          <div class="col-4 left-part">
-            <img
-              alt="song-cover"
-              class="left-part-img"
-            />
-            <div class="leftPart">
-              <h3 class="leftPart-h3">Fat Funny Friend</h3>
-              <h5 class="leftPart-h5">Maddie Zahm</h5>
-            </div>
-            <a
-              href="#"
-              class="heart-icon"
-              id="heartIcon"
-              onclick="toggleHeartIcon()"
-              ><i class="fas fa-heart ms-3"></i
-            ></a>
-          </div>
-          <div class="col-4 text-white">
-            <div class="d-flex justify-content-center">
-              <div>
-                <a href=""> <i class="fas fa-random fontIcon"></i></a>
-                <a href=""
-                  ><i class="fas fa-step-backward fontIcon ms-3"></i
-                ></a>
-
-                <button class="btn" onclick="togglePlayPause()">
-                  <i
-                    class="fas fa-play-circle play-icon fontIconPlay ms-3"
-                    id="playIcon"
-                  ></i>
-                </button>
-
-                <a href=""><i class="fas fa-step-forward fontIcon ms-3"></i></a>
-                <a href=""><i class="fas fa-retweet fontIcon ms-3"></i></a>
+          <div class="p-1">
+            <div class="container p-2">
+              <div class="row justify-content-center g-1">
+                <div class="col-3">
+                  <img
+                    id="imageUser"
+                    class="rounded-circle"
+                    src="./assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col-7">
+                  <div class="text-secondary">
+                    <h5 class="m-0" style="font-size: 0.8rem">Nome amico</h5>
+                    <p style="font-size: 0.7rem" class="m-0">
+                      canzone <span><i class="bi bi-dot"></i></span> nome artista
+                    </p>
+                    <p style="font-size: 0.7rem">
+                      <i class="bi bi-disc"></i> info
+                    </p>
+                  </div>
+                </div>
+                <div class="col-2 text-end text-secondary">
+                  <p style="font-size: 0.8rem">ore</p>
+                </div>
               </div>
             </div>
-            <div class="d-flex align-items-center">
-              <h5 class="fontSizeNumber me-2">0:00</h5>
-              <div class="progress-stacked" style="width: 500px; height: 5px">
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-end col-2"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn btn-dark rounded-circle"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div id="newFriends p-3">
+              <h5 class="text-light" style="font-size: 1rem">Aggiungi amici</h5>
+              <div class="d-flex justify-content-between">
+                <input
+                  type="text"
+                  class="rounded-pill text-bg-dark border border-ligth"
+                  placeholder="inserisci nome amico"
+                  style="width: 2600px"
+                />
+                <button class="btn btn-dark rounded-circle">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+  
+      <footer class="d-none">
+        <div class="box">
+          <div class="row">
+            <div class="col-4 left-part">
+              <img
+                alt="song-cover"
+                class="left-part-img"
+              />
+              <div class="leftPart">
+                <h3 class="leftPart-h3">Fat Funny Friend</h3>
+                <h5 class="leftPart-h5">Maddie Zahm</h5>
+              </div>
+              <a
+                href="#"
+                class="heart-icon"
+                id="heartIcon"
+                onclick="toggleHeartIcon()"
+                ><i class="fas fa-heart ms-3"></i
+              ></a>
+            </div>
+            <div class="col-4 text-white">
+              <div class="d-flex justify-content-center">
+                <div>
+                  <a href=""> <i class="fas fa-random fontIcon"></i></a>
+                  <a href=""
+                    ><i class="fas fa-step-backward fontIcon ms-3"></i
+                  ></a>
+  
+                  <button class="btn" onclick="togglePlayPause()">
+                    <i
+                      class="fas fa-play-circle play-icon fontIconPlay ms-3"
+                      id="playIcon"
+                    ></i>
+                  </button>
+  
+                  <a href=""><i class="fas fa-step-forward fontIcon ms-3"></i></a>
+                  <a href=""><i class="fas fa-retweet fontIcon ms-3"></i></a>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <h5 class="fontSizeNumber me-2">0:00</h5>
+                <div class="progress-stacked" style="width: 500px; height: 5px">
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 500px; height: 5px"
+                  >
+                    <div class="progress-bar bg-white" style="width: 25%"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment two"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 100%"
+                  >
+                    <div class="progress-bar bg-secondary"></div>
+                  </div>
+                </div>
+                <h5 class="fontSizeNumber ms-2" id="time">3:20</h5>
+              </div>
+            </div>
+            <div
+              class="col-4 d-flex justify-content-end align-items-center text-white"
+            >
+              <a class="me-2" href=""
+                ><i class="fas fa-microphone fontIcon"></i
+              ></a>
+              <a class="me-2" href=""><i class="fas fa-bars fontIcon"></i></a>
+              <a class="me-2" href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-speaker fontIcon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"
+                  />
+                  <path
+                    d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                  />
+                </svg>
+              </a>
+              <button class="btn p-0 me-2" onclick="toggleOnOff()">
+                <i class="fas fa-volume-up fontIcon" id="volumeIcon"></i>
+              </button>
+              <div class="progress-stacked" style="width: 100px; height: 5px">
                 <div
                   class="progress"
                   role="progressbar"
                   aria-label="Basic example"
-                  aria-valuenow="25"
+                  aria-valuenow="75"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style="width: 500px; height: 5px"
                 >
-                  <div class="progress-bar bg-white" style="width: 25%"></div>
-                </div>
-                <div
-                  class="progress"
-                  role="progressbar"
-                  aria-label="Segment two"
-                  aria-valuenow="30"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 100%"
-                >
-                  <div class="progress-bar bg-secondary"></div>
+                  <div class="progress-bar bg-white" style="width: 50%"></div>
                 </div>
               </div>
-              <h5 class="fontSizeNumber ms-2" id="time">3:20</h5>
+              <a class="ms-2" href=""
+                ><i class="fas fa-expand-alt fontIcon"></i
+              ></a>
             </div>
-          </div>
-          <div
-            class="col-4 d-flex justify-content-end align-items-center text-white"
-          >
-            <a class="me-2" href=""
-              ><i class="fas fa-microphone fontIcon"></i
-            ></a>
-            <a class="me-2" href=""><i class="fas fa-bars fontIcon"></i></a>
-            <a class="me-2" href=""
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-speaker fontIcon"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"
-                />
-                <path
-                  d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
-                />
-              </svg>
-            </a>
-            <button class="btn p-0 me-2" onclick="toggleOnOff()">
-              <i class="fas fa-volume-up fontIcon" id="volumeIcon"></i>
-            </button>
-            <div class="progress-stacked" style="width: 100px; height: 5px">
-              <div
-                class="progress"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div class="progress-bar bg-white" style="width: 50%"></div>
-              </div>
-            </div>
-            <a class="ms-2" href=""
-              ><i class="fas fa-expand-alt fontIcon"></i
-            ></a>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+  
+  
+        
 
-    <script
+
+
+      </div>
+    </div>
+    
+        <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
@@ -374,7 +379,7 @@
     <script src="album.js"></script>
 <!--     <script src="./Homepage.js"></script> -->
     <script src="./bottombar.js"></script>
-    <script src="./sideExtra.js"></script>
+<!--     <script src="./sideExtra.js"></script> -->
     <script src="./navbar-left.js"></script>
 
   </body>
