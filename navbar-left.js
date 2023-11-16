@@ -62,6 +62,9 @@ function createListItem(ul, value) {
   ulDiv.className = "d-flex justify-content-between mx-2 ";
 
   li.innerText = value;
+  li.onclick = () =>{
+    window.location.assign("./album.html?name=" + value );
+  }
   butLi.addEventListener("click", function () {
     const valueToRemove = li.innerText;
     const storedData = getStoredData();
