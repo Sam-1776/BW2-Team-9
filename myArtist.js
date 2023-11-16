@@ -238,3 +238,37 @@ const laodPage = () => {
     startPlayer(item);
   }
 };
+
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+let audio;
+
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
+    }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
+  }
+});
+
+function onAudioEnded() {
+  isPlayings = false;
+}
