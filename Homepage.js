@@ -459,7 +459,7 @@ const cardsSongsLoaded = () => {
      </div>
      </a>
      <div class="card-body">
-     <p class="card-text"><a href="./artist.html?id=${currentArtistId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentAlbumId}">Album: ${currentAlbum}</a></p>
+     <p class="card-text"><a href="./myArtist.html?id=${currentArtistId}">Cantante: ${currentSinger}</a></br><a href="./album.html?id=${currentAlbumId}">Album: ${currentAlbum}</a></p>
      </div>
      </div>
      </div>
