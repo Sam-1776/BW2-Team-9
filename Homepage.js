@@ -366,11 +366,23 @@ const headerloaded = function () {
   };
   advertismentLoading();
 };
-const cardSearchTot = 52;
+/* const cardSearchTot = 52;
 const cardColor = document.querySelectorAll("#cardColor");
 for (let index = 0; index < cardColor.length; index++) {
   let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
   randomColor = `#${randomColor.padStart(6, "0")}`;
 
   cardColor.style.backgroundColor = `${randomColor}`;
-}
+} */
+
+
+/* Playlist HomePage */
+
+const Mood = []
+const hit = []
+const casa = []
+const street = []
+
+const dragons = []
+
+

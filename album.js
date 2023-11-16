@@ -2,6 +2,8 @@ const param = new URLSearchParams(window.location.search);
 console.log(param);
 const productId = param.get("id");
 console.log("RESOURCE ID: ", productId);
+const namePlay = param.get("name")
+console.log(namePlay);
 
 if (productId) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/album/" + productId, {
@@ -17,7 +19,77 @@ if (productId) {
     })
     .then((data) => {
       console.log("API Response:", data);
-      const div = document.createElement("div");
+     generate(data)
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}else{
+  const arr = JSON.parse(localStorage.getItem(namePlay))
+  console.log(arr);
+  const buttonP = document.querySelector(".bi-play-circle-fill")
+buttonP.onclick = () => {
+  const index = Math.floor(Math.random() * arr.length)
+  console.log(arr[index]);
+  startPlayer(arr[index])
+}
+
+  const header = document.getElementById("header-snd");
+  const div = document.createElement("div");
+  const h1 = document.createElement("h1");
+  h1.innerText = namePlay;
+  h1.className = "text-light ms-4"
+  const img = document.createElement("img");
+  img.src = arr[0].artist.picture_medium
+  div.appendChild(img);
+  img.className = "img-album";
+  div.className = "div-album";
+  const divText = document.createElement("div");
+  divText.appendChild(h1);
+  const divTotal = document.createElement("div");
+  divTotal.appendChild(div);
+  divTotal.appendChild(divText);
+  divTotal.className = "album-header";
+  const ol = document.getElementById("ol");
+  header.appendChild(divTotal);
+
+
+  arr.forEach((song) => {
+    console.log(song);
+    const li = document.createElement("li");
+    li.innerText = song.title;
+    li.onclick = () =>{
+      startPlayer(song)
+    }
+    ol.appendChild(li);
+    li.className = "li-track";
+
+    const olsnd = document.getElementById("ol-nd");
+    const liNd = document.createElement("li");
+    liNd.innerText = song.rank;
+    olsnd.appendChild(liNd);
+    liNd.className = "li-track";
+    function convertiSecondiInMinuti(secondi) {
+      const minuti = Math.floor(secondi / 60);
+      const secondiResidui = secondi % 60;
+
+      const secondoFormattato =
+        secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
+
+      return minuti + ":" + secondoFormattato;
+    }
+
+    const olsec = document.getElementById("secondi");
+    const liSec = document.createElement("li");
+    liSec.innerText = convertiSecondiInMinuti(song.duration);
+    olsec.appendChild(liSec);
+  });
+
+}
+
+
+const generate = (x) =>{
+  const div = document.createElement("div");
       const header = document.getElementById("header-snd");
       const img = document.createElement("img");
 
@@ -25,13 +97,13 @@ if (productId) {
       const h5 = document.createElement("h5");
       divText.appendChild(h5);
       h5.innerText = "ALBUM";
-      albumP = document.createElement("p");
-      albumP.innerText = data.artist.name + " released " + data.release_date;
+      const albumP = document.createElement("p");
+      albumP.innerText = x.artist.name + " released " + x.release_date;
 
-      h1 = document.createElement("h1");
-      h1.innerText = data.title;
+      const h1 = document.createElement("h1");
+      h1.innerText = x.title;
 
-      img.src = data.cover_medium;
+      img.src = x.cover_medium;
       div.appendChild(img);
       img.className = "img-album";
       div.className = "div-album";
@@ -46,10 +118,13 @@ if (productId) {
       divTotal.className = "album-header";
       const ol = document.getElementById("ol");
 
-      data.tracks.data.forEach((song) => {
+      x.tracks.data.forEach((song) => {
         console.log(song);
         const li = document.createElement("li");
         li.innerText = song.title;
+        li.onclick = () =>{
+          startPlayer(song)
+        }
         ol.appendChild(li);
         li.className = "li-track";
 
@@ -73,11 +148,17 @@ if (productId) {
         liSec.innerText = convertiSecondiInMinuti(song.duration);
         olsec.appendChild(liSec);
       });
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
+      const buttonP = document.querySelector(".bi-play-circle-fill")
+      buttonP.onclick = () => {
+        const i = Math.floor(Math.random() * x.tracks.data.length)
+        console.log(x.tracks.data.length);
+        console.log(x.tracks.data[i]);
+        startPlayer(x.tracks.data[i])
+      }
 }
+
+
+
 
 const input = document.querySelector(".input");
 const anchor = document.getElementById("anchor");
