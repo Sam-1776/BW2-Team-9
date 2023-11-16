@@ -2,7 +2,7 @@ const param = new URLSearchParams(window.location.search);
 console.log(param);
 const productId = param.get("id");
 console.log("RESOURCE ID: ", productId);
-const namePlay = param.get("name")
+const namePlay = param.get("name");
 console.log(namePlay);
 
 if (productId) {
@@ -19,7 +19,7 @@ if (productId) {
     })
     .then((data) => {
       console.log("API Response:", data);
-     generate(data)
+      generate(data);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
@@ -84,14 +84,12 @@ buttonP.onclick = () => {
     liSec.innerText = convertiSecondiInMinuti(song.duration);
     olsec.appendChild(liSec);
   });
-
 }
 
-
-const generate = (x) =>{
+const generate = (x) => {
   const div = document.createElement("div");
-      const header = document.getElementById("header-snd");
-      const img = document.createElement("img");
+  const header = document.getElementById("header-snd");
+  const img = document.createElement("img");
 
       const divText = document.createElement("div");
       const h5 = document.createElement("h5");
@@ -103,20 +101,20 @@ const generate = (x) =>{
       const h1 = document.createElement("h1");
       h1.innerText = x.title;
 
-      img.src = x.cover_medium;
-      div.appendChild(img);
-      img.className = "img-album";
-      div.className = "div-album";
-      divText.appendChild(h1);
-      divText.appendChild(albumP);
-      divText.className = "div-text";
+  img.src = x.cover_medium;
+  div.appendChild(img);
+  img.className = "img-album";
+  div.className = "div-album";
+  divText.appendChild(h1);
+  divText.appendChild(albumP);
+  divText.className = "div-text";
 
-      const divTotal = document.createElement("div");
-      header.appendChild(divTotal);
-      divTotal.appendChild(div);
-      divTotal.appendChild(divText);
-      divTotal.className = "album-header";
-      const ol = document.getElementById("ol");
+  const divTotal = document.createElement("div");
+  header.appendChild(divTotal);
+  divTotal.appendChild(div);
+  divTotal.appendChild(divText);
+  divTotal.className = "album-header";
+  const ol = document.getElementById("ol");
 
       x.tracks.data.forEach((song) => {
         console.log(song);
@@ -157,8 +155,18 @@ const generate = (x) =>{
       }
 }
 
+      const secondoFormattato =
+        secondiResidui < 10 ? "0" + secondiResidui : secondiResidui;
 
+      return minuti + ":" + secondoFormattato;
+    }
 
+    const olsec = document.getElementById("secondi");
+    const liSec = document.createElement("li");
+    liSec.innerText = convertiSecondiInMinuti(song.duration);
+    olsec.appendChild(liSec);
+  });
+};
 
 const input = document.querySelector(".input");
 const anchor = document.getElementById("anchor");
@@ -258,7 +266,7 @@ close.onclick = () => {
   aside.classList.remove("col-2");
   main.classList.remove("col-7");
   main.classList.add("col-9");
- /*  header.style.width = "75%"; */
+  /*  header.style.width = "75%"; */
 };
 
 btnF.onclick = () => {
@@ -271,44 +279,39 @@ btnF.onclick = () => {
   /* header.style.width = "58%"; */
 };
 
-
-
 const buttonB = document.getElementById("backHome");
 
 buttonB.onclick = () => {
   window.location.assign("./Homepage.html");
 };
 
-
-const footer = document.querySelector("footer")
+const footer = document.querySelector("footer");
 console.log(footer);
-const startPlayer = (y) =>{
+const startPlayer = (y) => {
   console.log(y);
-  footer.classList.remove("d-none")
-  const img = document.querySelector(".left-part-img")
+  footer.classList.remove("d-none");
+  const img = document.querySelector(".left-part-img");
   console.log(img);
-  img.src = y.album.cover_small
-  const h3 = document.querySelector(".leftPart-h3")
-  h3.innerHTML = y.title
-  h3.onclick = () =>{
-    window.location.assign("./album.html?id=" + y.album.id)
-  }
-  const h5 = document.querySelector(".leftPart-h5")
-  h5.innerHTML = y.artist.name
-  h5.onclick = () =>{
-    window.location.assign("./album.html?id=" + y.artist.id)
-  }
-  const time = document.querySelector("#time")
-  time.innerHTML = convertiSecondiInMinuti(y.duration)
+  img.src = y.album.cover_small;
+  const h3 = document.querySelector(".leftPart-h3");
+  h3.innerHTML = y.title;
+  h3.onclick = () => {
+    window.location.assign("./album.html?id=" + y.album.id);
+  };
+  const h5 = document.querySelector(".leftPart-h5");
+  h5.innerHTML = y.artist.name;
+  h5.onclick = () => {
+    window.location.assign("./album.html?id=" + y.artist.id);
+  };
+  const time = document.querySelector("#time");
+  time.innerHTML = convertiSecondiInMinuti(y.duration);
 
-  const main = document.getElementById("mainAside")
-  main.style = "height: calc(100vh - 60px)"
-  const barLeft = document.getElementById("playlist")
-  barLeft.style = " height: calc(100vh - 416.5px)"
+  const main = document.getElementById("mainAside");
+  main.style = "height: calc(100vh - 60px)";
+  const barLeft = document.getElementById("playlist");
+  barLeft.style = " height: calc(100vh - 416.5px)";
   localStorage.setItem("info", JSON.stringify(y));
-}
-
-
+};
 
 function convertiSecondiInMinuti(secondi) {
   const minuti = Math.floor(secondi / 60);
@@ -320,18 +323,17 @@ function convertiSecondiInMinuti(secondi) {
   return minuti + ":" + secondoFormattato;
 }
 
-window.onload = ()=>{
-  laodPage()
- /*  headerloaded(); */
-}
+window.onload = () => {
+  laodPage();
+  /*  headerloaded(); */
+};
 
-const laodPage = ()=>{
+const laodPage = () => {
   const item = JSON.parse(localStorage.getItem("info"));
   console.log(item);
   if (item) {
-    startPlayer(item)
+    startPlayer(item);
   }
-}
-
+};
 
 /* localStorage.removeItem("info") */
