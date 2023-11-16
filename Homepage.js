@@ -78,6 +78,9 @@ const Artist = (x) => {
   img.style = "width: 80px; height:80px";
   const h3 = document.createElement("h3");
   h3.className = "fw-bold";
+  h3.onclick = () =>{
+    window.location.assign("./myArtist.html?id=" + x.data[1].artist.id)
+  }
   const divT = document.createElement("div");
   /* divT.style = "width: 36px; heigth: 36px" */
   const h4 = document.createElement("h4");
