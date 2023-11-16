@@ -332,4 +332,3 @@ const laodPage = () => {
 };
 
 /* localStorage.removeItem("info") */
-localStorage.removeItem("data");
