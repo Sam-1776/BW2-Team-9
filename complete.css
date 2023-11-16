@@ -98,7 +98,14 @@ width: 20%;
   background-color: grey;
   border-radius: 10px;
 }
-
+@media screen and (max-width: 766px) {
+ #advertisementContainer {
+  display: none;
+ }
+ #section1 {
+  margin-top: 70px;
+ }
+}
 #barSearch {
   width: 400px;
 }
@@ -107,6 +114,11 @@ width: 20%;
   position: fixed;
   top: 0;
   z-index: 99;
+}
+@media screen and (max-width: 766px){
+  #header {
+    width: 100%;
+  }
 }
 #offcanvasRight {
   height: calc(100vh - 75px);
@@ -166,6 +178,16 @@ aside {
   flex-direction: column;
 }
 
+@media screen and (max-width: 766px) {
+  #section-left {
+display: none;
+  }
+  body {
+    width: 100;
+  }
+}
+
+@media screen 
 .first-icons p {
   display: inline-block;
   margin-left: 10px;
