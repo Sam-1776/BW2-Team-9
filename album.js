@@ -26,15 +26,47 @@ if (productId) {
     });
 }else{
   const arr = JSON.parse(localStorage.getItem(namePlay))
-  arr.forEach(element => {
-    console.log(element);
+  console.log(arr);
+  const buttonP = document.querySelector(".bi-play-circle-fill")
+buttonP.onclick = () => {
+  const index = Math.floor(Math.random() * arr.length)
+  console.log(arr[index]);
+  startPlayer(arr[index])
+}
+
+  const header = document.getElementById("header-snd");
+  const div = document.createElement("div");
+  const h1 = document.createElement("h1");
+  h1.innerText = namePlay;
+  h1.className = "text-light ms-4"
+  const img = document.createElement("img");
+  img.src = arr[0].artist.picture_medium
+  div.appendChild(img);
+  img.className = "img-album";
+  div.className = "div-album";
+  const divText = document.createElement("div");
+  divText.appendChild(h1);
+  const divTotal = document.createElement("div");
+  divTotal.appendChild(div);
+  divTotal.appendChild(divText);
+  divTotal.className = "album-header";
+  const ol = document.getElementById("ol");
+  header.appendChild(divTotal);
+
+
+  arr.forEach((song) => {
+    console.log(song);
     const li = document.createElement("li");
-    li.innerText = element.title;
+    li.innerText = song.title;
+    li.onclick = () =>{
+      startPlayer(song)
+    }
     ol.appendChild(li);
     li.className = "li-track";
+
     const olsnd = document.getElementById("ol-nd");
     const liNd = document.createElement("li");
-    liNd.innerText = element.rank;
+    liNd.innerText = song.rank;
     olsnd.appendChild(liNd);
     liNd.className = "li-track";
     function convertiSecondiInMinuti(secondi) {
@@ -49,7 +81,7 @@ if (productId) {
 
     const olsec = document.getElementById("secondi");
     const liSec = document.createElement("li");
-    liSec.innerText = convertiSecondiInMinuti(element.duration);
+    liSec.innerText = convertiSecondiInMinuti(song.duration);
     olsec.appendChild(liSec);
   });
 
@@ -65,10 +97,10 @@ const generate = (x) =>{
       const h5 = document.createElement("h5");
       divText.appendChild(h5);
       h5.innerText = "ALBUM";
-      albumP = document.createElement("p");
+      const albumP = document.createElement("p");
       albumP.innerText = x.artist.name + " released " + x.release_date;
 
-      h1 = document.createElement("h1");
+      const h1 = document.createElement("h1");
       h1.innerText = x.title;
 
       img.src = x.cover_medium;
@@ -90,6 +122,9 @@ const generate = (x) =>{
         console.log(song);
         const li = document.createElement("li");
         li.innerText = song.title;
+        li.onclick = () =>{
+          startPlayer(song)
+        }
         ol.appendChild(li);
         li.className = "li-track";
 
@@ -113,6 +148,13 @@ const generate = (x) =>{
         liSec.innerText = convertiSecondiInMinuti(song.duration);
         olsec.appendChild(liSec);
       });
+      const buttonP = document.querySelector(".bi-play-circle-fill")
+      buttonP.onclick = () => {
+        const i = Math.floor(Math.random() * x.tracks.data.length)
+        console.log(x.tracks.data.length);
+        console.log(x.tracks.data[i]);
+        startPlayer(x.tracks.data[i])
+      }
 }
 
 

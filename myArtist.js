@@ -73,6 +73,12 @@ const makeBody = () =>{
     .then(element => {
         Brani(element)
         Artist(element)
+        const buttonP = document.querySelector(".bi-play-circle-fill")
+        buttonP.onclick = () => {
+          const index = Math.floor(Math.random() * element.data.length)
+          console.log(element.data[index]);
+          startPlayer(element.data[index])
+        }
         console.log(element)})
         
     }

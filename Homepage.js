@@ -390,33 +390,4 @@ const street = []
 
 const dragons = []
 
-const btn = document.querySelectorAll("#cardPlay")
-console.log(btn);
 
-btn.forEach((element) => {
-  element.onclick = (element) => {
-    console.log(element);
-    const txt = element.srcElement.children[0].innerText;
-   /* const txt = element.children[1].innerText */ 
-   console.log(txt);
-   const arr = JSON.parse(localStorage.getItem(txt))
-   console.log("questo è l'array", arr);
-   window.location.assign("./album.html?name=" + txt);
-  /*  fetch(URL + txt, {
-    headers: {
-      "X-RapidAPI-Key": Key,
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    },
-   })
-   .then(resp => resp.json())
-   .then(obj => {
-    console.log(obj)
-    for (let i = 0; i < 10; i++) {
-      const element = obj.data[i];
-      casa.push(element)
-      localStorage.setItem("Casa dolce casa", JSON.stringify(casa))
-      
-    }
-  }) */
-  };
-});

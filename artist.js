@@ -43,6 +43,7 @@ if (productId) {
       return response.json();
     })
     .then((data) => {
+  
       console.log(data);
       const ol = document.getElementById("ol-artist");
       for (let i = 0; i < 4; i++) {
