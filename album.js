@@ -241,7 +241,7 @@ function getStoredData() {
 const main = document.getElementById("main");
 const aside = document.querySelector("aside");
 const close = document.getElementById("close");
-const capo = document.getElementById("header")
+const capo = document.getElementById("header");
 console.log(aside);
 const btnF = document.getElementById("friends");
 
@@ -250,9 +250,9 @@ close.onclick = () => {
   aside.classList.add("d-none");
   aside.classList.remove("d-block");
   aside.classList.remove("col-2");
-  main.classList.remove( "col-md-7" );
-  main.classList.add("col-md-9","col-12");
-  capo.style.width = "75%"
+  main.classList.remove("col-md-7");
+  main.classList.add("col-md-9", "col-12");
+  capo.style.width = "75%";
 };
 
 btnF.onclick = () => {
@@ -260,11 +260,10 @@ btnF.onclick = () => {
   aside.classList.remove("d-none");
   aside.classList.add("d-block");
   aside.classList.add("col-2");
-  main.classList.remove("col-md-9","col-12");
-  main.classList.add("col-md-7",)
-  capo.style.width = "58%"
+  main.classList.remove("col-md-9", "col-12");
+  main.classList.add("col-md-7");
+  capo.style.width = "58%";
 };
-
 
 const buttonB = document.getElementById("backHome");
 
@@ -324,3 +323,36 @@ const laodPage = () => {
 };
 
 /* localStorage.removeItem("info") */
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+let audio;
+
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (audio) {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlayings = false;
+        return;
+      }
+    }
+
+    audio = new Audio(object.preview);
+
+    audio.play();
+    isPlayings = true;
+
+    audio.addEventListener("ended", onAudioEnded);
+  }
+});
+
+function onAudioEnded() {
+  isPlayings = false;
+}
