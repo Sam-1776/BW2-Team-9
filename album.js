@@ -287,7 +287,7 @@ const startPlayer = (y) => {
   const h5 = document.querySelector(".leftPart-h5");
   h5.innerHTML = y.artist.name;
   h5.onclick = () => {
-    window.location.assign("./album.html?id=" + y.artist.id);
+    window.location.assign("./myArtist.html?id=" + y.artist.id);
   };
   const time = document.querySelector("#time");
   time.innerHTML = convertiSecondiInMinuti(y.duration);
