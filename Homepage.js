@@ -213,7 +213,7 @@ const generateNewC = (x, str) => {
     h5.innerText = x.data[i].title;
     const aArt = document.createElement("a");
     aArt.onclick = () => {
-      window.location.assign("./artist.html?id=" + x.data[i].artist.id);
+      window.location.assign("./myArtist.html?id=" + x.data[i].artist.id);
     };
     const p = document.createElement("p");
     p.className = "card-text text-light";
@@ -261,7 +261,7 @@ const startPlayer = (y) => {
   const h5 = document.querySelector(".leftPart-h5");
   h5.innerHTML = y.artist.name;
   h5.onclick = () => {
-    window.location.assign("./artist.html?id=" + y.artist.id);
+    window.location.assign("./myArtist.html?id=" + y.artist.id);
   };
   const time = document.querySelector("#time");
   time.innerHTML = convertiSecondiInMinuti(y.duration);
@@ -347,7 +347,7 @@ const headerloaded = function () {
                  <div>
                  <h5>${currentTitle}</h5>
                  <h1 class="display-4">${currentPlayed}</h1>
-                 <p class="h3"><a href="./artist.html?id=${currentArtistId}">${currentArtist}</a></p>
+                 <p class="h3"><a href="./myArtist.html?id=${currentArtistId}">${currentArtist}</a></p>
                  <p class="h4">${randomText}</p>
                  <div>
                  <button class="btn btn-success me-3 px-4 rounded-pill" id="play" type="
@@ -367,21 +367,10 @@ const headerloaded = function () {
   advertismentLoading();
 };
 const cardSearchTot = 52;
-const cardColor = document.getElementById("cardColor")
-for (let index = 0; index < cardSearchTot; index++) {
+const cardColor = document.querySelectorAll("#cardColor");
+for (let index = 0; index < cardColor.length; index++) {
   let randomColor = Math.floor(Math.random() * 0xffffff).toString(16);
-  randomColor = `#${randomColor.padStart(6, "0")}`
- 
- cardColor.style.backgroundColor = `${randomColor}`
- 
+  randomColor = `#${randomColor.padStart(6, "0")}`;
+
+  cardColor.style.backgroundColor = `${randomColor}`;
 }
-
-
-
-
-
-
-
-
-
-
