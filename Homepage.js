@@ -243,6 +243,24 @@ if (ore >= 12) {
   saluto.innerHTML = "Buongiorno";
 }
 
+const buttonPlay = document.getElementById("playIcon");
+let isPlayings = false;
+buttonPlay.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const previewInLocal = localStorage.getItem("info");
+
+  if (previewInLocal) {
+    const object = JSON.parse(previewInLocal);
+
+    if (!isPlayings) {
+      const audio = new Audio(object.preview);
+      audio.play();
+      isPlayings = true;
+    }
+  }
+});
+
 /* Dati sul footer */
 
 const footer = document.querySelector("footer");
@@ -375,29 +393,28 @@ for (let index = 0; index < cardColor.length; index++) {
   cardColor.style.backgroundColor = `${randomColor}`;
 } */
 
-
 /* Playlist HomePage */
 
-const Mood = []
-const hit = []
-const casa = []
-const street = []
+const Mood = [];
+const hit = [];
+const casa = [];
+const street = [];
 
-const dragons = []
+const dragons = [];
 
-const btn = document.querySelectorAll("#cardPlay")
+const btn = document.querySelectorAll("#cardPlay");
 console.log(btn);
 
 btn.forEach((element) => {
   element.onclick = (element) => {
     console.log(element);
     const txt = element.srcElement.children[0].innerText;
-   /* const txt = element.children[1].innerText */ 
-   console.log(txt);
-   const arr = JSON.parse(localStorage.getItem(txt))
-   console.log("questo è l'array", arr);
-   window.location.assign("./album.html?name=" + txt);
-  /*  fetch(URL + txt, {
+    /* const txt = element.children[1].innerText */
+    console.log(txt);
+    const arr = JSON.parse(localStorage.getItem(txt));
+    console.log("questo è l'array", arr);
+    window.location.assign("./album.html?name=" + txt);
+    /*  fetch(URL + txt, {
     headers: {
       "X-RapidAPI-Key": Key,
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
@@ -413,5 +430,6 @@ btn.forEach((element) => {
       
     }
   }) */
+    console.log(previewInLocal);
   };
 });
