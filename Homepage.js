@@ -411,9 +411,5 @@ for (let index = 0; index < cardColor.length; index++) {
 
 /* Playlist HomePage */
 
-const Mood = [];
-const hit = [];
-const casa = [];
-const street = [];
 
 const dragons = [];
