@@ -24,14 +24,26 @@
     <link rel="stylesheet" href="./complete.css" />
   </head>
   <body class="row text-bg-dark g-0">
-    <section id="section-left" class="col-3 ">
+    <section id="section-left" class="col-3">
       <div class="d-none d-md-block">
         <i class="bi bi-three-dots"></i>
       </div>
       <div class="first-icons">
         <div class="div-a-i d-flex align-items-center">
           <a href="./Homepage.html" class="text-decoration-none fs-6 mb-2"
-            ><i class="bi bi-house-door-fill"></i> Home</a
+            ><svg
+              style="fill: white; width: 20px; margin-bottom: 5px"
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              class="Svg-sc-ytk21e-0 iYxpxA home-icon"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
+              ></path>
+            </svg>
+            Home</a
           >
         </div>
         <div class="div-a-i d-flex">
@@ -39,9 +51,24 @@
             ><i class="bi bi-search"></i> Cerca</a
           >
         </div>
-        <div class="div-a-i d-flex">
-          <a href="" class="text-decoration-none fs-6 mb-2"
-            ><i class="bi bi-music-note-list"></i> La tua libreria</a
+        <div class="div-a-i d-flex align-items-center">
+          <a
+            href=""
+            class="text-decoration-none mb-2 fs-6"
+            style="font-size: 15px"
+            ><svg
+              style="fill: white; width: 20px; margin-bottom: 5px"
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="Svg-sc-ytk21e-0 iYxpxA"
+            >
+              <path
+                d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+              ></path>
+            </svg>
+            La tua libreria</a
           >
         </div>
       </div>
@@ -233,7 +260,7 @@
               </div>
             </div>
             <div class="col-6 col-md-4">
-              <div class="card mb-3 text-bg-dark overflow-hidden" >
+              <div class="card mb-3 text-bg-dark overflow-hidden">
                 <div class="row g-0 align-items-center" id="cardPlay">
                   <div class="col-3 pe-1 pe-md-3">
                     <img
@@ -354,9 +381,9 @@
             </div>
           </div>
         </div>
-        <div  class="container-fluid">
+        <div class="container-fluid">
           <div class="row" id="cards2">
-          <!-- <div id="col-20">
+            <!-- <div id="col-20">
     <div class="">
         <img src="./assets/imgs/search/image-6.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -364,9 +391,8 @@
         </div>
       </div>
     </div> -->
-  </div>
+          </div>
         </div>
-
       </section2>
 
       <div class="container d-none" style="margin-top: 80px" id="ricerca">
@@ -374,7 +400,7 @@
       </div>
       <div id="reSearch" class="d-none" style="margin-top: 80px">
         <div class="container">
-          <input type="text">
+          <input type="text" />
           <h4>Sfoglia tutto</h4>
           <div class="row g-2">
             <div class="col-6 col-md-4 col-lg-3">
@@ -802,7 +828,9 @@
               ><i class="fas fa-heart ms-3"></i
             ></a>
           </div>
-          <div class="col-2 col-md-4 text-white d-flex d-md-block align-items-center">
+          <div
+            class="col-2 col-md-4 text-white d-flex d-md-block align-items-center"
+          >
             <div class="d-flex justify-content-center">
               <div>
                 <a href=""> <i class="fas fa-random fontIcon"></i></a>
@@ -861,7 +889,10 @@
             <button class="btn p-0 me-2" onclick="toggleOnOff()">
               <i class="fas fa-volume-up fontIcon" id="volumeIcon"></i>
             </button>
-            <div class="progress-stacked d-none d-md-block" style="width: 100px; height: 5px">
+            <div
+              class="progress-stacked d-none d-md-block"
+              style="width: 100px; height: 5px"
+            >
               <div
                 class="progress"
                 role="progressbar"
@@ -886,7 +917,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-  <!--   <script src="./main.js"></script> -->
+    <!--   <script src="./main.js"></script> -->
     <script src="./bottombar.js"></script>
     <script src="./sideExtra.js"></script>
     <script src="./navbar-left.js"></script>
