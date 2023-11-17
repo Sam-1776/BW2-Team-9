@@ -467,3 +467,6 @@ const cardsSongsLoaded = () => {
   }
 }
 };
+
+
+localStorage.clear()

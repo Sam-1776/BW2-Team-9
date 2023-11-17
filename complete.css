@@ -189,8 +189,21 @@ aside {
 
 @media screen and (max-width: 766px) {
   #section-left {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
   }
+  
+}
+hr {
+  width: 95%;
+  color: white;
+  margin-inline: auto;
 }
 
 .first-icons {
@@ -200,6 +213,20 @@ aside {
   padding-inline: 20px;
   margin-left: 5px;
   margin-top: 10px;
+}
+@media screen and (max-width: 766px) {
+  .first-icons {
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: space-around;
+/*     padding-inline: 20px;
+    margin-left: 5px;
+    margin-top: 10px; */
+  }
+  hr{
+    display: none;
+  }
+
 }
 
 .first-icons a {
@@ -221,11 +248,7 @@ aside {
   padding-inline: 20px;
   margin-top: 20px;
 }
-hr {
-  width: 95%;
-  color: white;
-  margin-inline: auto;
-}
+
 
 .second-icons p {
   display: inline-block;
@@ -420,6 +443,61 @@ hr {
 }
 .fas.fa-volume-mute:hover {
   color: green;
+}
+@media screen and (max-width: 766px) {
+  .box {
+    width: 95%;
+    position: fixed;
+    left: 14px;
+    bottom: 80px;
+    border-radius: 20px;
+  }
+  .leftPart {
+   flex-grow: 2;
+  }
+  .leftPart-h3 {
+    font-size: 1.4rem;
+  }
+  .leftPart-h5 {
+    display: none;
+  }
+  .heart-icon {
+    font-size: 2rem;
+  }
+  .fontIconPlay {
+    font-size: 2.2rem;
+  }
+  .bi.bi-speaker {
+    font-size: 2rem;
+  }
+  .fas.fa-random {
+    display: none;
+  }
+  .fas.fa-step-backward {
+    display: none
+  }
+  .fas.fa-step-forward {
+    display: none
+  }
+  .fas.fa-retweet {
+    display: none
+  }
+  .fas.fa-microphone {
+display: none;  
+}
+  .fas.fa-bars {
+    display: none;
+  }
+  .fas.fa-expand-alt {
+    display: none
+  }
+  .fas.fa-volume-up {
+    display: none
+  }
+  .fas.fa-volume-mute {
+    display: none
+  }
+  
 }
 
 /* ALBUM */
