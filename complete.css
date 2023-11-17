@@ -371,6 +371,11 @@ hr {
   flex-direction: column;
   justify-content: end;
 }
+@media screen and (max-width: 766px) {
+  .leftPart {
+    margin-left: 0;
+}
+}
 
 .leftPart-h3 {
   margin: 0;
@@ -448,9 +453,10 @@ hr {
   .box {
     width: 95%;
     position: fixed;
-    left: 14px;
+    left: 7px;
     bottom: 80px;
     border-radius: 20px;
+ 
   }
   .leftPart {
    flex-grow: 2;
