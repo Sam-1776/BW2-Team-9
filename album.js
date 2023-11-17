@@ -220,6 +220,9 @@ function createListItem(ul, value) {
   ulDiv.className = "d-flex justify-content-between mx-2 ";
 
   li.innerText = value;
+  li.onclick = () =>{
+    window.location.assign("./album.html?name=" + value );
+  }
   butLi.addEventListener("click", function () {
     const valueToRemove = li.innerText;
     const storedData = getStoredData();
@@ -318,6 +321,7 @@ function convertiSecondiInMinuti(secondi) {
 
 window.onload = () => {
   laodPage();
+  laodPagePlay()
   /*  headerloaded(); */
 };
 
@@ -363,3 +367,14 @@ buttonPlay.addEventListener("click", function (e) {
 function onAudioEnded() {
   isPlayings = false;
 }
+
+
+const laodPagePlay = () => {
+  const item = JSON.parse(localStorage.getItem("namePlaylist"));
+  console.log(item);
+  if (item) {
+    item.forEach(element => {
+      createListItem(ul,element)
+    });
+  }
+};
