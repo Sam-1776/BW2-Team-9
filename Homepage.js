@@ -459,7 +459,7 @@ const cardsSongsLoaded = () => {
                           const currentAlbumId = songs.data[i].album.id;
                           const currentArtistId = songs.data[i].artist.id;
      cards2.innerHTML += `
-     <div class="p-2 col-md-3 col-12" >
+     <div class="col-6 col-sm-4 col-md-3 mb-3" >
      <div class="card h-100 text-bg-dark">
 <a href="./album.html?id=${currentAlbumId}">
   <div class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25">

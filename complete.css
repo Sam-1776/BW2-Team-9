@@ -184,6 +184,12 @@ aside {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
+.card-text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 
 /* .cardSearch:hover{
   
