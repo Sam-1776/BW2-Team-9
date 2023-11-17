@@ -42,14 +42,14 @@ if (productId) {
   const img = document.createElement("img");
   img.src = arr[0].artist.picture_medium;
   div.appendChild(img);
-  img.className = "img-album";
-  div.className = "div-album";
+  img.className = "img-album ";
+  div.className = "div-album col-12 col-md-6";
   const divText = document.createElement("div");
   divText.appendChild(h1);
   const divTotal = document.createElement("div");
   divTotal.appendChild(div);
   divTotal.appendChild(divText);
-  divTotal.className = "album-header";
+  divTotal.className = "album-header mt-4 row";
   const ol = document.getElementById("ol");
   header.appendChild(divTotal);
 
@@ -103,16 +103,16 @@ const generate = (x) => {
   img.src = x.cover_medium;
   div.appendChild(img);
   img.className = "img-album";
-  div.className = "div-album";
+  div.className = "div-album col-12 col-md-5";
   divText.appendChild(h1);
   divText.appendChild(albumP);
-  divText.className = "div-text";
+  divText.className = "div-text col-12 col-md-4";
 
   const divTotal = document.createElement("div");
   header.appendChild(divTotal);
   divTotal.appendChild(div);
   divTotal.appendChild(divText);
-  divTotal.className = "album-header";
+  divTotal.className = "album-header row";
   const ol = document.getElementById("ol");
 
   x.tracks.data.forEach((song) => {

@@ -4,8 +4,12 @@ const buttonB = document.getElementById("backHome");
 const barInput = document.getElementById("barSearch");
 const newSection = document.getElementById("reSearch");
 const ricerca = document.getElementById("ricerca");
+const barIH = document.getElementById("searchHide")
 
-search.onclick = () => {
+search.onclick = () => cercaCard()
+
+
+const cercaCard = () =>{
   const section1 = document.querySelector("#section1");
   const section2 = document.querySelector("#section2");
   newSection.classList.remove("d-none");
@@ -42,24 +46,27 @@ search.onclick = () => {
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
 const Key = "68a8776b0bmsh6e2a39f98b70d75p1790aejsn95b31ef05b61";
 
-barInput.onchange = () => {
-  const query = barInput.value;
-  ricerca.classList.remove("d-none");
-  fetch(URL + query, {
-    headers: {
-      "X-RapidAPI-Key": Key,
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    },
-  })
-    .then((resp) => resp.json())
-    .then((Obj) => {
-      console.log(Obj);
-      Artist(Obj);
-      Brani(Obj);
-      generateNewC(Obj, "Songs");
+barInput.onchange = () => cerca(barInput.value) 
+barIH.onchange = () => cerca(barIH.value)
+
+const cerca = (x) => {
+    const query = x;
+    ricerca.classList.remove("d-none");
+    fetch(URL + query, {
+      headers: {
+        "X-RapidAPI-Key": Key,
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
     })
-    .catch((err) => console.log(err));
-};
+      .then((resp) => resp.json())
+      .then((Obj) => {
+        console.log(Obj);
+        Artist(Obj);
+        Brani(Obj);
+        generateNewC(Obj, "Songs");
+      })
+      .catch((err) => console.log(err));
+  };
 
 const container = document.querySelector("#searchQ");
 
@@ -68,7 +75,7 @@ const container = document.querySelector("#searchQ");
 const Artist = (x) => {
   newSection.classList.add("d-none");
   const row = document.createElement("div");
-  row.className = "col-5";
+  row.className = "col-12 col-md-6";
   const col = document.createElement("div");
   col.className = "rounded bg-dark";
   col.style = "height: 216px";
@@ -110,7 +117,7 @@ const Artist = (x) => {
 
 const Brani = (x) => {
   const row = document.createElement("div");
-  row.className = "col-7";
+  row.className = "col-12 col-md-6";
   const divT = document.createElement("div");
   divT.className = "mb-3";
   const h4 = document.createElement("h4");
@@ -196,7 +203,7 @@ const generateNewC = (x, str) => {
   h2.className = "fs-1 mb-4";
   for (let i = 0; i < 16; i++) {
     const col = document.createElement("div");
-    col.className = "col-3 mb-3";
+    col.className = "col-6 col-sm-4 col-md-3 mb-3";
     const card = document.createElement("div");
     card.className = "card ";
     card.style = "background-color: #212529 ";
@@ -291,6 +298,7 @@ console.log(footer);
 const startPlayer = (y) => {
   console.log(y);
   footer.classList.remove("d-none");
+  footer.classList.remove("d-block");
   const img = document.querySelector(".left-part-img");
   console.log(img);
   img.src = y.album.cover_small;
