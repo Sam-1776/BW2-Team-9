@@ -93,11 +93,7 @@ img {
   height: 100vh;
   overflow: scroll;
   background-color: #1b1b1b;
-  background: linear-gradient(
-    0deg,
-    rgba(20, 20, 14, 1) 57%,
-    rgb(39, 39, 38) 94%
-  );
+  background: linear-gradient(0deg, rgba(20, 20, 14, 1) 57%, #f44336 94%);
 }
 
 #mainAside::-webkit-scrollbar {
@@ -107,22 +103,22 @@ img {
   background-color: grey;
   border-radius: 10px;
 }
-#reSearch{
-  margin-top: 80px
+#reSearch {
+  margin-top: 80px;
 }
 #barSearch {
   width: 400px;
   padding-inline: 10px;
 }
-#ricerca{
-  margin-top: 80px
+#ricerca {
+  margin-top: 80px;
 }
-#searchHide{
+#searchHide {
   width: 400px;
   padding-inline: 10px;
 }
 @media screen and (max-width: 850px) {
-  #barSearch{
+  #barSearch {
     width: 350px;
   }
 }
@@ -133,11 +129,11 @@ img {
   #section1 {
     margin-top: 20px;
   }
-  #reSearch{
+  #reSearch {
     margin-top: 20px;
   }
-  #ricerca{
-    margin-top: 20px
+  #ricerca {
+    margin-top: 20px;
   }
 }
 #header {
@@ -184,7 +180,7 @@ aside {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-.card-text{
+.card-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -222,7 +218,6 @@ aside {
     justify-content: center;
     background-color: #1b1b1b;
   }
-  
 }
 hr {
   width: 95%;
@@ -243,14 +238,13 @@ hr {
     flex-direction: row;
     font-size: 20px;
     justify-content: space-around;
-/*     padding-inline: 20px;
+    /*     padding-inline: 20px;
     margin-left: 5px;
     margin-top: 10px; */
   }
-  hr{
+  hr {
     display: none;
   }
-
 }
 
 .first-icons a {
@@ -272,7 +266,6 @@ hr {
   padding-inline: 20px;
   margin-top: 20px;
 }
-
 
 .second-icons p {
   display: inline-block;
@@ -398,7 +391,7 @@ hr {
 @media screen and (max-width: 766px) {
   .leftPart {
     margin-left: 0;
-}
+  }
 }
 
 .leftPart-h3 {
@@ -480,10 +473,9 @@ hr {
     left: 7px;
     bottom: 80px;
     border-radius: 20px;
- 
   }
   .leftPart {
-   flex-grow: 2;
+    flex-grow: 2;
   }
   .leftPart-h3 {
     font-size: 1.4rem;
@@ -504,37 +496,35 @@ hr {
     display: none;
   }
   .fas.fa-step-backward {
-    display: none
+    display: none;
   }
   .fas.fa-step-forward {
-    display: none
+    display: none;
   }
   .fas.fa-retweet {
-    display: none
+    display: none;
   }
   .fas.fa-microphone {
-display: none;  
-}
+    display: none;
+  }
   .fas.fa-bars {
     display: none;
   }
   .fas.fa-expand-alt {
-    display: none
+    display: none;
   }
   .fas.fa-volume-up {
-    display: none
+    display: none;
   }
   .fas.fa-volume-mute {
-    display: none
+    display: none;
   }
-  
 }
 
 /* ALBUM */
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
 header {
-  background-color: #bebe34;
   height: 330px;
 }
 
@@ -576,7 +566,6 @@ header {
 .album-header {
   display: flex;
   align-items: center;
-  
 }
 
 .div-text {
@@ -643,7 +632,7 @@ ol li::before {
   font-size: 16px;
   color: white;
   padding: 10px;
-/*   margin-right: 60px; */
+  /*   margin-right: 60px; */
 }
 
 /* ARTIST */
@@ -788,9 +777,8 @@ ol li::before {
   color: white;
 }
 
-
 @media screen and (max-width: 766px) {
- #mainAside{
-  height: calc(100vh + 350px);
- }
+  #mainAside {
+    height: calc(100vh + 350px);
+  }
 }
