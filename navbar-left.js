@@ -97,8 +97,6 @@ btn.forEach((element) => {
     const txt = element.srcElement.innerText;
     /* const txt = element.children[1].innerText */
     console.log(txt);
-    
-    
     const nameLi = JSON.parse(localStorage.getItem("namePlaylist"))
     if (!nameLi) {
       namePlaylist.push(txt)
