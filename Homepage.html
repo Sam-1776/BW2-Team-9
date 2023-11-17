@@ -26,7 +26,14 @@
   <body class="row text-bg-dark g-0">
     <section id="section-left" class="col-3">
       <div class="d-none d-md-block">
-        <i class="bi bi-three-dots"></i>
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-three-dots"></i>
+        </button>
+        <ul class="dropdown-menu bg-dark">
+          <li><a class="dropdown-item text-light" href="#">Profilo</a></li>
+          <li><a class="dropdown-item text-light" href="#">Impostazioni</a></li>
+          <li><a class="dropdown-item text-danger" href="./login.html">Esci</a></li>
+        </ul>
       </div>
       <div class="first-icons">
         <div class="div-a-i d-flex align-items-center">
@@ -159,7 +166,12 @@
               <div class="d-flex d-md-none" id="buttonSection1">
                 <button class=""><i class="bi bi-bell"></i></button>
                 <button><i class="bi bi-stopwatch"></i></button>
-                <button><i class="bi bi-gear"></i></button>
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear"></i></button>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-light" href="#">Profilo</a></li>
+                  <li><a class="dropdown-item text-light" href="#">Impostazioni</a></li>
+                  <li><a class="dropdown-item text-danger" href="./login.html">Esci</a></li>
+                </ul>
               </div>
             </div>
             <div class="col-6 col-md-4">
@@ -281,119 +293,123 @@
           </div>
         </div>
       </div>
-
-      <section2 id="section2" class="mb-3 d-md-flex flex-md-column">
-        <div id="h2-Button-Container" class="d-flex px-md-0 px-3">
-          <h2 class="col-auto">Altri Contenuti</h2>
-          <div id="buttonContainer">
-            <button id="buttonSection2">
-              <p class="m-0 px-2">Visualizza tutto</p>
-            </button>
-          </div>
-        </div>
-        <div id="cards" class="d-md-flex justify-content-between">
-          <div class="col-12 col-md-3 mb-2">
-            <div
-              class="card h-100 rounded text-bg-dark"
-              style="border: 1px solid #181818"
-            >
-              <div
-                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
-              >
-                <img
-                  src="./assets/imgs/search/image-6.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+      <div class="container-fluid">
+        <div class="row">
+          <section2 id="section2" class="mb-3 d-md-flex flex-md-column">
+            <div id="h2-Button-Container" class="d-flex px-md-0 px-3">
+              <h2 class="col-auto">Altri Contenuti</h2>
+              <div id="buttonContainer">
+                <button id="buttonSection2">
+                  <p class="m-0 px-2">Visualizza tutto</p>
+                </button>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-3 mb-2">
-            <div
-              class="card h-100 rounded text-bg-dark"
-              style="border: 1px solid #181818"
-            >
-              <div
-                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
-              >
-                <img
-                  src="./assets/imgs/search/image-7.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
+            <div id="cards" class="row">
+              <div class="col-6 col-sm-4 col-md-3 mb-3">
+                <div
+                  class="card rounded text-bg-dark"
+                  style="border: 1px solid #181818"
+                >
+                  <div
+                    class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-6.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">R&B</h5>
+                    <p class="card-text">
+                     Ascolta il mix R&B fatto per te da Spotify
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+              <div class="col-6 col-sm-4 col-md-3 mb-3">
+                <div
+                  class="card rounded text-bg-dark"
+                  style="border: 1px solid #181818"
+                >
+                  <div
+                    class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-7.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Rock This</h5>
+                    <p class="card-text">
+                     Ascolta il miglior Rock dalla lista di Spotify
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 mb-3">
+                <div
+                  class="card rounded text-bg-dark"
+                  style="border: 1px solid #181818"
+                >
+                  <div
+                    class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-8.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Allenamento</h5>
+                    <p class="card-text">
+                     Allenati al massimo con la playlist Beast di Spotify
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 mb-3 d-sm-none d-md-block">
+                <div
+                  class="card rounded text-bg-dark"
+                  style="border: 1px solid #181818"
+                >
+                  <div
+                    class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-39.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Hot Country</h5>
+                    <p class="card-text">
+                     Ascolta le migliori canzoni uscite  
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-3 mb-2">
-            <div
-              class="card h-100 rounded text-bg-dark"
-              style="border: 1px solid #181818"
-            >
-              <div
-                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
-              >
-                <img
-                  src="./assets/imgs/search/image-8.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
-              </div>
+            <div class="container-fluid">
+              <div class="row" id="cards2">
+                <!-- <div id="col-20">
+        <div class="">
+            <img src="./assets/imgs/search/image-6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quae.</p>
             </div>
           </div>
-          <div class="col-12 col-md-3 mb-2">
-            <div
-              class="card h-100 rounded text-bg-dark"
-              style="border: 1px solid #181818"
-            >
-              <div
-                class="card-img-top w-100 object-fit-cover p-2 shadow-sm w-25"
-              >
-                <img
-                  src="./assets/imgs/search/image-39.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p class="card-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis, quae.
-                </p>
+        </div> -->
               </div>
             </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row" id="cards2">
-            <!-- <div id="col-20">
-    <div class="">
-        <img src="./assets/imgs/search/image-6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quae.</p>
+          </section2>
         </div>
       </div>
-    </div> -->
-          </div>
-        </div>
-      </section2>
+
 
       <div class="container-fluid d-none" id="ricerca">
         <div class="row" id="searchQ"></div>
