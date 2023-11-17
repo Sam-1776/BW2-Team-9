@@ -38,14 +38,21 @@ if (productId) {
   const div = document.createElement("div");
   const h1 = document.createElement("h1");
   h1.innerText = namePlay;
-  h1.className = "text-light ms-4";
+  h1.className = "text-light";
   const img = document.createElement("img");
   img.src = arr[0].artist.picture_medium;
   div.appendChild(img);
   img.className = "img-album ";
-  div.className = "div-album col-12 col-md-6";
+  div.className = "div-album col-12 col-md-5";
   const divText = document.createElement("div");
+  const h5 = document.createElement("h5");
+  divText.appendChild(h5);
+  h5.innerText = "Playlist";
+  divText.className = "div-text col-12 col-md-4";
+  const albumP = document.createElement("p");
+  albumP.innerText =  "Released by Spotify "
   divText.appendChild(h1);
+  divText.appendChild(albumP);
   const divTotal = document.createElement("div");
   divTotal.appendChild(div);
   divTotal.appendChild(divText);
