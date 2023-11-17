@@ -21,11 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   storedData.forEach(function (value) {
     createListItem(ul, value);
   });
-  btn.forEach((element) => {
-    const nameP = element.children[1].innerText;
-    console.log(nameP);
-    laodPagePlay(nameP);
-  });
+  laodPagePlay()
 });
 
 butIn.addEventListener("click", function () {
@@ -92,13 +88,31 @@ function getStoredData() {
 
 const btn = document.querySelectorAll("#cardPlay");
 console.log(btn);
+const namePlaylist =[]
 
 btn.forEach((element) => {
   element.onclick = (element) => {
     console.log(element);
-    const txt = element.srcElement.children[0].innerText;
+    console.log(element);
+    const txt = element.srcElement.innerText;
     /* const txt = element.children[1].innerText */
     console.log(txt);
+    
+    
+    const nameLi = JSON.parse(localStorage.getItem("namePlaylist"))
+    if (!nameLi) {
+      namePlaylist.push(txt)
+      localStorage.setItem("namePlaylist", JSON.stringify(namePlaylist))
+    }else{
+      localStorage.removeItem("namePlaylist")
+      namePlaylist.push(txt)
+      localStorage.setItem("namePlaylist", JSON.stringify(namePlaylist))
+       
+    }
+
+
+
+
     const arr = JSON.parse(localStorage.getItem(txt));
     console.log("questo è l'array", arr);
     /* window.location.assign("./album.html?name=" + txt); */
@@ -141,11 +155,13 @@ btn.forEach((element) => {
 });
 
 
-const laodPagePlay = (x) => {
-  const item = JSON.parse(localStorage.getItem(x));
+const laodPagePlay = () => {
+  const item = JSON.parse(localStorage.getItem("namePlaylist"));
   console.log(item);
   if (item) {
-    createListItem(ul, x);
+    item.forEach(element => {
+      createListItem(ul,element)
+    });
   }
 };
 

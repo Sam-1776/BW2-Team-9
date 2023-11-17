@@ -3,6 +3,10 @@ console.log(param);
 const productId = param.get("id");
 console.log("RESOURCE ID: ", productId);
 
+window.onload = () =>{
+  laodPagePlay()
+}
+
 if (productId) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/artist/" + productId, {
     method: "GET",
@@ -120,3 +124,16 @@ function convertiSecondiInMinuti(secondi) {
 
   return minuti + ":" + secondoFormattato;
 }
+
+
+
+
+const laodPagePlay = () => {
+  const item = JSON.parse(localStorage.getItem("namePlaylist"));
+  console.log(item);
+  if (item) {
+    item.forEach(element => {
+      createListItem(ul,element)
+    });
+  }
+};
