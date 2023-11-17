@@ -811,10 +811,10 @@
       </div>
     </aside>
 
-    <footer class="">
-      <div class="box">
-        <div class="row">
-          <div class="col-9 col-md-4 left-part">
+    <footer class="d-none">
+      <div class="box ">
+        <div class="d-flex align-items-center">
+          <div class="col-8 col-md-4 left-part">
             <img alt="song-cover" class="left-part-img" />
             <div class="leftPart">
               <h3 class="leftPart-h3">Fat Funny Friend</h3>
@@ -825,12 +825,10 @@
               class="heart-icon"
               id="heartIcon"
               onclick="toggleHeartIcon()"
-              ><i class="fas fa-heart ms-3"></i
+              ><i class="fas fa-heart ms-md-3"></i
             ></a>
           </div>
-          <div
-            class="col-2 col-md-4 text-white d-flex d-md-block align-items-center"
-          >
+          <div class="col-auto ms-auto me-auto ms-md-0 me-md-0 col-md-4 text-white d-flex d-md-block align-items-center">
             <div class="d-flex justify-content-center">
               <div>
                 <a href=""> <i class="fas fa-random fontIcon"></i></a>
@@ -840,7 +838,7 @@
 
                 <button class="btn rounded-circle" onclick="togglePlayPause()">
                   <i
-                    class="fas fa-play-circle play-icon fontIconPlay ms-3"
+                    class="fas fa-play-circle play-icon fontIconPlay ms-md-3"
                     id="playIcon"
                   ></i>
                 </button>
@@ -879,14 +877,14 @@
             </div>
           </div>
           <div
-            class="col-1 col-md-4 d-flex justify-content-end align-items-center text-white"
+            class="col-auto ms-auto me-auto ms-md-0 me-md-0 col-md-4 d-flex justify-content-end align-items-center text-white"
           >
-            <a class="me-2" href=""
+            <a class="d-none d-md-inline me-2" href=""
               ><i class="fas fa-microphone fontIcon"></i
             ></a>
-            <a class="me-2" href=""><i class="fas fa-bars fontIcon"></i></a>
-            <a class="me-2" href=""><i class="bi bi-speaker fontIcon"></i></a>
-            <button class="btn p-0 me-2" onclick="toggleOnOff()">
+            <a class="d-none d-md-inline me-2" href=""><i class="fas fa-bars fontIcon"></i></a>
+            <a class="me-md-2" href=""><i class="bi bi-speaker fontIcon"></i></a>
+            <button class="d-none d-md-inline btn p-0 me-md-2" onclick="toggleOnOff()">
               <i class="fas fa-volume-up fontIcon" id="volumeIcon"></i>
             </button>
             <div
@@ -904,7 +902,7 @@
                 <div class="progress-bar bg-white" style="width: 50%"></div>
               </div>
             </div>
-            <a class="ms-2" href=""
+            <a class="ms-md-2" href=""
               ><i class="fas fa-expand-alt fontIcon"></i
             ></a>
           </div>
